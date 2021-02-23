@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="views/sign-up.php"> test </a>
+    <a href="views/sign-up.php">Sign up</a>
+    <a href="views/login.php">LOGIN</a>
 </body>
 </html>
