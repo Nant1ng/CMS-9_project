@@ -58,16 +58,14 @@ catch(PDOException $error)
                 <label>First name:</label>
                 <input type="text" name="regFname">
                 <label>Last name:</label>
-                <input type="text" name="regLname">
-                <input type="submit" name="sign-up" value="Sign-up"> 
+                <input type="text" name="regLname"> 
                 <label>Email:</label>
                 <input type="text" name="regEmail">
                 <label>Username:</label>
                 <input type="text" name="regUsername" >
                 <label>Password:</label>
                 <input type="password" name="regPassword">
-                
-
+                <input type="submit" name="sign-up" value="Sign-up"> 
             </form>
     </div>
 </body>
