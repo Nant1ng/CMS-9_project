@@ -63,8 +63,8 @@ catch(PDOException $error)
 <h2>Logga in</h2>
 <!-- Inputfält -->
 <form method="post">
-<input type="text" name="username">
-<input type="password" name="password">
+<input type="text" name="username" placeholder = "Username"><br>
+<input type="password" name="password" placeholder = "Password"><br>
 <input type="submit" name="login" value="Logga in">
 </form>
 </div>
