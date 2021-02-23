@@ -57,15 +57,15 @@ catch(PDOException $error)
         <h3>Sign up</h3>
             <form method="post">
                 <label>First name:</label>
-                <input type="text" name="regFname">
+                <input type="text" name="regFname"><br>
                 <label>Last name:</label>
-                <input type="text" name="regLname"> 
+                <input type="text" name="regLname"> <br>
                 <label>Email:</label>
-                <input type="text" name="regEmail">
+                <input type="text" name="regEmail"><br>
                 <label>Username:</label>
-                <input type="text" name="regUsername" >
+                <input type="text" name="regUsername" ><br>
                 <label>Password:</label>
-                <input type="password" name="regPassword">
+                <input type="password" name="regPassword"><br>
                 <input type="submit" name="sign-up" value="Sign-up"> 
             </form>
     </div>
