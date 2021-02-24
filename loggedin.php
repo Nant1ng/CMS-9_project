@@ -34,13 +34,13 @@ while ($row = $stm->fetch()){
 <!-- fixas senare -->
     <a href=" " title ="Click here to see post">
     <h2><?php echo $row['title'];?></h2>
-    <img <?php echo $row['imageURL'];?> alt="" width="200">
+    <img src="<?php echo $row['imageURL'];?>" alt="blog-bild" width="200">
     <figcaption><p><?php echo $row['description'];?></p></figcaption>
     <p><?php echo $row['date'];?></p>
     </a>
     <!-- För att få rätt id på edit o delete knapparna -->
     <div class="edit">
-       <a href="editPost.php?id=<?php echo $row['postID']; ?>">Edit</a>              
+       <a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a>              
     </div>
     <div class="delete">
        <a href="deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a>
