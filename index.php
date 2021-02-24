@@ -13,7 +13,7 @@
 <?php
 session_start();
 include 'includes/database_connection.php';
-$stm = $pdo->query("SELECT postID, title, description, imageURL, category, date, adminID FROM posts");
+$stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts");
 
 
 // IF statement för att få edit och delete att bara visas som admin
