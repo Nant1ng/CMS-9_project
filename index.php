@@ -8,7 +8,7 @@
 </head>
 <body>
 <a href="views/sign-up.php">Sign up</a>
-    <a href="views/login.php">LOGIN</a>
+<a href="views/login.php">LOGIN</a>
 
 <?php
 session_start();
