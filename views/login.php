@@ -38,7 +38,7 @@ try
             if($count > 0){  
                 $_SESSION["username"] = $_POST["username"];
                 $_SESSION['role'] = $count['role'];
-                header("location:../index.php");  
+                header("location:../loggedin.php");  
             }else{  
                 $errorMessage = '<label>Något blev fel försök igen</label>';  
             }  
