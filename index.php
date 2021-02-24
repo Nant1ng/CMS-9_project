@@ -21,16 +21,18 @@ $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date,
 
 // Man måste kunna lägga till nytt blogginlägg som admin
 
-//while loop för att skriva ut alla entries på sidan
+//while loop för att skriva ut alla blogposts på sidan
 while ($row = $stm->fetch()){
 
 ?>
 
-<table id="entries" border="0">
+<table id="blogposts" border="0">
 <tr>
    <td><?php echo $row['postID'];?></td>
 </tr>
 <tr>
+   <td><?php echo $row['imageURL'];?></td>
+</tr>
    <td><?php echo $row['title'];?></td>
 </tr>
 <tr>
