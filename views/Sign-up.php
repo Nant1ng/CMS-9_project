@@ -52,6 +52,16 @@ catch(PDOException $error)
 }
 
 ?>
+
+<!-- för error meddelandet -->
+<?php  
+    if(isset($errorMessage)){  
+        echo '<label>'.$errorMessage.'</label>';  
+    }  
+?>  
+
+
+
 <body>
     <div class="sign-up-container">
         <h3>Sign up</h3>
