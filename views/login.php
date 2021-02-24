@@ -37,7 +37,7 @@ try
             $count = $statement->rowCount();  
             if($count > 0){  
                 $_SESSION["username"] = $_POST["username"];  
-                header("location:index.php");  
+                header("location:../index.php");  
             }else{  
                 $errorMessage = '<label>Något blev fel försök igen</label>';  
             }  
