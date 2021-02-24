@@ -15,33 +15,44 @@
 <main>
 
 <div id = "Posts">
+<?php
+session_start();
+include 'includes/database_connection.php';
+$stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts");
 
+
+// IF statement för att få edit och delete att bara visas som admin
+
+
+// Man måste kunna lägga till nytt blogginlägg som admin
+
+//while loop för att skriva ut alla blogposts på sidan
+while ($row = $stm->fetch()){
+
+?>
 <div class ="Glasses">
+<!-- fixas senare -->
     <a href=" " title ="Click here to see post">
-    <h2>Retro glasses</h2>
-    <img src="/image/pictures/pexels-ali-pazani-2811088.jpg" alt="Girl with orange glasses" width="200">
-    <figcaption><p>Beautiful retro glasses with orange tone</p></figcaption>
+    <h2><?php echo $row['title'];?></h2>
+    <img <?php echo $row['imageURL'];?> alt="" width="200">
+    <figcaption><p><?php echo $row['description'];?></p></figcaption>
+    <p><?php echo $row['date'];?></p>
     </a>
-</div>
-
-<div class ="Watch" title ="Click here to see post">
-    <a href=" "> 
-    <h2>Classy watch</h2>
-    <img src="/image/pictures/pexels-taryn-elliott-4684396.jpg" alt="Girl with a watch" width="200">
-    <figcaption><p>Classy watch to match with the rest of your accessories</p></figcaption>
-    </a>
-</div>
-
-<div class ="Glass" title ="Click here to see post">
-    <a href=" ">
-    <h2>Cool drink-glasses</h2>
-    <img src="/image/pictures/pexels-isabella-mendes-338713.jpg" alt="Glass with a orange drink" width="200">
-    <figcaption><p>Cool and stylish drink-glasses ready to serve</p></figcaption>
-    </a>
+    <!-- För att få rätt id på edit o delete knapparna -->
+    <div class="edit">
+       <a href="editPost.php?id=<?php echo $row['postID']; ?>">Edit</a>              
+    </div>
+    <div class="delete">
+       <a href="deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a>
+    </div>
 </div>
 
 </div>
-
+<!-- stänger while loop -->
+<?php
+}
+echo '<br /><a href="views/logout.php">Logout</a>';  
+?>
 </main>
 
 <footer>
