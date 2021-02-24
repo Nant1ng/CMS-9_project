@@ -36,8 +36,9 @@ try
         
             $count = $statement->rowCount();  
             if($count > 0){  
-                $_SESSION["username"] = $_POST["username"];  
-                header("location:../index.php");  
+                $_SESSION["username"] = $_POST["username"];
+                $_SESSION['role'] = $count['role'];
+                header("location:../loggedin.php");  
             }else{  
                 $errorMessage = '<label>Något blev fel försök igen</label>';  
             }  
