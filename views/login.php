@@ -23,27 +23,29 @@ try
         {  
             $errorMessage = '<label>Alla fält måste vara ifyllda</label>';  
         }  
-        else{  
-            $query = "SELECT * FROM users WHERE username = :username AND password = :password";  
-            $statement = $pdo->prepare($query);  
-            $statement->execute(  
-                array(  
-                    'username'     =>     $_POST["username"],  
-                    'password'     =>     $_POST["password"], 
-                )  
-            );  
-            
-          
-            $count = $statement->rowCount();  
+        else{ 
+            $username = $_POST['username'];
+            $userPassword = $_POST['password'];
+            $salt = "siahbndjiasnidja12893183s9300";
+            $userPassword = md5($userPassword.$salt);
 
-            if($count > 0){  
-                $_SESSION["username"] = $_POST["username"];
-                $_SESSION["password"] = $_POST["password"];
+            $sql = "SELECT count(userID), role FROM users WHERE username = :username_IN AND password = :password_IN";
+            $stm = $pdo->prepare($sql);
+            $stm->bindparam(":username_IN", $username);
+            $stm->bindparam(":password_IN", $userPassword);
+            $stm->execute();
+            $return = $stm->fetch();
+
+            if($return[0] > 0){
+                $_SESSION['username'] = $username;
+                $_SESSION['password'] = $userPassword;
                 $_SESSION['role'] = $return['role'];
-                header("location:../loggedin.php");  
+                header("location:../loggedin.php");
             }else{  
                 $errorMessage = '<label>Något blev fel försök igen</label>';  
-            }  
+            } 
+            
+            
         }
         
     }  
