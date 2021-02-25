@@ -7,7 +7,7 @@
     <title>Startpage</title>
 </head>
 <body>
-<a href="views/sign-up.php">Sign up</a>
-    <a href="views/login.php">LOGIN</a>
+    <a href="views/sign-up.php">Sign up</a>
+    <a href="views/login.php">Login</a>
 </body>
 </html>

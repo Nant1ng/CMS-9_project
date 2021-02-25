@@ -11,12 +11,9 @@
 session_start();
 include '../includes/database_connection.php';
 
-
 try  
-{  
-      
-    // För login
-      
+{     
+    // För login      
     if(isset($_POST["login"]))  
     {  
         if(empty($_POST["username"]) || empty($_POST["password"]))  
@@ -29,7 +26,7 @@ try
             $salt = "siahbndjiasnidja12893183s9300";
             $userPassword = md5($userPassword.$salt);
 
-            $sql = "SELECT count(userID), role FROM users WHERE username = :username_IN AND password = :password_IN";
+            $sql = "SELECT count(userID), role, fname FROM users WHERE username = :username_IN AND password = :password_IN";
             $stm = $pdo->prepare($sql);
             $stm->bindparam(":username_IN", $username);
             $stm->bindparam(":password_IN", $userPassword);
@@ -40,16 +37,13 @@ try
                 $_SESSION['username'] = $username;
                 $_SESSION['password'] = $userPassword;
                 $_SESSION['role'] = $return['role'];
+                $_SESSION['fname'] = $return['fname'];
                 header("location:../loggedin.php");
             }else{  
                 $errorMessage = '<label>Något blev fel försök igen</label>';  
-            } 
-            
-            
-        }
-        
+            }   
+        }    
     }  
-
 }  
 catch(PDOException $error)  
 {  
@@ -57,7 +51,7 @@ catch(PDOException $error)
 }  
 ?>
 
-<!-- för error meddelandet -->
+<!-- För error meddelandet -->
 <?php  
     if(isset($errorMessage)){  
         echo '<label>'.$errorMessage.'</label>';  
@@ -65,15 +59,13 @@ catch(PDOException $error)
 ?>  
 
 <div>
-<h2>Logga in</h2>
-<!-- Inputfält -->
-<form method="post">
-<input type="text" name="username" placeholder = "Username"><br>
-<input type="password" name="password" placeholder = "Password"><br>
-<input type="submit" name="login" value="Logga in">
-</form>
+    <h2>Logga in</h2>
+        <!-- Inputfält -->
+        <form method="post">
+        <input type="text" name="username" placeholder = "Username"><br>
+        <input type="password" name="password" placeholder = "Password"><br>
+        <input type="submit" name="login" value="Logga in">
+        </form>
 </div>
-
-
 </body>
 </html>

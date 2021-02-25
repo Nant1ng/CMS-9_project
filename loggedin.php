@@ -9,7 +9,7 @@
 <body>
 
     <header>
-    <img src="/image/logos/Millhouse-logos.jpeg" alt="Logo Millhouse" width="200">
+    <img src="image/logos/Millhouse-logos.jpeg" alt="Logo Millhouse" width="200">
 </header>
 
 <main>
@@ -23,7 +23,7 @@ $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date 
 //För välkomstmeddelande och kollar om man är admin
 
 if(isset($_SESSION['username']) && isset($_SESSION['password'])){
-    echo "<h1>Välkommen " . $_SESSION['username'] . "</h1>";
+    echo "<h1>Välkommen " . $_SESSION['fname'] . "</h1>";
 
     if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
         echo "Du har adminrättigheter";
@@ -37,7 +37,7 @@ while ($row = $stm->fetch()){
     if($_SESSION['role'] == "admin"){                                           // Om role är admin loopa ut edit och deleteknapparna
 ?>
 <div class ="Glasses">
-<!-- fixas senare -->
+<!-- Fixas senare -->
     <h2><?php echo $row['title'];?></h2>
     <img src="<?php echo $row['imageURL'];?>" alt="blog-bild" width="200">
     <figcaption><p><?php echo $row['description'];?></p></figcaption>
@@ -52,13 +52,13 @@ while ($row = $stm->fetch()){
 </div>
 
 </div>
-<!-- stänger while loop -->
+<!-- Stänger while loop -->
 <?php
-    }else{                                                                       // inga edit och deleteknappar
+    }else{                                                                       // Inga edit och deleteknappar
      
     ?>
 <div class ="Glasses">
-<!-- fixas senare -->
+<!-- Fixas senare -->
     <h2><?php echo $row['title'];?></h2>
     <img src="<?php echo $row['imageURL'];?>" alt="blog-bild" width="200">
     <figcaption><p><?php echo $row['description'];?></p></figcaption>

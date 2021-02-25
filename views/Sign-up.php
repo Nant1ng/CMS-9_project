@@ -40,7 +40,8 @@ if(isset($_POST["sign-up"]))
         $stm->bindParam(':lname_IN', $regLname);
 
           if($stm->execute()){
-              echo "Register success";
+            //echo "Register success";
+              header("location:../index.php");
           }else {
               echo "Something went wrong try again";
           }

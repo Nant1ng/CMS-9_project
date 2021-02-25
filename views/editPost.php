@@ -12,15 +12,15 @@ if(isset($_POST['update'])){
     $category = $_POST['category'];    
         
     // sql query och förbered för att köra
-    $sql = "UPDATE posts set description=:description, title=:title, imageUrl=:imageUrl, category=:category WHERE postID=:postID";
+    $sql = "UPDATE posts set description=:description_IN, title=:title_IN, imageUrl=:imageUrl_IN, category=:category_IN WHERE postID=:postID_IN";
     $query = $pdo->prepare($sql);
 
 
-    $query->bindparam(':postID', $postID);               
-    $query->bindparam(':description', $description);
-    $query->bindparam(':title', $title);
-    $query->bindparam(':imageUrl', $imageUrl);
-    $query->bindparam(':category', $category);
+    $query->bindparam(':postID_IN', $postID);               
+    $query->bindparam(':description_IN', $description);
+    $query->bindparam(':title_IN', $title);
+    $query->bindparam(':imageUrl_IN', $imageUrl);
+    $query->bindparam(':category_IN', $category);
 
     //Kör query
     $query->execute();
