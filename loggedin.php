@@ -21,8 +21,17 @@ include 'includes/database_connection.php';
 $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts");
 
 
-// IF statement för att få edit och delete att bara visas som admin
+// IF statement för att få edit och delete att bara visas som admin behövs
 
+
+
+if(isset($_SESSION['username']) && isset($_SESSION['password'])){
+    echo "<h1>Välkommen " . $_SESSION['username'] . "</h1>";
+
+    if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
+        echo "Du har adminrättigheter";
+    }
+}
 
 // Man måste kunna lägga till nytt blogginlägg som admin
 

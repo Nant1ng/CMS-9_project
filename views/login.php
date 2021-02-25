@@ -32,12 +32,14 @@ try
                     'password'     =>     $_POST["password"], 
                 )  
             );  
-
-        
+            
+          
             $count = $statement->rowCount();  
+
             if($count > 0){  
                 $_SESSION["username"] = $_POST["username"];
-                $_SESSION['role'] = $count['role'];
+                $_SESSION["password"] = $_POST["password"];
+                $_SESSION['role'] = $return['role'];
                 header("location:../loggedin.php");  
             }else{  
                 $errorMessage = '<label>Något blev fel försök igen</label>';  
