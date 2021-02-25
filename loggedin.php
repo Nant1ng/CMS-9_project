@@ -26,7 +26,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
     echo "<h1>Välkommen " . $_SESSION['username'] . "</h1>";
 
     if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
-        echo "Du har adminrättigheter";
+        echo "<h2><a href='views/post.php'>Skapa en ny blogpost</a></h2>";
     }
 }
 
