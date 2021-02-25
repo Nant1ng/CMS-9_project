@@ -17,6 +17,8 @@ if(isset($_POST["sign-up"]))
 {
     $regUsername = $_POST['regUsername'];
     $regPassword = $_POST['regPassword'];
+    $salt = "siahbndjiasnidja12893183s9300";
+    $regPassword = md5($regPassword.$salt);
     $regEmail = $_POST['regEmail'];
     $regFname = $_POST['regFname'];
     $regLname = $_POST['regLname'];
