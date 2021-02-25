@@ -5,3 +5,32 @@ body {
 form {
     border: 3px solid #bebebe;
 }
+
+
+/* Style på index.html  */
+
+.start {
+    border-color: green;
+}
+
+.signin-link{
+    border-color: blue;
+}
+
+.login-link{
+    border-color: red;
+}
+
+
+/* Style på posts */
+
+td{
+    border:1px solid #000;
+    width:1px;
+    white-space:nowrap;
+}
+
+td input {
+    width: 100%;
+    box-sizing: border-box;
+}
