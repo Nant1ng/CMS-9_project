@@ -12,7 +12,7 @@ if(isset($_POST['delete'])){
     $category = $_POST['category'];    
         
     // sql query och förbered för att köra
-    $sql = "DELETE posts set description=:description_IN, title=:title_IN, imageUrl=:imageUrl_IN, category=:category_IN WHERE postID=:postID_IN";
+    $sql = "DELETE FROM posts WHERE description=:description_IN, title=:title_IN, imageUrl=:imageUrl_IN, category=:category_IN WHERE postID=:postID_IN";
     $query = $pdo->prepare($sql);
 
 
@@ -43,7 +43,7 @@ $query->execute(array(':postID' => $postID));
 // while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en array med all data från posts med rätt id
 // {
 //     $title = $row['title'];  
-//     $description = $row['description'];                               //sparar all data från arrayen i nya variabler
+//     $description = $row['description'];          //sparar all data från arrayen i nya variabler
 //     $imageUrl = $row['imageUrl'];    
 //     $category = $row['category'];                  
 // }
