@@ -68,19 +68,25 @@ catch(PDOException $error)
 <body>
     <div class="sign-up-container">
         <h3>Sign up</h3>
+        <pre>
             <form method="post">
                 <label>First name:</label>
-                <input type="text" name="regFname"><br>
+                <input type="text" name="regFname">
                 <label>Last name:</label>
-                <input type="text" name="regLname"> <br>
+                <input type="text" name="regLname">
                 <label>Email:</label>
-                <input type="text" name="regEmail"><br>
+                <input type="text" name="regEmail">
                 <label>Username:</label>
-                <input type="text" name="regUsername" ><br>
+                <input type="text" name="regUsername" >
                 <label>Password:</label>
-                <input type="password" name="regPassword"><br>
-                <input type="submit" name="sign-up" value="Sign-up"> 
+                <input type="password" name="regPassword">
+                <select name ="role">
+                <option value = "user">User</option>
+                <option value = "admin">Admin</option> 
+                <input type="submit" name="sign-up" value="Sign-up">
+                </select>
             </form>
+        </pre>  
     </div>
 </body>
 </html>

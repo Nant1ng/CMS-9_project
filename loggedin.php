@@ -36,7 +36,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
 while ($row = $stm->fetch()){
     if($_SESSION['role'] == "admin"){                                           // Om role är admin loopa ut edit och deleteknapparna
 ?>
-<div class ="Glasses">
+<div class ="post">
 <!-- Fixas senare -->
     <h2><?php echo $row['title'];?></h2>
     <img src="<?php echo $row['imageURL'];?>" alt="blog-bild" width="200">
