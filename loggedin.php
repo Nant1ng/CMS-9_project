@@ -36,7 +36,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
 while ($row = $stm->fetch()){
     if($_SESSION['role'] == "admin"){                                           // Om role är admin loopa ut edit och deleteknapparna
 ?>
-<div class ="post">
+<div class ="posts">
 <!-- Fixas senare -->
     <h2><?php echo $row['title'];?></h2>
     <img src="<?php echo $row['imageURL'];?>" alt="blog-bild" width="200">
@@ -49,6 +49,9 @@ while ($row = $stm->fetch()){
     <div class="delete">
        <a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a>
     </div>
+    <div class="comments">
+       <a href="views/comments.php?id=<?php echo $row['postID']; ?>">Kommentarer</a>
+    </div>
 </div>
 
 </div>
@@ -57,12 +60,15 @@ while ($row = $stm->fetch()){
     }else{                                                                       // Inga edit och deleteknappar
      
     ?>
-<div class ="Glasses">
+<div class ="posts">
 <!-- Fixas senare -->
     <h2><?php echo $row['title'];?></h2>
     <img src="<?php echo $row['imageURL'];?>" alt="blog-bild" width="200">
     <figcaption><p><?php echo $row['description'];?></p></figcaption>
     <p><?php echo $row['date'];?></p>
+    <div class="comments">
+       <a href="views/comments.php?id=<?php echo $row['postID']; ?>">Kommentarer</a>
+    </div>
 
 </div>
 <?php
