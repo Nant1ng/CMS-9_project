@@ -21,9 +21,9 @@ include 'includes/database_connection.php';
 $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts");
 
 //För välkomstmeddelande och kollar om man är admin
-
+//ucfrist() är en inbygged funktion som gör så att den första bokstaven är uppercase
 if(isset($_SESSION['username']) && isset($_SESSION['password'])){
-    echo "<h1>Välkommen " . $_SESSION['fname'] . "</h1>";
+    echo "<h1>Välkommen " . ucfirst($_SESSION['fname']). "</h1>";
 
     if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
         echo "<h2><a href='views/post.php'>Skapa en ny blogpost</a></h2>";
