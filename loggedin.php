@@ -47,7 +47,7 @@ while ($row = $stm->fetch()){
        <a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a>              
     </div>
     <div class="delete">
-       <a href="deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a>
+       <a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a>
     </div>
 </div>
 
