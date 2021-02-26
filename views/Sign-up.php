@@ -80,11 +80,8 @@ catch(PDOException $error)
                 <input type="text" name="regUsername" >
                 <label>Password:</label>
                 <input type="password" name="regPassword">
-                <select name ="role">
-                <option value = "user">User</option>
-                <option value = "admin">Admin</option> 
+        
                 <input type="submit" name="sign-up" value="Sign-up">
-                </select>
             </form>
         </pre>  
     </div>

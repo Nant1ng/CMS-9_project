@@ -66,9 +66,6 @@ catch(PDOException $error)
         <form method="post">
         <input type="text" name="username" placeholder = "Username"><br>
         <input type="password" name="password" placeholder = "Password"><br>
-        <select name ="role">
-                <option value = "user">User</option>
-                <option value = "admin">Admin</option> 
         <input type="submit" name="login" value="Logga in">
         </form>
 </div>
