@@ -1,5 +1,5 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 form {
@@ -30,13 +30,16 @@ a:active {
 
 
 h1 {
-    font-size: 10rem;
+    font-size: 5rem;
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 
 h2 {
-    font-size: 7rem;
+    font-size: 2rem;
+    text-align: center;
+
 }
 
 h3 {
@@ -58,17 +61,49 @@ h3 {
 }
 
 
-/* Style på posts */
+/* Style på posts loggedin.php*/
+
+
 .posts{
     border: red solid 3px;
+    padding:2rem;
+    display: flex;
+    justify-content:space-around;
+}
+
+.post{
+    border: red solid 3px;
+    padding:2rem;
+}
+
+
+/* Style på post.php, skapa inlägg */
+.post-form{
+    border: grey solid 3px;
+    padding:2rem;
 }
 
 /* Style på comments */
 
 
 /* Style på knapparna Redigera och Ta bort */
+.edit{
 
+}
+
+.delete{
+
+}
+
+.comments{
+
+}
 
 /* Style på footer */
+
+footer{
+    text-align: center;
+    color: lightgray;
+}
 
 

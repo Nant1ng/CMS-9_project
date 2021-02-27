@@ -20,9 +20,9 @@
     </header>
     <hr>
 
-    <main>
+<main>
 
-<div id = "Posts">
+<div id = "post-container">
 <?php
 session_start();
 include 'includes/database_connection.php';
@@ -44,25 +44,25 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
 while ($row = $stm->fetch()){
     if($_SESSION['role'] == "admin"){           // Om role är admin loopa ut edit och deleteknapparna
 ?>
-<div class ="posts">
-<!-- Fixas senare -->
-    <h2><?php echo $row['title'];?></h2>
-    <img src="<?php echo $row['imageURL'];?>" alt="blog-bild" width="200">
-    <figcaption><p><?php echo $row['description'];?></p></figcaption>
-    <p><?php echo $row['date'];?></p>
-    <!-- För att få rätt id på edit o delete knapparna -->
-    <div class="edit">
-       <a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a>              
-    </div>
-    <div class="delete">
-       <a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a>
-    </div>
-    <div class="comments">
-       <a href="views/comments.php?id=<?php echo $row['postID']; ?>">Kommentarer</a>
-    </div>
-</div>
+    <div class ="posts">
+    <!-- Fixas senare -->
+        <h2><?php echo $row['title'];?></h2>
+        <figure><img src="<?php echo $row['imageURL'];?>" alt="blog-bild" width="200">
+        <figcaption><p><?php echo $row['description'];?></p></figcaption><figure>
+        <p><?php echo $row['date'];?></p>
+        <!-- För att få rätt id på edit o delete knapparna -->
+        <div class="edit">
+        <a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a>              
+        </div>
+        <div class="delete">
+        <a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a>
+        </div>
+        <div class="comments">
+        <a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a>
+        </div>
+    </div> <!-- stänger post -->
+</div> <!-- stänger post-container -->
 
-</div>
 <!-- Stänger while loop -->
 <?php
     }else{   // Inga edit och deleteknappar
@@ -84,8 +84,9 @@ while ($row = $stm->fetch()){
 }
 ?>
 </main>
-
+<hr>
 <footer>
+    <p>&copy; 2021 Grupp CMS 9, kurs systemutveckling PHP, Medieinsitutet</p>
 </footer>
 </body>
 </html>
