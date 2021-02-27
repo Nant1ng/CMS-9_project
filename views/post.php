@@ -19,12 +19,12 @@ include '../includes/database_connection.php';
 
 <div class="form">
 <form method="POST" action="savePost.php">
-<input type="text" name="title" placeholder="title">
-<textarea name="description" cols="30" rows="10" placeholder="meddelande"></textarea>
-<input type="text" name="imageUrl" placeholder="image url">
-<input type="text" name="category" placeholder="kategori">
-<input type="date" name="date" placeholder="datum">
-<input type="submit" value="Post message!">
+<input type="text" name="title" placeholder="Rubrik">
+<textarea name="description" cols="30" rows="10" placeholder="Beskrivning"></textarea>
+<input type="text" name="imageUrl" placeholder="Bildadress ex: https://images.pexels.com/photos/2811088/pexels-photo-2811088.jpeg">
+<input type="text" name="category" placeholder="Välj kategori">
+<input type="date" name="date" placeholder="Väj datum">
+<input type="submit" value="Posta inlägg!">
 </form>
 
 </div>
