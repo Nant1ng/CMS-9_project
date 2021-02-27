@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;}
+    font-family: Arial, Helvetica, sans-serif}
 
 form {
     border: 3px solid #bebebe;
@@ -10,11 +10,15 @@ form {
 
 
 h1 {
-    font-size: 45em;
+    font-size: 10rem;
+}
+
+h2 {
+    font-size: 7rem;
 }
 
 h3 {
-    font-size: 5em;
+    font-size: 5rem;
 }
 
 /* Style på index.html  */
