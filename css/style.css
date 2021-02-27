@@ -9,42 +9,40 @@ form {
 
 /* Style på länkar */
 
-a:link {
+a:link, a:visited {
     text-decoration: none;
+    color: grey;
 }
   
-a:visited {
-    text-decoration: none;
-}
-  
-a:hover {
+a:hover, a:active {
     text-decoration: underline;
 }
-  
-a:active {
-    text-decoration: underline;
-}
+
 
 
 /* Rubriker  */
 
 
 h1 {
+    border: red solid 3px;
     font-size: 5rem;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: auto;
+    width: auto;
 
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem 1rem;
     text-align: center;
 
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: 1rem;
 }
+
 
 /* Style på index.html  */
 
@@ -64,23 +62,34 @@ h3 {
 /* Style på posts loggedin.php*/
 
 
-.posts{
-    border: red solid 3px;
-    padding:2rem;
+#post-container{
+    border: green solid 3px;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+#posts{
+    border: blue solid 3px;
     display: flex;
     justify-content:space-around;
+    flex-wrap: wrap;
 }
 
 .post{
     border: red solid 3px;
-    padding:2rem;
+    width: 20rem;
+    height: 33rem;
+    text-align: center;
+    margin:0.5rem;
+    padding:0.5rem;
+
 }
 
 
 /* Style på post.php, skapa inlägg */
 .post-form{
     border: grey solid 3px;
-    padding:2rem;
 }
 
 /* Style på comments */
