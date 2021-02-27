@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, Helvetica, sans-serif}
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 form {
     border: 3px solid #bebebe;
@@ -10,19 +11,19 @@ form {
 
 a:link {
     text-decoration: none;
-  }
+}
   
-  a:visited {
+a:visited {
     text-decoration: none;
-  }
+}
   
-  a:hover {
+a:hover {
     text-decoration: underline;
-  }
+}
   
-  a:active {
+a:active {
     text-decoration: underline;
-  }
+}
 
 
 /* Rubriker  */
@@ -30,6 +31,8 @@ a:link {
 
 h1 {
     font-size: 10rem;
+    text-align: center;
+
 }
 
 h2 {
@@ -56,7 +59,9 @@ h3 {
 
 
 /* Style på posts */
-
+.posts{
+    border: red solid 3px;
+}
 
 /* Style på comments */
 
