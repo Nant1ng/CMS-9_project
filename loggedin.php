@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Logged in</title>
 </head>
 <body>
 
     <header>
-    <img src="image/logos/Millhouse-logos.jpeg" alt="Logo Millhouse" width="200">
-</header>
+        <img src="image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" width="200">
+    </header>
+    <hr>
 
-<main>
+    <main>
 
 <div id = "Posts">
 <?php
@@ -34,7 +38,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
 
 //while loop för att skriva ut alla blogposts på sidan
 while ($row = $stm->fetch()){
-    if($_SESSION['role'] == "admin"){                                           // Om role är admin loopa ut edit och deleteknapparna
+    if($_SESSION['role'] == "admin"){           // Om role är admin loopa ut edit och deleteknapparna
 ?>
 <div class ="posts">
 <!-- Fixas senare -->
@@ -57,7 +61,7 @@ while ($row = $stm->fetch()){
 </div>
 <!-- Stänger while loop -->
 <?php
-    }else{                                                                       // Inga edit och deleteknappar
+    }else{                            // Inga edit och deleteknappar
      
     ?>
 <div class ="posts">
@@ -67,7 +71,7 @@ while ($row = $stm->fetch()){
     <figcaption><p><?php echo $row['description'];?></p></figcaption>
     <p><?php echo $row['date'];?></p>
     <div class="comments">
-       <a href="views/comments.php?id=<?php echo $row['postID']; ?>">Kommentarer</a>
+       <a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a>
     </div>
 
 </div>
