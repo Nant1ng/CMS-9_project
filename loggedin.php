@@ -14,7 +14,7 @@
 </header>
 
 <div class = "loggaut-knapp">
-    <a href="views/logout.php">Logout</a>
+    <a href="views/logout.php">Logga ut</a>
 </div>  
 
 <main>
@@ -83,12 +83,11 @@
         </div> <!-- stänger post -->
 </div> <!-- stänger post-container -->
 
-
-
 <?php
     }
 }
 ?>
+
 
 </main>
 

@@ -20,7 +20,7 @@ a:link, a:visited {
 }
   
 a:hover, a:active {
-    text-decoration: underline;
+    text-decoration: rgb(63, 63, 63);
 }
 
 
@@ -73,7 +73,7 @@ header {
 }
 
 .loggaut-knapp {
-    padding: 0rem 1rem ;
+    padding: 1rem ;
 }
 
 #post-container{
