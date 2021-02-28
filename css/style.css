@@ -24,7 +24,7 @@ a:hover, a:active {
 
 
 h1 {
-    border: red solid 3px;
+    border: pink solid 3px;
     font-size: 5rem;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -34,15 +34,28 @@ h1 {
 }
 
 h2 {
+    border: rgb(196, 107, 121) solid 3px;
     font-size: 3rem 1rem;
     text-align: center;
 
 }
 
 h3 {
-    font-size: 1rem;
+    border: rgb(117, 50, 61) solid 3px;
+    font-size: 2rem;
 }
 
+h4 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p{
+    font-size: 1rem;
+    text-align: left;
+}
 
 /* Style på index.html  */
 
@@ -59,31 +72,52 @@ h3 {
 }
 
 
-/* Style på posts loggedin.php*/
+/* Style på loggedin.php*/
 
+header {
+    background-color: rgb(253, 230, 230);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.header-logo {
+    width: 15rem;
+}
 
 #post-container{
     border: green solid 3px;
-    align-items: center;
+    background-color: rgb(243, 243, 243);
     width: 100%;
     height: auto;
-}
-
-#posts{
-    border: blue solid 3px;
     display: flex;
     justify-content:space-around;
     flex-wrap: wrap;
 }
 
 .post{
-    border: red solid 3px;
-    width: 20rem;
-    height: 33rem;
-    text-align: center;
+    border: lightgray solid 1px;
+    background-color: white;
+    width: 40rem;
+    height: auto;
     margin:0.5rem;
     padding:0.5rem;
 
+}
+
+p.date {
+    font-size: 1rem;
+    text-align: center;
+}
+
+img {
+    width: 35rem;
+}
+
+
+.postknappar {
+    font-size: 0.7rem;
+    text-align: center;
 }
 
 
@@ -92,27 +126,22 @@ h3 {
     border: grey solid 3px;
 }
 
-/* Style på comments */
 
 
-/* Style på knapparna Redigera och Ta bort */
-.edit{
+/* Style på knapparna Redigera och Ta bort och comments*/
 
+.edit, .delete, .comments {
+    text-align: center;
 }
 
-.delete{
-
-}
-
-.comments{
-
-}
 
 /* Style på footer */
 
-footer{
+.footer{
     text-align: center;
     color: lightgray;
+    text-transform: uppercase;
+    font-size: 0.7rem;
 }
 
 
