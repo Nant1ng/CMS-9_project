@@ -1,3 +1,8 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
@@ -42,22 +47,6 @@ h2 {
 h3 {
     font-size: 1rem;
 }
-
-
-/* Style på index.html  */
-
-.start {
-    border: green 3px solid;
-}
-
-.signin-link{
-    border-color: blue;
-}
-
-.login-link{
-    border-color: red;
-}
-
 
 /* Style på posts loggedin.php*/
 

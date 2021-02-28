@@ -1,0 +1,21 @@
+/* Style på index.html  */
+.start{
+    padding-top: 20%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.signup-link{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+.login-link{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+.signup-link, .login-link{
+    display: inline-block;
+}
