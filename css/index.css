@@ -1,0 +1,35 @@
+/* Style på index.html  */
+.start{
+    padding-top: 20%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.signup-link{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border: 3px solid black;
+}
+.login-link{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border: 3px solid black;
+}
+#login{
+    text-decoration: none;
+    position: relative;
+    top: 40g%;
+}
+#signup{
+    text-decoration: none;
+    position: relative;
+    top: 40%;
+}
+#login, #signup{
+    color: black;
+    cursor: pointer;
+    font-size: 3vw;
+}
