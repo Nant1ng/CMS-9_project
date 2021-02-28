@@ -55,6 +55,7 @@ h4 {
     text-transform: uppercase;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1rem 0rem ;
 }
 
 p{
@@ -80,14 +81,15 @@ p{
 /* Style på loggedin.php*/
 
 header {
-    background-color: rgb(253, 230, 230);
+    background-color: rgba(253, 230, 230, 0.281);
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
 }
 
 .header-logo {
-    width: 15rem;
+    width: 10rem;
+    padding: 0rem 1rem ;
 }
 
 #post-container{
@@ -106,17 +108,19 @@ header {
     width: 40rem;
     height: auto;
     margin:0.5rem;
-    padding:0.5rem;
+    padding:2rem 5rem;
 
 }
 
 p.date {
     font-size: 1rem;
     text-align: center;
+    padding: 0.5rem;
+
 }
 
 img {
-    width: 35rem;
+    width: 40rem;
 }
 
 

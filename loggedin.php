@@ -11,15 +11,13 @@
 
     <header>
         <img src = "image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo">
-    
-        <div class = "loggaut-knapp">
+    <hr>
+    </header>
+    <div class = "loggaut-knapp">
             <?php
             echo '<a href="views/logout.php">Logout</a>';
             ?>
         </div>  
-    </header>
-    <hr>
-
 <main>
 
 
@@ -37,7 +35,7 @@
             echo "<h2><a href='views/post.php'> Skapa en ny blogpost</a></h2>";
         }
     }
-
+    
     
     // Man måste kunna lägga till nytt blogginlägg som admin
 
