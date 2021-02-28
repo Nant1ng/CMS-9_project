@@ -10,10 +10,10 @@
 <body>
    <div class ="start">
       <div class ="login-link">
-         <a href="views/login.php">Login</a>
+         <a id="login" href="views/login.php">Login</a>
       </div>
       <div class ="signup-link">
-         <a href="views/sign-up.php">Sign up</a>
+         <a id="signup" href="views/sign-up.php">Sign up</a>
       </div>
    </div>
 </body>

@@ -10,12 +10,26 @@
     height: 200px;
     width: 200px;
     background-color: red;
+    border: 3px solid black;
 }
 .login-link{
     height: 200px;
     width: 200px;
     background-color: red;
+    border: 3px solid black;
 }
-.signup-link, .login-link{
-    display: inline-block;
+#login{
+    text-decoration: none;
+    position: relative;
+    top: 40g%;
+}
+#signup{
+    text-decoration: none;
+    position: relative;
+    top: 40%;
+}
+#login, #signup{
+    color: black;
+    cursor: pointer;
+    font-size: 3vw;
 }
