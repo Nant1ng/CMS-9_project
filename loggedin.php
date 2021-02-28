@@ -9,15 +9,14 @@
 </head>
 <body>
 
-    <header>
-        <img src = "image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo">
-    <hr>
-    </header>
-    <div class = "loggaut-knapp">
-            <?php
-            echo '<a href="views/logout.php">Logout</a>';
-            ?>
-        </div>  
+<header>
+    <img src = "image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo">
+</header>
+
+<div class = "loggaut-knapp">
+    <a href="views/logout.php">Logout</a>
+</div>  
+
 <main>
 
 
@@ -46,7 +45,6 @@
 
 
 <div id = "post-container">
-
         <div class ="post">
             <figure><h4><?php echo $row['title'];?></h4>
             <p class ="date"><?php echo $row['date'];?></p>
@@ -56,13 +54,13 @@
             <figure>
             <!-- För att få rätt id på edit o delete knapparna -->
             
-            <div class="postknappar">
-            <p><a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a></p>              
+                <div class="postknappar">
+                <p><a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a></p>              
 
-            <p><a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a></p>
+                <p><a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a></p>
 
-            <p><a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a></p>
-            </div>
+                <p><a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a></p>
+                </div><!-- stänger postknappar -->
 
         </div> <!-- stänger post -->
 
@@ -73,10 +71,13 @@
 
         <div class ="post">
         <!-- Fixas senare -->
+            <figure>
             <h2><?php echo $row['title'];?></h2>
-            <figure><img src="<?php echo $row['imageURL'];?>" alt="blog-bild" width="200">
-            <figcaption><p><?php echo $row['description'];?></p></figcaption></figure>
             <p><?php echo $row['date'];?></p>
+            <hr>
+            <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
+            <figcaption><p><?php echo $row['description'];?></p></figcaption>
+            </figure>
             <div class="comments">
             <a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a>
         </div> <!-- stänger post -->

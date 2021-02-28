@@ -27,9 +27,8 @@ a:hover, a:active {
 
 /* Rubriker  */
 
-
-h1 {
-    border: pink solid 3px;
+/* Välkommen..  */
+h1 { 
     font-size: 5rem;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -38,11 +37,11 @@ h1 {
 
 }
 
+/* Skapa bloggpost */
 h2 {
-    border: rgb(196, 107, 121) solid 3px;
     font-size: 3rem 1rem;
     text-align: center;
-
+    padding: 1rem 0rem;
 }
 
 h3 {
@@ -58,11 +57,6 @@ h4 {
     padding: 1rem 0rem ;
 }
 
-p{
-    font-size: 1rem;
-    text-align: left;
-}
-
 
 /* Style på loggedin.php*/
 
@@ -75,6 +69,10 @@ header {
 
 .header-logo {
     width: 10rem;
+    padding: 0rem 1rem ;
+}
+
+.loggaut-knapp {
     padding: 0rem 1rem ;
 }
 
@@ -93,7 +91,7 @@ header {
     background-color: white;
     width: 40rem;
     height: auto;
-    margin:0.5rem;
+    margin:1rem;
     padding:2rem 5rem;
 
 }
