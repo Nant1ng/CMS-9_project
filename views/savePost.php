@@ -20,7 +20,7 @@ $stm->bindParam(':date_IN', $date);
 if($stm->execute()) {
     header("location:../loggedin.php");
 }else{
-    echo "Något blev fel";
+    echo "Something went wrong try again";
 }
 
 

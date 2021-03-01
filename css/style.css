@@ -37,7 +37,6 @@ h1 {
 
 }
 
-/* Skapa bloggpost */
 h2 {
     font-size: 3rem 1rem;
     text-align: center;
@@ -61,7 +60,6 @@ h4 {
 /* Style på loggedin.php*/
 
 header {
-    background-color: rgba(253, 230, 230, 0.281);
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -76,14 +74,16 @@ header {
     padding: 1rem ;
 }
 
+
+
 #post-container{
     border: green solid 3px;
     background-color: rgb(243, 243, 243);
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
-    justify-content:space-around;
-    flex-wrap: wrap;
+    flex-flow:column wrap;
+    align-items: center;
 }
 
 .post{
@@ -98,6 +98,7 @@ header {
 
 p.date {
     font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     padding: 0.5rem;
 
@@ -130,3 +131,21 @@ img {
 }
 
 
+
+
+
+
+/* Sign-up */
+
+
+label
+{
+    display:none;
+    
+}
+
+.signup-form {
+    border: blue solid 3px;
+
+
+}

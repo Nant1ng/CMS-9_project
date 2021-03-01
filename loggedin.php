@@ -13,10 +13,6 @@
     include_once('includes/header.php');
 ?>
 
-<div class = "loggaut-knapp">
-    <a href="views/logout.php">Logga ut</a>
-</div>  
-
 <main>
 
 <div id = "post-container">
@@ -28,14 +24,20 @@
     //För välkomstmeddelande och kollar om man är admin
     //ucfrist() är en inbygged funktion som gör så att den första bokstaven är uppercase
     if(isset($_SESSION['username']) && isset($_SESSION['password'])){
-        echo "<h1>Välkommen " . ucfirst($_SESSION['fname']). "</h1>";
+        echo "<h1>Welcome " . ucfirst($_SESSION['fname']). "</h1>";
 
         if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
-            echo "<h2><a href='views/post.php'> Skapa en ny blogpost</a></h2>";
+            echo "<span><a href='views/post.php'> Create a new blogpost</a></span>";
         }
     }
+   
+    ?>
+
+    <div class = "loggaut-knapp">
+    <a href="views/logout.php">Log out</a>
+    </div>  
     
-    
+    <?php
     // Man måste kunna lägga till nytt blogginlägg som admin
 
     //while loop för att skriva ut alla blogposts på sidan
@@ -44,10 +46,9 @@
     ?>
 
 
-
         <div class ="post">
-            <figure><h4><?php echo $row['title'];?></h4>
             <p class ="date"><?php echo $row['date'];?></p>
+            <figure><h4><?php echo $row['title'];?></h4>
             <hr>
             <figcaption class ="description"><p><?php echo $row['description'];?></p></figcaption>
             <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
@@ -55,11 +56,9 @@
             <!-- För att få rätt id på edit o delete knapparna -->
             
                 <div class="postknappar">
-                <p><a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a></p>              
-
-                <p><a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a></p>
-
-                <p><a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a></p>
+                    <p><a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a></p>              
+                    <p><a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a></p>
+                    <p><a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a></p>
                 </div><!-- stänger postknappar -->
 
         </div> <!-- stänger post -->
@@ -72,15 +71,15 @@
         <div class ="post">
         <!-- Fixas senare -->
             <figure>
-            <h2><?php echo $row['title'];?></h2>
             <p><?php echo $row['date'];?></p>
+            <h2><?php echo $row['title'];?></h2>
             <hr>
-            <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
             <figcaption><p><?php echo $row['description'];?></p></figcaption>
+            <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
             </figure>
             <div class="comments">
             <a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a>
-        </div> <!-- stänger post -->
+            </div> <!-- stänger post -->
 </div> <!-- stänger post-container -->
 
 <?php
