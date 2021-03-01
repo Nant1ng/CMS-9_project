@@ -21,19 +21,22 @@ a:link, a:visited {
   
 a:hover, a:active {
     text-decoration: rgb(63, 63, 63);
+    background-color: grey;
 }
 
 
 
 /* Rubriker  */
 
-/* Välkommen..  */
+/* Welcome..  */
 h1 { 
     font-size: 5rem;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     height: auto;
     width: auto;
+    margin: 2rem;
+
 
 }
 
@@ -56,7 +59,13 @@ h4 {
     padding: 1rem 0rem ;
 }
 
-
+span {
+    border: lightgray solid 1px;
+    width: auto;
+    height: auto;
+    margin:1rem;
+    padding:0.5rem 2rem;
+}
 /* Style på loggedin.php*/
 
 header {
@@ -71,7 +80,12 @@ header {
 }
 
 .loggaut-knapp {
-    padding: 1rem ;
+    border: lightgray solid 1px;
+    width: auto;
+    height: auto;
+    padding:0.5rem 2rem;
+    margin:0.5rem 2rem 7rem;
+
 }
 
 
@@ -109,7 +123,11 @@ img {
 }
 
 .description {
-    padding: 1rem 0rem;
+    width: 30rem;
+    margin: 2.5rem 5rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.6;
+
 }
 
 
