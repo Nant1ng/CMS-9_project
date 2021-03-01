@@ -13,6 +13,9 @@ session_start();
 include '../includes/database_connection.php';
 
 ?>
+<?php
+    include_once('../includes/header.php');
+?>
 <h2>Skapa ett nytt blogginlägg</h2>
 
 <pre>

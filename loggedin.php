@@ -9,9 +9,9 @@
 </head>
 <body>
 
-<header>
-    <img src = "image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo">
-</header>
+<?php
+    include_once('includes/header.php');
+?>
 
 <div class = "loggaut-knapp">
     <a href="views/logout.php">Logga ut</a>

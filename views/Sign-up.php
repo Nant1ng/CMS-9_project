@@ -66,6 +66,9 @@ catch(PDOException $error)
 
 
 <body>
+<?php
+    include_once('includes/header.php');
+?>
     <div class="sign-up-container">
         <h3>Sign up</h3>
         <pre>
