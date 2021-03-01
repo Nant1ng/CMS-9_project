@@ -26,6 +26,16 @@
     if(isset($_SESSION['username']) && isset($_SESSION['password'])){
         echo "<h1>Welcome " . ucfirst($_SESSION['fname']). "</h1>";
 
+
+?>
+     <p class = "welcome-text">
+    Welcome to Millhouse merchandise. We are a small business that focus on customer service and high quality products. Here on our product blog you can follow our latest products and also comment what you think our products. Here you can choose to comment between glasses, watches and lighter decoration. Happy reading!
+    </p>
+
+<?php
+
+
+
         if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
             echo "<span><a href='views/post.php'> Create a new blogpost</a></span>";
         }
@@ -35,8 +45,10 @@
 
     <div class = "loggaut-knapp">
     <a href="views/logout.php">Log out</a>
-    </div>  
-    
+    </div> 
+
+    <p class ="latestpost">Latest posts</p>
+        
     <?php
     // Man måste kunna lägga till nytt blogginlägg som admin
 
@@ -45,6 +57,7 @@
         if($_SESSION['role'] == "admin"){           // Om role är admin loopa ut edit och deleteknapparna
     ?>
 
+   
 
         <div class ="post">
             <p class ="date"><?php echo $row['date'];?></p>
