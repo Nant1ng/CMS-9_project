@@ -29,7 +29,7 @@
 
 ?>
      <p class = "welcome-text">
-    Welcome to Millhouse merchandise. We are a small business that focus on customer service and high quality products. Here on our product blog you can follow our latest products and also comment what you think our products. Here you can choose to comment between glasses, watches and lighter decoration. Happy reading!
+    Welcome to Millhouse merchandise. We are a small business that focus on customer service and high quality products. Here on our product blog you can follow our latest products and also comment what you think of our products. Here you can choose to comment between accessories like glasses, watches and lighter decoration for your home. Happy reading!
     </p>
 
 <?php
