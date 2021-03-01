@@ -19,7 +19,7 @@
 
 <main>
 
-
+<div id = "post-container">
     <?php
     session_start();
     include 'includes/database_connection.php';
@@ -44,7 +44,7 @@
     ?>
 
 
-<div id = "post-container">
+
         <div class ="post">
             <figure><h4><?php echo $row['title'];?></h4>
             <p class ="date"><?php echo $row['date'];?></p>
