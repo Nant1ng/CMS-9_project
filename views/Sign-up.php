@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+<title>Sign up</title>
 </head>
 <?php
 session_start();
@@ -80,11 +80,8 @@ catch(PDOException $error)
                 <input type="text" name="regUsername" >
                 <label>Password:</label>
                 <input type="password" name="regPassword">
-                <select name ="role">
-                <option value = "user">User</option>
-                <option value = "admin">Admin</option> 
+        
                 <input type="submit" name="sign-up" value="Sign-up">
-                </select>
             </form>
         </pre>  
     </div>

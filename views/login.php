@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logga in</title>
-    <link rel = "stylesheet" type = "text/css" href = "style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
 </head>
 <body>
 <?php
@@ -66,9 +66,6 @@ catch(PDOException $error)
         <form method="post">
         <input type="text" name="username" placeholder = "Username"><br>
         <input type="password" name="password" placeholder = "Password"><br>
-        <select name ="role">
-                <option value = "user">User</option>
-                <option value = "admin">Admin</option> 
         <input type="submit" name="login" value="Logga in">
         </form>
 </div>

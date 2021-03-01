@@ -51,13 +51,13 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 ?>
 
 <html>
-<head>    
-    <title>Edit post</title>
-</head>
  
 <body>
-    <a href="../index.php">Tillbaka till bloggen</a>
+    <a href="../index.php">Back to the blog</a>
     <br/><br/>
+
+    <h3>Edit post</h3>
+
     <form name="form1" method="post" action="editPost.php">
     <table border="0">
             <tr>
