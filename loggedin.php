@@ -69,10 +69,12 @@
             <!-- För att få rätt id på edit o delete knapparna -->
             
                 <div class="postbuttons">
-                    <p><a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a></p>              
+                    <div class ="edit">
+                    <p><a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a></p> 
+                    </div>             
                     <p><a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a></p>
                     <p><a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a></p>
-                </div><!-- stänger postknappar -->
+                </div><!-- stänger postbuttons-->
 
         </div> <!-- stänger post -->
 
