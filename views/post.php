@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
-    <title>Skapa ett inlägg</title>
+    <title>The blog</title>
 </head>
 <body>
 <?php
@@ -13,7 +13,10 @@ session_start();
 include '../includes/database_connection.php';
 
 ?>
-<h2>Skapa ett nytt blogginlägg</h2>
+<?php
+    include_once('../includes/header.php');
+?>
+<h2>Create a new blogpost</h2>
 
 <pre>
 <div class="post-form">

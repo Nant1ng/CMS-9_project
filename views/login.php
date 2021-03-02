@@ -53,6 +53,10 @@ catch(PDOException $error)
 }  
 ?>
 
+<?php
+    include_once('../includes/header.php');
+?>
+
 <!-- För error meddelandet -->
 <?php  
     if(isset($errorMessage)){  

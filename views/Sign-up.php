@@ -26,7 +26,7 @@ if(isset($_POST["sign-up"]))
 
     if(empty($_POST["regUsername"]) || empty($_POST["regPassword"]) || empty($_POST["regEmail"]) || empty($_POST["regFname"]) || empty($_POST["regLname"]))
     {
-        $message = '<label>Alla fält måste fyllas i</label>';
+        $message = '<label>All fields must be filled</label>';
     }
     else
     {
@@ -66,20 +66,23 @@ catch(PDOException $error)
 
 
 <body>
-    <div class="sign-up-container">
+<?php
+    include_once('includes/header.php');
+?>
+    <div class="signup-container">
         <h3>Sign up</h3>
         <pre>
-            <form method="post">
-                <label>First name:</label>
-                <input type="text" name="regFname">
+            <form method="post" class ="signup-form">
+                <label hidden>First name:</label>
+                <input type="text" name="regFname" placeholder = "First name">
                 <label>Last name:</label>
-                <input type="text" name="regLname">
+                <input type="text" name="regLname" placeholder = "Last name">
                 <label>Email:</label>
-                <input type="text" name="regEmail">
+                <input type="text" name="regEmail" placeholder = "Email">
                 <label>Username:</label>
-                <input type="text" name="regUsername" >
+                <input type="text" name="regUsername" placeholder = "Username">
                 <label>Password:</label>
-                <input type="password" name="regPassword">
+                <input type="password" name="regPassword"placeholder = "Password">
         
                 <input type="submit" name="sign-up" value="Sign-up">
             </form>
