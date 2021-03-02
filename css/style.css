@@ -79,7 +79,7 @@ span {
 
 /* Style på index.html */
 .startpage-container {
-    border: 3px solid black;
+    border-left: 3px solid black;
     min-width: 50%;
     display: flex;
     align-items: center;
