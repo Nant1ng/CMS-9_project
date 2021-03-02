@@ -17,27 +17,33 @@ form {
 a:link, a:visited {
     text-decoration: none;
     color: grey;
+    border: lightgray solid 1px;
+    width: auto;
+    height: auto;
+    padding:0.5rem 2rem;
 }
   
 a:hover, a:active {
-    text-decoration: rgb(63, 63, 63);
+    text-decoration:none;
+    background-color: rgba(211, 211, 211, 0.192);
 }
 
 
 
 /* Rubriker  */
 
-/* Välkommen..  */
+/* Welcome..  */
 h1 { 
     font-size: 5rem;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     height: auto;
     width: auto;
+    margin: 5rem 0rem 2rem;
+
 
 }
 
-/* Skapa bloggpost */
 h2 {
     font-size: 3rem 1rem;
     text-align: center;
@@ -57,11 +63,24 @@ h4 {
     padding: 1rem 0rem ;
 }
 
+.latestpost
+{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1rem 0rem ;
+}
 
+span {
+    width: auto;
+    height: auto;
+    margin:1rem;
+    padding:0.5rem 2rem;
+}
 /* Style på loggedin.php*/
 
 header {
-    background-color: rgba(253, 230, 230, 0.281);
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -72,18 +91,25 @@ header {
     padding: 0rem 1rem ;
 }
 
-.loggaut-knapp {
-    padding: 1rem ;
+.welcome-text {
+    text-align: center;
+    width: 35rem;
+    margin-bottom: 2rem;
 }
 
+.loggaut-knapp {
+        margin:0.5rem 2rem 7rem;
+}
+
+
+
 #post-container{
-    border: green solid 3px;
     background-color: rgb(243, 243, 243);
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
-    justify-content:space-around;
-    flex-wrap: wrap;
+    flex-flow:column wrap;
+    align-items: center;
 }
 
 .post{
@@ -98,6 +124,7 @@ header {
 
 p.date {
     font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     padding: 0.5rem;
 
@@ -108,9 +135,18 @@ img {
 }
 
 .description {
-    padding: 1rem 0rem;
+    width: 30rem;
+    margin: 2.6rem 5rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.6;
+
 }
 
+.postbuttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
 
 
 /* Style på post.php, skapa inlägg */
@@ -130,3 +166,21 @@ img {
 }
 
 
+
+
+
+
+/* Sign-up */
+
+
+label
+{
+    display:none;
+    
+}
+
+.signup-form {
+    border: blue solid 3px;
+
+
+}
