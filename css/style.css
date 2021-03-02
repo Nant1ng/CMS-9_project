@@ -80,11 +80,11 @@ span {
 /* Style på index.html */
 .startpage-container {
     border: 3px solid black;
-    width: 500px;
+    min-width: 50%;
     display: flex;
     align-items: center;
     flex-flow: column wrap; 
-    margin: 10% 25%;            /* måste fixa sen så det blir en riktig centrering */
+    margin: 10% 25%;
     padding:2rem 2rem 5rem;
 }
 
