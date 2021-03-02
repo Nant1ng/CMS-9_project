@@ -25,7 +25,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 
 
 ?>
-
+<a href="../loggedin.php">Back to the blog</a>
 <!-- Skriver ut den post som kommentarerna tillhör -->
 <div class ="post">
     <figure><h4><?php echo $blogTitle?></h4>
