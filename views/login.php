@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logga in</title>
-    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
+    <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <?php
@@ -64,18 +65,21 @@ catch(PDOException $error)
     }  
 ?>  
 
-<div>
-    <h2>Logga in</h2>
+<div class="login-form">
+    <h1>Logga in här</h1>
         <!-- Inputfält -->
         <form method="post">
-        <input type="text" name="username" placeholder = "Username"><br>
-        <input type="password" name="password" placeholder = "Password"><br>
+        <div class="input-box">
+            <input type="text" name="username" placeholder = "Username">
+        </div>
+        <div class="input-box">
+        <input type="password" name="password" placeholder = "Password">
+        <span class="eye">
+        <i class="far fa-eye"></i>
+        </span>
+        </div>
         <input type="submit" name="login" value="Logga in">
         </form>
 </div>
-
-
-
-
 </body>
 </html>
