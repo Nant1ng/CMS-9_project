@@ -3,6 +3,7 @@
     padding: 0%;
     
 }
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
@@ -12,8 +13,8 @@ body {
 
 a:link, a:visited {
     text-decoration: none;
-    color: grey;
-    border: lightgray solid 1px;
+    color: black;
+    border: black solid 1px;
     width: auto;
     height: auto;
     padding:0.5rem 2rem;
@@ -26,7 +27,7 @@ a:hover, a:active {
 
 
 
-/* Rubriker  */
+/* RUBRIKER  */
 
 /* Welcome..  */
 h1 { 
@@ -72,6 +73,32 @@ span {
     margin:1rem;
     padding:0.5rem 2rem;
 }
+
+
+
+
+/* Style på index.html */
+.startpage-container {
+    border: 3px solid black;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap; 
+    margin: 10% 25%;            /* måste fixa sen så det blir en riktig centrering */
+    padding:2rem 2rem 5rem;
+}
+
+p.welcomeLogin {
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+#login{
+    margin-bottom: 1rem;
+}
+
+
+
 /* Style på loggedin.php*/
 
 header {
@@ -94,7 +121,6 @@ header {
 .loggaut-knapp {
         margin:0.5rem 2rem 7rem;
 }
-
 
 
 #post-container{
@@ -160,21 +186,3 @@ img {
 }
 
 
-
-
-
-
-/* Sign-up */
-
-
-label
-{
-    display:none;
-    
-}
-
-.signup-form {
-    border: blue solid 3px;
-
-
-}

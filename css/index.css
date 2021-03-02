@@ -1,4 +1,4 @@
-/* Style på index.html */
+/* Style på index.html flyttad till style.css
 
 .start{
     border: 3px solid red;
@@ -6,20 +6,19 @@
     text-align: center;
     /* display: flex;
     justify-content: center;
-    flex-flow: column wrap; */
+    flex-flow: column wrap;
 }
 
 h1.welcomelogin{
-    border: red solid 3px;
-    font-size: 10rem;
+    font-size: 5rem;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     height: auto;
     width: auto;
-    margin: 1rem;
+    margin: 5rem 0rem 2rem;
 }
 
-/* .signup-link{
+.signup-link{
     height: 200px;
     width: 200px;
     border: lightgray solid 1px;
