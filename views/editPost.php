@@ -69,7 +69,8 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 <?php
     include_once('../includes/header.php');
 ?>
-    <p><a href="../loggedin.php"><-Back to the blog</a><p>
+    <a href="../loggedin.php">Back to the blog</a>
+    <br/><br/>
 
     <h4>Edit post</h4>
 

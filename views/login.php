@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logga in</title>
-    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
+    <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
+    <script src="../includes/Showpassword.js" defer></script>
 </head>
 <body>
 <?php
@@ -28,7 +30,7 @@ try
             $salt = "siahbndjiasnidja12893183s9300";
             $userPassword = md5($userPassword.$salt);
 
-            $sql = "SELECT count(userID), role, fname FROM users WHERE username = :username_IN AND password = :password_IN";
+            $sql = "SELECT userID, role, fname FROM users WHERE username = :username_IN AND password = :password_IN";
             $stm = $pdo->prepare($sql);
             $stm->bindparam(":username_IN", $username);
             $stm->bindparam(":password_IN", $userPassword);
@@ -40,6 +42,7 @@ try
                 $_SESSION['password'] = $userPassword;
                 $_SESSION['role'] = $return['role'];
                 $_SESSION['fname'] = $return['fname'];
+                $_SESSION['userID'] = $return['userID'];
                 header("location:../loggedin.php");
             }else{  
                 $errorMessage = '<label>Något blev fel försök igen</label>';  
@@ -64,18 +67,22 @@ catch(PDOException $error)
     }  
 ?>  
 
-<div>
-    <h2>Logga in</h2>
+<div class="login-form">
+    <h1>Logga in här</h1>
         <!-- Inputfält -->
         <form method="post">
-        <input type="text" name="username" placeholder = "Username"><br>
-        <input type="password" name="password" placeholder = "Password"><br>
-        <input type="submit" name="login" value="Logga in">
+        <div class="input-box">
+            <input type="text" name="username" placeholder = "Username">
+        </div>
+        <div class="input-box">
+        <input type="password" name="password" placeholder ="Password" id="Input">
+        <span class="eye" onclick="showpassword()">
+        <i id="hide1" class="fa fa-eye"></i>
+        <i id="hide2" class="fa fa-eye-slash"></i>
+        </span>
+        </div>
+        <input type="submit" name="login" value="Logga in" class="login-btn">
         </form>
 </div>
-
-
-
-
 </body>
 </html>
