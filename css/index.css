@@ -1,16 +1,25 @@
-/* Style på index.html  */
+/* Style på index.html */
+
 .start{
+    border: 3px solid red;
     padding-top: 20%;
     text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: column;
+    /* display: flex;
+    justify-content: center;
+    flex-flow: column wrap; */
 }
-h1.loginOrRegister{
+
+h1.welcomelogin{
+    border: red solid 3px;
+    font-size: 10rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: auto;
+    width: auto;
     margin: 1rem;
 }
 
-.signup-link{
+/* .signup-link{
     height: 200px;
     width: 200px;
     border: lightgray solid 1px;
@@ -20,6 +29,7 @@ h1.loginOrRegister{
     width: 200px;
     border: lightgray solid 1px;
 }
+
 #login{
     text-decoration: none;
     position: relative;
@@ -28,10 +38,11 @@ h1.loginOrRegister{
 #signup{
     text-decoration: none;
     position: relative;
-    top: 40%;
+    top: 40%; 
 }
+
 #login, #signup{
     color: black;
     cursor: pointer;
     font-size: 3vw;
-}
+} */

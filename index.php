@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
     <link rel = "stylesheet" type = "text/css" href = "css/index.css" />
+
     <title>Startpage</title>
 </head>
 <body>
@@ -13,20 +14,11 @@
     include_once('includes/header.php');
 ?>
    <div class ="start">
-      <h1 class ="loginOrRegister">Login or register</h1>
+      <h4>Welcome! Login here<h4>
+      <a id="login" href="views/login.php">Login</a>
+      <h4>Or if your new here, sign up here<h4>
+       <a id="signup" href="views/sign-up.php">Sign up</a></h4>
    </div>
-   <div class ="start">
-      <div class ="login-link">
-         <p>Welcome! Login here:</p>
-         <a id="login" href="views/login.php">Login</a>
-      </div>
-      <hr>
 
-      <div class ="signup-link">
-      <p>Are you new here? Register here:</p>
-         <a id="signup" href="views/sign-up.php">Sign up</a>
-      </div>
-
-   </div>
 </body>
 </html>
