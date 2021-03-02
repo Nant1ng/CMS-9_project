@@ -85,7 +85,7 @@ span {
     align-items: center;
     flex-flow: column wrap; 
     margin: 10% 25%;
-    padding:2rem 2rem 5rem;
+    padding:2rem 2rem 4rem;
 }
 
 p.welcomeLogin {
