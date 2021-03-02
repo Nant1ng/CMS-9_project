@@ -3,8 +3,11 @@
 session_start();
 include '../includes/database_connection.php';
 
-
 $postID = $_GET['id'];
+
+if(isset($_SESSION['userID'])){
+    echo "<h1>Welcome " . ucfirst($_SESSION['userID']). "</h1>";
+}
 
 //Välj data från rätt id
 $sql = "SELECT * FROM posts WHERE postID=:postID";
@@ -42,13 +45,12 @@ $comment_count = $stmt2->rowCount();
 if($comment_count == 0) {
     echo "No comments";
 }else {
+    echo '<h2 class="comment-count">' . $comment_count . ' Comments</h2>';            // För att skriva ut hur många kommentarer det finns
     while($comment = $stmt2->fetch(PDO::FETCH_ASSOC)){
         $commentAuthor = $comment['userID'];
         $commentText = $comment['comment'];
         $commentDate = $comment['date'];?>              <!-- stänger php taggen -->
         <!-- Skriver ut comments -->
-        <h2 class="comment-count"><?php echo $comment_count; ?> Comments</h2>
-           
         <div class="comment-box">
            <span class="comment-author"><b><?php echo $commentAuthor; ?></b> </span>
            <span class="comment-date"><?php echo $commentDate; ?></span>
@@ -62,10 +64,33 @@ if($comment_count == 0) {
 
 <!-- Form för att kunna kommentera -->
 <h3>Leave a comment:</h3>
+<?php
+if(isset($_POST['submit-comment'])){
+    $comment = $_POST['comment'];
+    $userID = $_SESSION['userID'];
+    $date = date('j Y F');
+    if(empty($comment)) {
+        echo "<div>Please write a comment before posting!</div>";
+    } else{
+        $sql3 = "INSERT INTO comments (comment, date, userID, postID) VALUES (:comment, :date, :userID, :postID)";
+        $stmt3 = $pdo->prepare($sql3);
+        $stmt3->execute([
+            ':comment' => $comment,
+            'date' => $date ,
+            'userID' => $userID,
+            ':postID' => $_GET['id']
+        ]);
+    }
+
+}
+
+
+?>
+
     <div class="newCommentDiv">
-        <form action="#" class="comment-form">
+        <form class="comment-form" method="POST" action="blogComments.php?id=<?php echo $_GET['id']; ?>">
             <textarea name="comment" id="" cols="20" rows="5" placeholder="Comment..."></textarea>
-            <input type="submit" value="Post comment">
+            <input type="submit" name="submit-comment" value="Post comment">
         </form>
     </div>
 

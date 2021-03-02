@@ -30,7 +30,7 @@ try
             $salt = "siahbndjiasnidja12893183s9300";
             $userPassword = md5($userPassword.$salt);
 
-            $sql = "SELECT count(userID), role, fname FROM users WHERE username = :username_IN AND password = :password_IN";
+            $sql = "SELECT userID, role, fname FROM users WHERE username = :username_IN AND password = :password_IN";
             $stm = $pdo->prepare($sql);
             $stm->bindparam(":username_IN", $username);
             $stm->bindparam(":password_IN", $userPassword);
@@ -42,6 +42,7 @@ try
                 $_SESSION['password'] = $userPassword;
                 $_SESSION['role'] = $return['role'];
                 $_SESSION['fname'] = $return['fname'];
+                $_SESSION['userID'] = $return['userID'];
                 header("location:../loggedin.php");
             }else{  
                 $errorMessage = '<label>Något blev fel försök igen</label>';  
