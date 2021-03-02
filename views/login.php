@@ -7,6 +7,7 @@
     <title>Logga in</title>
     <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
     <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
+    <script src="../includes/Showpassword.js" defer></script>
 </head>
 <body>
 <?php
@@ -73,12 +74,13 @@ catch(PDOException $error)
             <input type="text" name="username" placeholder = "Username">
         </div>
         <div class="input-box">
-        <input type="password" name="password" placeholder = "Password">
-        <span class="eye">
-        <i class="far fa-eye"></i>
+        <input type="password" name="password" placeholder ="Password" id="Input">
+        <span class="eye" onclick="showpassword()">
+        <i id="hide1" class="fa fa-eye"></i>
+        <i id="hide2" class="fa fa-eye-slash"></i>
         </span>
         </div>
-        <input type="submit" name="login" value="Logga in">
+        <input type="submit" name="login" value="Logga in" class="login-btn">
         </form>
 </div>
 </body>
