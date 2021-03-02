@@ -68,7 +68,7 @@ if($comment_count == 0) {
 if(isset($_POST['submit-comment'])){
     $comment = $_POST['comment'];
     $userID = $_SESSION['userID'];
-    $date = date('j Y F');
+    $date = date('Y-m-d');
     if(empty($comment)) {
         echo "<div>Please write a comment before posting!</div>";
     } else{
@@ -80,6 +80,7 @@ if(isset($_POST['submit-comment'])){
             'userID' => $userID,
             ':postID' => $_GET['id']
         ]);
+        header("location: blogComments.php?id={$postID}");
     }
 
 }
