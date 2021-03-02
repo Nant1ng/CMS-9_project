@@ -103,8 +103,6 @@
 
 </main>
 
-<hr>
-
 <footer>
     <p class = "footer">&copy; 2021 Grupp CMS 9, kurs systemutveckling PHP, Medieinsitutet</p>
 </footer>

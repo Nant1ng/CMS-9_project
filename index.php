@@ -13,15 +13,20 @@
     include_once('includes/header.php');
 ?>
    <div class ="start">
-      <h1>Logga in eller registrera dig</h1>
+      <h1 class ="loginOrRegister">Login or register</h1>
+   </div>
+   <div class ="start">
       <div class ="login-link">
-         <p>Välkommen! Logga in:</p>
+         <p>Welcome! Login here:</p>
          <a id="login" href="views/login.php">Login</a>
       </div>
+      <hr>
+
       <div class ="signup-link">
-      <p>Har du inte registrerat dig? Gör det här:</p>
+      <p>Are you new here? Register here:</p>
          <a id="signup" href="views/sign-up.php">Sign up</a>
       </div>
+
    </div>
 </body>
 </html>

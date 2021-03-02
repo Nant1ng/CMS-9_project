@@ -4,19 +4,21 @@
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    align-content: center;
+    align-content: column;
 }
+h1.loginOrRegister{
+    margin: 1rem;
+}
+
 .signup-link{
     height: 200px;
     width: 200px;
-    background-color: red;
-    border: 3px solid black;
+    border: lightgray solid 1px;
 }
 .login-link{
     height: 200px;
     width: 200px;
-    background-color: red;
-    border: 3px solid black;
+    border: lightgray solid 1px;
 }
 #login{
     text-decoration: none;

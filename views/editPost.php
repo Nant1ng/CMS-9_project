@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "css/editPost.css" />
+    <title>Edit post</title>
+</head>
+<body>
+
+
+
+
 <?php
 session_start();
 include '../includes/database_connection.php';
@@ -50,39 +65,45 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 
 ?>
 
-<html>
- 
-<body>
+
 <?php
     include_once('../includes/header.php');
 ?>
-    <a href="../index.php">Back to the blog</a>
-    <br/><br/>
+    <p><a href="../loggedin.php"><-Back to the blog</a><p>
 
-    <h3>Edit post</h3>
+    <h4>Edit post</h4>
 
     <form name="form1" method="post" action="editPost.php">
-    <table border="0">
-            <tr>
-                <td>Title:</td>
-                <td><input type="text" name="title" value="<?php echo $title;?>"></td>
-            </tr>
-            <tr>
-                <td>Description:</td>
-                    <td><input type="text" name="description" value="<?php echo $description;?>"></td>
-                </tr>
-            <tr>
-                <td>Image url:</td>
-                    <td><input type="text" name="imageUrl" value="<?php echo $imageUrl;?>"></td>
-            </tr>
-            <tr>
-                <td>Category:</td>
-                    <td><input type="text" name="category" value="<?php echo $category;?>"></td>
-            </tr>
-                <td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>                  <!-- hidden och get id för att hålla koll på vilket id i posts som ska redigeras. -->
-                <td><input type="submit" name="update" value="Update"></td>
-            </tr>
-        </table>
+        <div class ="editPost-form">
+                <p>Title</p>
+                <div class = "title-input">
+                    <input type="text" name="title" value="<?php echo $title;?>"></div>
+                
+                <p>Description</p>
+                <div class = "description-input">
+                    <textarea
+                    cols="50" rows="20"
+                    name="description" 
+                    value="<?php echo $description;?>">
+                    <?php echo $description;?>
+                    
+                    </textarea></div>
+                
+                <p>Choose an image</p>
+                <div class = "imageUrl">
+                    <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>">
+                
+                <p>Choose a category</p>
+                <div class = "category-input">
+                    <input type="text" name="category" value="<?php echo $category;?>">
+                
+                <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>               <!-- hidden och get id för att hålla koll på vilket id i posts som ska redigeras. -->
+                
+                <div class ="submit-button">
+                    <input type="submit" name="update" value="Update">
+                </div>
+        </div>        
     </form>
+
 </body>
 </html>
