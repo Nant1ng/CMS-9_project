@@ -91,7 +91,7 @@
             <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
             </figure>
             <div class="comments">
-            <a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a>
+            <a href="views/bloggComments.php?id=<?php echo $row['postID']; ?>">Comments</a>
             </div> <!-- stänger post -->
 </div> <!-- stänger post-container -->
 
