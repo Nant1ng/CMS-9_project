@@ -59,7 +59,7 @@
 
                 <p><a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a></p>
 
-                <p><a href="views/comments.php?id=<?php echo $row['postID']; ?>">Comments</a></p>
+                <p><a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">Comments</a></p>
                 </div><!-- stänger postknappar -->
 
         </div> <!-- stänger post -->
