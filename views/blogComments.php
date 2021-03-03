@@ -5,8 +5,10 @@ include '../includes/database_connection.php';
 
 $postID = $_GET['id'];
 
-if(isset($_SESSION['userID'])){
-    echo "<h1>Welcome " . ucfirst($_SESSION['userID']). "</h1>";
+
+
+if(isset($_SESSION['fname'])){
+    echo "<h1>Welcome " . ucfirst($_SESSION['fname']). "</h1>";
 }
 
 //Välj data från rätt id
