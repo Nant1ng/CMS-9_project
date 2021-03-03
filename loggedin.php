@@ -81,18 +81,19 @@
             }else{   // Inga edit och deleteknappar
         ?>
 
-        <div class ="post">
-        <!-- Fixas senare -->
-            <figure>
-            <p><?php echo $row['date'];?></p>
-            <h2><?php echo $row['title'];?></h2>
+<div class ="post">
+            <p class ="date"><?php echo $row['date'];?></p>
+            <figure><h4><?php echo $row['title'];?></h4>
             <hr>
-            <figcaption><p><?php echo $row['description'];?></p></figcaption>
+            <figcaption class ="description"><p><?php echo $row['description'];?></p></figcaption>
             <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
-            </figure>
-            <div class="comments">
-            <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">Comments</a>
-            </div> <!-- stänger post -->
+            <figure>
+            <!-- För att få rätt id på edit o delete knapparna -->
+            
+                <div class="postbuttons">
+                    <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">Comments</a>
+                </div><!-- stänger postbuttons-->
+
 </div> <!-- stänger post-container -->
 
 <?php
@@ -102,8 +103,6 @@
 
 
 </main>
-
-<hr>
 
 <footer>
     <p class = "footer">&copy; 2021 Grupp CMS 9, kurs systemutveckling PHP, Medieinsitutet</p>

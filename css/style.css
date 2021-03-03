@@ -3,12 +3,9 @@
     padding: 0%;
     
 }
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-form {
-    border: 3px solid #bebebe;
 }
 
 
@@ -16,8 +13,8 @@ form {
 
 a:link, a:visited {
     text-decoration: none;
-    color: grey;
-    border: lightgray solid 1px;
+    color: black;
+    border: black solid 1px;
     width: auto;
     height: auto;
     padding:0.5rem 2rem;
@@ -30,7 +27,7 @@ a:hover, a:active {
 
 
 
-/* Rubriker  */
+/* RUBRIKER  */
 
 /* Welcome..  */
 h1 { 
@@ -40,8 +37,6 @@ h1 {
     height: auto;
     width: auto;
     margin: 5rem 0rem 2rem;
-
-
 }
 
 h2 {
@@ -78,6 +73,33 @@ span {
     margin:1rem;
     padding:0.5rem 2rem;
 }
+
+
+
+
+/* Style på index.html */
+.startpage-container {
+    border-left: 3px solid black;
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap; 
+    margin: 10% 25%;
+    padding:2rem 2rem 4rem;
+}
+
+p.welcomeLogin {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+#login{
+    margin-bottom: 1rem;
+}
+
+
+
 /* Style på loggedin.php*/
 
 header {
@@ -100,7 +122,6 @@ header {
 .loggaut-knapp {
         margin:0.5rem 2rem 7rem;
 }
-
 
 
 #post-container{
@@ -166,21 +187,3 @@ img {
 }
 
 
-
-
-
-
-/* Sign-up */
-
-
-label
-{
-    display:none;
-    
-}
-
-.signup-form {
-    border: blue solid 3px;
-
-
-}
