@@ -42,7 +42,25 @@ $stmt2->execute([':id'=>$_GET['id']]);
 $comment_count = $stmt2->rowCount();
 if($comment_count == 0) {
     echo "No comments";
-}else {
+}else if(isset($_SESSION['role']) && $_SESSION['role'] == "admin") {
+    echo '<h2 class="comment-count">' . $comment_count . ' Comments</h2>';            // För att skriva ut hur många kommentarer det finns
+    while($comment = $stmt2->fetch(PDO::FETCH_ASSOC)){
+        $commentAuthor = $comment['username'];
+        $commentText = $comment['comment'];
+        $commentDate = $comment['date'];?>              <!-- stänger php taggen -->
+        <!-- Skriver ut comments -->
+        <div class="comment-box">
+           <span class="comment-author"><b><?php echo $commentAuthor; ?></b> </span>
+           <span class="comment-date"><?php echo $commentDate; ?></span>
+           <p class="comment-text"><?php echo $commentText; ?></p>
+           <a href="editComment.php?id=<?php echo $_GET['id'];?>">Edit</a>
+           <a href="deleteComment.php?id=<?php echo $_GET['id'];?>">Delete</a>
+        </div>
+    
+<?php  
+    
+    }
+}else{
     echo '<h2 class="comment-count">' . $comment_count . ' Comments</h2>';            // För att skriva ut hur många kommentarer det finns
     while($comment = $stmt2->fetch(PDO::FETCH_ASSOC)){
         $commentAuthor = $comment['username'];
@@ -55,7 +73,9 @@ if($comment_count == 0) {
            <p class="comment-text"><?php echo $commentText; ?></p>
         </div>
 
-<?php   // bara för att stänga whileloopen till kommentarerna 
+
+<?php
+    // bara för att stänga whileloopen till kommentarerna 
     }
 }
 ?>
