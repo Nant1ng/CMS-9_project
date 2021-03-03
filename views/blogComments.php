@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comments</title>
-    <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../css/comments.css" />
     <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -94,7 +94,7 @@ if($comment_count == 0) {
 ?>
 
 <!-- för att spara kommentaren i databasen -->
-<h3>Leave a comment:</h3>
+<p>Leave a comment:</p>
 <?php
 if(isset($_POST['submit-comment'])){
     $comment = $_POST['comment'];
@@ -124,7 +124,7 @@ if(isset($_POST['submit-comment'])){
     <!-- Form för att kunna kommentera -->
     <div class="newCommentDiv">
         <form class="comment-form" method="POST" action="blogComments.php?id=<?php echo $_GET['id']; ?>">
-            <textarea name="comment" id="" cols="20" rows="5" placeholder="Comment..."></textarea>
+            <textarea name="comment" id="" cols="40" rows="10" placeholder="Comment..."></textarea>
             <input type="submit" name="submit-comment" value="Post comment">
         </form>
     </div>
