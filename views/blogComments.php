@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
+    <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
 
 <?php
 session_start();
@@ -47,14 +59,15 @@ if($comment_count == 0) {
     while($comment = $stmt2->fetch(PDO::FETCH_ASSOC)){
         $commentAuthor = $comment['username'];
         $commentText = $comment['comment'];
+        $commentID = $comment['commentID'];
         $commentDate = $comment['date'];?>              <!-- stänger php taggen -->
         <!-- Skriver ut comments -->
         <div class="comment-box">
            <span class="comment-author"><b><?php echo $commentAuthor; ?></b> </span>
            <span class="comment-date"><?php echo $commentDate; ?></span>
            <p class="comment-text"><?php echo $commentText; ?></p>
-           <a href="editComment.php?id=<?php echo $_GET['id'];?>">Edit</a>
-           <a href="deleteComment.php?id=<?php echo $_GET['id'];?>">Delete</a>
+           <a href="editComment.php?id=<?php echo $commentID; ?>">Edit</a>
+           <a href="deleteComment.php?id=<?php echo $commentID?>">Delete</i></a>
         </div>
     
 <?php  
@@ -116,4 +129,5 @@ if(isset($_POST['submit-comment'])){
         </form>
     </div>
 
-
+</body>
+</html>
