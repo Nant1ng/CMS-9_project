@@ -48,9 +48,9 @@ a:hover, a:active {
     border: lightgray solid 1px;
     background-color: white;
     width: 40%;
-    height: auto;
+    height: 70%;
     margin:1rem;
-    padding:2rem 2rem;
+    padding:1rem;
 
 }
 
