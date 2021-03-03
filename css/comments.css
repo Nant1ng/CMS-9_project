@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* RUBRIKER  */
+
+
+h2 {
+    font-size: 3rem 1rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem 1rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Style på länkar */
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    border: black solid 1px;
+    width: auto;
+    height: 10%;
+    padding:0.5rem 2rem;
+    margin-top:1rem;
+}
+  
+a:hover, a:active {
+    text-decoration:none;
+    background-color: rgba(211, 211, 211, 0.192);
+}
+
+
+/* Blogposten  */
+
+.post{
+    border: lightgray solid 1px;
+    background-color: white;
+    width: 40%;
+    height: auto;
+    margin:1rem;
+    padding:2rem 2rem;
+
+}
+
+p.date {
+    font-size: 1rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0.5rem;
+
+}
+
+img {
+    width: 20rem;
+}
+
+.description {
+    width: auto;
+    margin: 2rem 0rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.6;
+
+}
+
+/* Style på kommentar sektionen */
+
+.comments{
+    border: lightgray 1px solid;
+    width: 30%;
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+}
+.comment-box {
+    border-top: lightgray 1px solid;
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+}
+
+
+
+

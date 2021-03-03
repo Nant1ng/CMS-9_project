@@ -46,8 +46,7 @@ h2 {
 }
 
 h3 {
-    border: rgb(117, 50, 61) solid 3px;
-    font-size: 2rem;
+    font-size: 2rem 1rem;
 }
 
 h4 {
