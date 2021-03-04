@@ -12,6 +12,8 @@
 session_start();
 include('../includes/database_connection.php');
 
+// För registrering.
+// Kollar ifall användernamnet eller email är redan taget.
 $regUsername = $regEmail = "";
 $regUsername_error = $regEmail_error = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -43,6 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
         }
     }
+    //Om email eller användernamet inte är taget så skapas det ett konto.
     if(empty($regUsername_error) && empty($regEmail_error)){
         try{
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
