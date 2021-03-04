@@ -168,10 +168,29 @@ img {
 }
 
 
+
+
+
 /* Style på post.php, skapa inlägg */
 .post-form{
     border: grey solid 3px;
 }
+
+
+
+
+/* Style på editPost.php*/
+
+.editPost-form {
+    background-color: rgb(243, 243, 243);
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-flow:column wrap;
+    align-items: center;
+}
+
+
 
 
 /* Style på footer */
