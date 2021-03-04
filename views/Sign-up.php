@@ -63,8 +63,6 @@ catch(PDOException $error)
     }  
 ?>  
 
-
-
 <body>
 <?php
     include_once('includes/header.php');
@@ -83,7 +81,6 @@ catch(PDOException $error)
                 <input type="text" name="regUsername" placeholder = "Username">
                 <label>Password:</label>
                 <input type="password" name="regPassword"placeholder = "Password">
-        
                 <input type="submit" name="sign-up" value="Sign-up">
             </form>
         </pre>  
