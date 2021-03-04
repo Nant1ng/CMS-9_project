@@ -11,11 +11,10 @@
 <?php
 session_start();
 include '../includes/database_connection.php';
+?>
 
-?>
-<?php
-    include_once('../includes/header.php');
-?>
+
+
 <h2>Create a new blogpost</h2>
 
 <pre>
@@ -25,7 +24,7 @@ include '../includes/database_connection.php';
     <input type="text" name="title" placeholder="Choose a title" size="30">
     
     <span>Write a description</span>
-    <textarea name="description" cols="30" rows="10" placeholder="Description"></textarea>
+    <textarea name="description" cols="40" rows="10" placeholder="Description"></textarea>
     
 <span>Choose an image URL</span>
     <input type="text" name="imageUrl" placeholder="Image adress ex: https://images.pexels.com/photos/2811088/pexels-photo-2811088.jpeg" size="37">
@@ -36,7 +35,7 @@ include '../includes/database_connection.php';
 <span>Choose a date</span>
     <input type="date" name="date" placeholder="Choose date" size="30">
     
-    <input type="submit" value="Post!">
+    <input type="submit" value="Post to blog">
     </form>
 </div>
 </pre>
