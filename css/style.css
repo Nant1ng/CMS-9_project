@@ -3,12 +3,9 @@
     padding: 0%;
     
 }
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-form {
-    border: 3px solid #bebebe;
 }
 
 
@@ -16,8 +13,8 @@ form {
 
 a:link, a:visited {
     text-decoration: none;
-    color: grey;
-    border: lightgray solid 1px;
+    color: black;
+    border: black solid 1px;
     width: auto;
     height: auto;
     padding:0.5rem 2rem;
@@ -30,7 +27,7 @@ a:hover, a:active {
 
 
 
-/* Rubriker  */
+/* RUBRIKER  */
 
 /* Welcome..  */
 h1 { 
@@ -40,8 +37,6 @@ h1 {
     height: auto;
     width: auto;
     margin: 5rem 0rem 2rem;
-
-
 }
 
 h2 {
@@ -51,8 +46,7 @@ h2 {
 }
 
 h3 {
-    border: rgb(117, 50, 61) solid 3px;
-    font-size: 2rem;
+    font-size: 2rem 1rem;
 }
 
 h4 {
@@ -63,14 +57,6 @@ h4 {
     padding: 1rem 0rem ;
 }
 
-.latestpost
-{
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 1rem 0rem ;
-}
 
 span {
     width: auto;
@@ -78,6 +64,31 @@ span {
     margin:1rem;
     padding:0.5rem 2rem;
 }
+
+
+/* Style på index.html */
+.startpage-container {
+    border-left: 3px solid black;
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap; 
+    margin: 10% 25%;
+    padding:2rem 2rem 4rem;
+}
+
+p.welcomeLogin {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+#login{
+    margin-bottom: 1rem;
+}
+
+
+
 /* Style på loggedin.php*/
 
 header {
@@ -101,7 +112,14 @@ header {
         margin:0.5rem 2rem 7rem;
 }
 
-
+.latestpost
+{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1rem 0rem ;
+}
 
 #post-container{
     background-color: rgb(243, 243, 243);
@@ -130,9 +148,6 @@ p.date {
 
 }
 
-img {
-    width: 40rem;
-}
 
 .description {
     width: 30rem;
@@ -140,6 +155,10 @@ img {
     letter-spacing: 0.02rem;
     line-height: 1.6;
 
+}
+
+img {
+    width: 40rem;
 }
 
 .postbuttons{
@@ -166,21 +185,3 @@ img {
 }
 
 
-
-
-
-
-/* Sign-up */
-
-
-label
-{
-    display:none;
-    
-}
-
-.signup-form {
-    border: blue solid 3px;
-
-
-}
