@@ -47,12 +47,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     //Kollar så att lösenordet är längre än 10 tecken. 
     if(strlen(trim($_POST["regPassword"])) < 10){
-        $regPassword_error = "Password must have at least 10 characters.";
+        $regPassword_error = "Password must have at least 10 characters!";
     } else{
-        $password = trim($_POST["regPassword"]);
+        $regPassword = trim($_POST["regPassword"]);
     }
-    //Om email eller användernamet inte är taget så skapas det ett konto.
-    if(empty($regUsername_error) && empty($regEmail_error) && empty($regPassword_error)){
+    $regConfirmPassword = trim($_POST["regConfirmPassword"]);
+    if(empty($regConfirmPassword_error) && ($regPassword != $regConfirmPassword)){
+        $regConfirmPassword_error = "Password is not matching!";
+    }
+    //Om man inte får ett error så skapas det ett konto.
+    if(empty($regUsername_error) && empty($regEmail_error) && empty($regPassword_error) && empty($regConfirmPassword_error)){
         try{
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         if(isset($_POST["sign-up"]))
