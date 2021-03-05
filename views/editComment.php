@@ -14,6 +14,9 @@
 session_start();
 include '../includes/database_connection.php';
 
+$postID = $_SESSION['postID'];
+
+
 if(isset($_POST['update'])){    
     
     // Spara texten från inputfältet
@@ -30,7 +33,7 @@ if(isset($_POST['update'])){
 
     //Kör query
     $query->execute();
-    header("location:../loggedin.php");
+    header("location:blogComments.php?id=$postID");
 
     }
 
@@ -85,3 +88,6 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 
 </body>
 </html>
+
+
+

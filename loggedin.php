@@ -19,7 +19,7 @@
     <?php
     session_start();
     include 'includes/database_connection.php';
-    $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts");
+    $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts ORDER BY date DESC");
 
     //För välkomstmeddelande och kollar om man är admin
     //ucfrist() är en inbygged funktion som gör så att den första bokstaven är uppercase
@@ -64,7 +64,8 @@
             <figure><h4><?php echo $row['title'];?></h4>
             <hr>
             <figcaption class ="description"><p><?php echo $row['description'];?></p></figcaption>
-            <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
+            <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">
+                <img src="<?php echo $row['imageURL'];?>" alt="blog-bild"></a>
             <figure>
             <!-- För att få rätt id på edit o delete knapparna -->
             
@@ -86,7 +87,8 @@
             <figure><h4><?php echo $row['title'];?></h4>
             <hr>
             <figcaption class ="description"><p><?php echo $row['description'];?></p></figcaption>
-            <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
+            <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">
+                <img src="<?php echo $row['imageURL'];?>" alt="blog-bild"></a>
             <figure>
             <!-- För att få rätt id på edit o delete knapparna -->
             

@@ -48,7 +48,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 <!-- Hämtar och skriver ut alla kommentarer -->
 <div class="comments">
 <?php
-$sql2 = "SELECT * FROM comments WHERE postID = :id";
+$sql2 = "SELECT * FROM comments WHERE postID = :id ORDER BY date DESC";
 $stmt2 = $pdo->prepare($sql2);
 $stmt2->execute([':id'=>$_GET['id']]);
 $comment_count = $stmt2->rowCount();
@@ -60,7 +60,9 @@ if($comment_count == 0) {
         $commentAuthor = $comment['username'];
         $commentText = $comment['comment'];
         $commentID = $comment['commentID'];
-        $commentDate = $comment['date'];?>              <!-- stänger php taggen -->
+        $commentDate = $comment['date'];
+        $_SESSION['postID'] = $comment['postID']
+        ?>              <!-- stänger php taggen -->
         <!-- Skriver ut comments -->
         <div class="comment-box">
            <span class="comment-author"><b><?php echo $commentAuthor; ?></b> </span>
