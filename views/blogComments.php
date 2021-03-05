@@ -60,7 +60,9 @@ if($comment_count == 0) {
         $commentAuthor = $comment['username'];
         $commentText = $comment['comment'];
         $commentID = $comment['commentID'];
-        $commentDate = $comment['date'];?>              <!-- stänger php taggen -->
+        $commentDate = $comment['date'];
+        $_SESSION['postID'] = $comment['postID']
+        ?>              <!-- stänger php taggen -->
         <!-- Skriver ut comments -->
         <div class="comment-box">
            <span class="comment-author"><b><?php echo $commentAuthor; ?></b> </span>
