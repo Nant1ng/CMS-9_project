@@ -116,7 +116,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="text" name="regUsername" placeholder = "Username">
                 <span><?php echo $regUsername_error; ?></span>
                 <label>Password:</label>
-                <input type="password" name="regPassword"placeholder = "Password">
+                <input type="password" name="regPassword" placeholder = "Password">
+                <label>Confirm Password:</label>
+                <input type="password" name="regConfirmPassword" placeholder = "Confirm Password">
                 <input type="submit" name="sign-up" value="Sign-up">
             </form>
         </pre>  
