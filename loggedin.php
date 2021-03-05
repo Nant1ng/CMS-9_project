@@ -19,7 +19,7 @@
     <?php
     session_start();
     include 'includes/database_connection.php';
-    $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts");
+    $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts ORDER BY date DESC");
 
     //För välkomstmeddelande och kollar om man är admin
     //ucfrist() är en inbygged funktion som gör så att den första bokstaven är uppercase

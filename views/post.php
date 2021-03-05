@@ -31,6 +31,9 @@ include '../includes/database_connection.php';
     
 <span>Choose file from device</span>
     <input type="file" name="imageupload" value="<?php echo $imageUrl;?>"> <input type="submit" value="Upload">
+
+<span>Choose a category</span>
+    <input type="text" name="category" value="<?php echo $category;?>">
     
 <span>Choose a date</span>
     <input type="date" name="date" placeholder="Choose date" size="30">
