@@ -14,8 +14,8 @@ include('../includes/database_connection.php');
 
 // För registrering.
 // Kollar ifall användernamnet eller email är redan taget.
-$regUsername = $regEmail = "";
-$regUsername_error = $regEmail_error = "";
+$regUsername = $regEmail = $regPassword = $regConfirmPassword = "";
+$regUsername_error = $regEmail_error = $regPassword_error = $regConfirmPassword_error = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $sql = "SELECT userID FROM users WHERE username = :username_IN";
 
@@ -117,8 +117,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span><?php echo $regUsername_error; ?></span>
                 <label>Password:</label>
                 <input type="password" name="regPassword" placeholder = "Password">
+                <span><?php echo $regPassword_error; ?></span>
                 <label>Confirm Password:</label>
                 <input type="password" name="regConfirmPassword" placeholder = "Confirm Password">
+                <span><?php echo $regConfirmPassword_error; ?></span>
                 <input type="submit" name="sign-up" value="Sign-up">
             </form>
         </pre>  
