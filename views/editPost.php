@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
-    <link rel = "stylesheet" type = "text/css" href = "css/editPost.css" />
     <title>Edit post</title>
 </head>
 <body>
 
 
-
-
 <?php
 session_start();
 include '../includes/database_connection.php';
+
+
 
 if(isset($_POST['update'])){    
     
@@ -63,10 +62,6 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
     $category = $row['category'];                  
 }
 
-?>
-
-
-<?php
     include_once('../includes/header.php');
 ?>
     <a href="../loggedin.php">Back to the blog</a>
@@ -74,11 +69,12 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 
     <h4>Edit post</h4>
 
-    <form name="form1" method="post" action="editPost.php">
+    <form name="form1" method="post" action="editPost.php" enctype="multipart/form-data">
         <div class ="editPost-form">
                 <p>Title</p>
                 <div class = "title-input">
-                    <input type="text" name="title" value="<?php echo $title;?>"></div>
+                    <input type="text" name="title" value="<?php echo $title;?>">
+                </div>
                 
                 <p>Description</p>
                 <div class = "description-input">
@@ -86,18 +82,26 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                     cols="50" rows="20"
                     name="description" 
                     value="<?php echo $description;?>">
-                    <?php echo $description;?>
-                    
-                    </textarea></div>
+                    <?php echo $description;?>    
+                    </textarea>
+                </div>
                 
-                <p>Choose an image</p>
+                <p>Choose an image Url</p>
                 <div class = "imageUrl">
                     <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>">
-                
+                </div>
+
+                <p>Upload from device</p>
+                <div class = "imageupload">
+                    <input type="file" name="imageupload" value="<?php echo $imageUrl;?>">
+                    <input type="submit" value="Upload">
+                </div>
+
                 <p>Choose a category</p>
                 <div class = "category-input">
                     <input type="text" name="category" value="<?php echo $category;?>">
-                
+                </div>
+
                 <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>               <!-- hidden och get id för att hålla koll på vilket id i posts som ska redigeras. -->
                 
                 <div class ="submit-button">

@@ -82,7 +82,7 @@
         ?>
 
 <div class ="post">
-            <p class ="date"><?php echo $row['date'];?></p>
+<p class ="date"><?php echo $row['date'];?></p>
             <figure><h4><?php echo $row['title'];?></h4>
             <hr>
             <figcaption class ="description"><p><?php echo $row['description'];?></p></figcaption>
