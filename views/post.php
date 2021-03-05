@@ -29,9 +29,9 @@ include '../includes/database_connection.php';
 <span>Choose an image URL</span>
     <input type="text" name="imageUrl" placeholder="Image adress ex: https://images.pexels.com/photos/2811088/pexels-photo-2811088.jpeg" size="37">
     
-<span>Choose file from device</span>
-    <input type="file" name="imageupload" value="<?php echo $imageUrl;?>"> <input type="submit" value="Upload">
-
+<span>Choose image from device</span>
+<input type="file" name="imageToUpload" > </br>
+    <input type="submit" value="Upload image">
 <span>Choose a category</span>
     <input type="text" name="category" value="<?php echo $category;?>">
     

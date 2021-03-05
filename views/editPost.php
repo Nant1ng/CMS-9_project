@@ -71,12 +71,12 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 
     <form name="form1" method="post" action="editPost.php" enctype="multipart/form-data">
         <div class ="editPost-form">
-                <p>Title</p>
+                <p>Update title</p>
                 <div class = "title-input">
                     <input type="text" name="title" value="<?php echo $title;?>">
                 </div>
                 
-                <p>Description</p>
+                <p>Update description</p>
                 <div class = "description-input">
                     <textarea
                     cols="50" rows="20"
@@ -86,18 +86,18 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                     </textarea>
                 </div>
                 
-                <p>Choose an image Url</p>
+                <p>Update image Url</p>
                 <div class = "imageUrl">
                     <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>">
                 </div>
 
-                <p>Upload from device</p>
-                <div class = "imageupload">
-                    <input type="file" name="imageupload" value="<?php echo $imageUrl;?>">
+                <p>Update image from device</p>
+                <div class = "image-upload">
+                    <input type="file" name="imageUpload" value="<?php echo $imageUrl;?>">
                     <input type="submit" value="Upload">
                 </div>
 
-                <p>Choose a category</p>
+                <p>Update category</p>
                 <div class = "category-input">
                     <input type="text" name="category" value="<?php echo $category;?>">
                 </div>

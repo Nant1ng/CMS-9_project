@@ -64,7 +64,8 @@
             <figure><h4><?php echo $row['title'];?></h4>
             <hr>
             <figcaption class ="description"><p><?php echo $row['description'];?></p></figcaption>
-            <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
+            <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">
+                <img src="<?php echo $row['imageURL'];?>" alt="blog-bild"></a>
             <figure>
             <!-- För att få rätt id på edit o delete knapparna -->
             
@@ -86,7 +87,8 @@
             <figure><h4><?php echo $row['title'];?></h4>
             <hr>
             <figcaption class ="description"><p><?php echo $row['description'];?></p></figcaption>
-            <img src="<?php echo $row['imageURL'];?>" alt="blog-bild">
+            <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">
+                <img src="<?php echo $row['imageURL'];?>" alt="blog-bild"></a>
             <figure>
             <!-- För att få rätt id på edit o delete knapparna -->
             
