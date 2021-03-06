@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
-<title>Sign up</title>
+    <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
+    <title>Sign up</title>
 </head>
 
 <?php
 session_start();
 include('../includes/database_connection.php');
+
 
 // För registrering.
 // Kollar ifall användernamnet eller email är redan taget.
@@ -39,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         if($stm->execute()){
             if($stm->rowCount() == 1){
-                $regEmail_error = "This email is already taken!";
+                $regEmail_error = "This password is already taken!";
             } else{
                 $regEmail = trim($_POST["regEmail"]);
             }
@@ -61,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
             if(empty($_POST["regUsername"]) || empty($_POST["regPassword"]) || empty($_POST["regEmail"]) || empty($_POST["regFname"]) || empty($_POST["regLname"]))
             {
-                $message = '<label>All fields must be filled</label>';
+                $message = '<input>All fields must be filled</input>';
             }
             else
             {
@@ -74,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $stm->bindParam(':lname_IN', $regLname);
         
                   if($stm->execute()){
-                    echo "Register success";
+                    echo "Your registeration was success, now you can log in!";
                      header("location:../index.php");
                   }else {
                       echo "Something went wrong try again";
@@ -93,33 +95,47 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!-- För error meddelandet -->
 <?php  
     if(isset($errorMessage)){  
-        echo '<label>'.$errorMessage.'</label>';  
+        echo '<input>'.$errorMessage.'</input>';  
     }  
 ?>  
 
 <body>
-<?php
-    include_once('../includes/header.php');
-?>
-    <div class="signup-container">
-        <h3>Sign up</h3>
-        <pre>
-            <form method="post" class ="signup-form">
-                <label>First name:</label>
+<header>
+<a id ="header-logo" img src ="image/logos/Millhouse-logos_black.png" alt="Logo Millhouse">
+</header>
+
+<main>
+    <div class="login-form">
+        <h2>Sign up</h2>
+        <!-- Inputfält -->
+        <form method="post">
+            
+            <div class="input-box">
                 <input type="text" name="regFname" placeholder = "First name">
-                <label>Last name:</label>
+            </div>
+            <div class="input-box">
                 <input type="text" name="regLname" placeholder = "Last name">
-                <label>Email:</label>
+            </div>
+
+            <div class="input-box">
                 <input type="text" name="regEmail" placeholder = "Email">
-                <span><?php echo $regEmail_error; ?></span>
-                <label>Username:</label>
-                <input type="text" name="regUsername" placeholder = "Username">
-                <span><?php echo $regUsername_error; ?></span>
-                <label>Password:</label>
-                <input type="password" name="regPassword"placeholder = "Password">
-                <input type="submit" name="sign-up" value="Sign-up">
-            </form>
-        </pre>  
+            </div>
+            
+            <div class="input-box">
+            <input type="text" name="regUsername" placeholder = "Username">
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="regPassword" placeholder = "Password">
+            </div>
+            <span><?php echo $regUsername_error; ?></span><br>
+            <span><?php echo $regEmail_error; ?></span>
+            <input type="submit" name="sign-up" value="Sign-up" class="login-btn">
+
+
+        </form>
     </div>
+
+</main>
 </body>
 </html>

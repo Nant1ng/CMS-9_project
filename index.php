@@ -8,10 +8,14 @@
 
     <title>Startpage</title>
 </head>
+
+
 <body>
-<?php
-    include_once('includes/header.php');
-?>
+<header>
+<img src = "image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo">
+</header>
+
+<main>
    <div class ="startpage-container">
       <p class = "welcomeLogin">Welcome! Login here</p>
       <a id="login" href="views/login.php">Login</a>
@@ -21,6 +25,8 @@
       <p class = "welcomeLogin">Or if your new here, sign up!</p>
       <p><a id="signup" href="views/sign-up.php">Sign up</a></p>
    </div>
+
+</main>
 
 </body>
 </html>

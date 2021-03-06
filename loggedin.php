@@ -8,10 +8,10 @@
     <title>Logged in</title>
 </head>
 <body>
+<header>
+<a href="#top"> <img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo"></a>
+</header>
 
-<?php
-    include_once('includes/header.php');
-?>
 
 <main>
 
@@ -19,6 +19,8 @@
     <?php
     session_start();
     include 'includes/database_connection.php';
+
+
     $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts ORDER BY date DESC");
 
     //För välkomstmeddelande och kollar om man är admin

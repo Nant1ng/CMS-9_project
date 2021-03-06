@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logga in</title>
+    <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
     <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
     <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
     <script src="../includes/Showpassword.js" defer></script>
 </head>
-<body>
+
 <?php
 session_start();
 include '../includes/database_connection.php';
@@ -45,7 +46,7 @@ try
                 $_SESSION['userID'] = $return['userID'];
                 header("location:../loggedin.php");
             }else{  
-                $errorMessage = '<label>Något blev fel försök igen</label>';  
+                $errorMessage = '<label>Something went wrong, try again!</label>';  
             }   
         }    
     }  
@@ -56,9 +57,6 @@ catch(PDOException $error)
 }  
 ?>
 
-<?php
-    include_once('../includes/header.php');
-?>
 
 <!-- För error meddelandet -->
 <?php  
@@ -66,9 +64,12 @@ catch(PDOException $error)
         echo '<label>'.$errorMessage.'</label>';  
     }  
 ?>  
-
+<header>
+<img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo">
+</header>
+<main>
 <div class="login-form">
-    <h1>Logga in här</h1>
+    <h2>Login here</h2>
         <!-- Inputfält -->
         <form method="post">
         <div class="input-box">
@@ -84,5 +85,6 @@ catch(PDOException $error)
         <input type="submit" name="login" value="Logga in" class="login-btn">
         </form>
 </div>
+</main>
 </body>
 </html>
