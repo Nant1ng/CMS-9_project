@@ -40,7 +40,7 @@ input{
 #hide2{
     display: none;
 }
-.login-btn{
+.login-btn, .signup-btn{
     margin: 40px auto 20px;
     width: 80%;
     display: block;

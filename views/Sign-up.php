@@ -115,8 +115,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </header>
 
 <main>
-    <div class="login-form">
-        <h2>Sign up</h2>
+    <div class="login-form signup-form">
+        <h2>Sign up here</h2>
         <!-- Inputfält -->
         <form method="post">
             
@@ -147,7 +147,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="password" name="regConfirmPassword" placeholder = "Confirm Password">
                 <span><?php echo $regConfirmPassword_error; ?></span>
             </div>
-            <input type="submit" name="sign-up" value="Sign-up">
+            <input type="submit" name="sign-up" value="Sign-up" class="login-btn signup-btn">
             </form>
     </div>
 
