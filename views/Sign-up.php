@@ -141,11 +141,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="input-box">
                 <input type="password" name="regPassword" placeholder = "Password">
                 <span><?php echo $regPassword_error; ?></span>
+                <!-- <span class="eye" onclick="showpassword()">
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i>
+                </span> -->
             </div>
 
             <div class="input-box">
                 <input type="password" name="regConfirmPassword" placeholder = "Confirm Password">
                 <span><?php echo $regConfirmPassword_error; ?></span>
+                <!-- <span class="eye" onclick="showpassword()">
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i>
+                </span> -->
             </div>
             <input type="submit" name="sign-up" value="Sign-up" class="login-btn signup-btn">
             </form>
