@@ -35,6 +35,9 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 ?>
 <a href="../loggedin.php">Back to the blog</a>
 
+
+
+
 <!-- Visar det bloginlägget som kommentarerna tillhör -->
 <div class ="post">
     <figure><h4><?php echo $blogTitle?></h4>
@@ -47,6 +50,42 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 
 <!-- Hämtar och skriver ut alla kommentarer -->
 <div class="comments">
+    <!-- för att spara kommentaren i databasen -->
+<p>Leave a comment:</p>
+<?php
+if(isset($_POST['submit-comment'])){
+    $comment = $_POST['comment'];
+    $userID = $_SESSION['userID'];
+    $username = $_SESSION['username'];
+    $date = date('Y-m-d');
+    
+    if(empty($comment)) {
+        echo "<div>Please write a comment before posting!</div>";
+    } else{
+        $sql3 = "INSERT INTO comments (comment, date, userID, postID, username) VALUES (:comment, :date, :userID, :postID, :username)";
+        $stmt3 = $pdo->prepare($sql3);
+        $stmt3->execute([
+            ':comment' => $comment,
+            'date' => $date ,
+            'userID' => $userID,
+            ':postID' => $_GET['id'],
+            ':username' => $username
+        ]);
+        header("location: blogComments.php?id={$postID}");
+    }
+
+}
+
+
+?>
+    <!-- Form för att kunna kommentera -->
+    <div class="newCommentDiv">
+        <form class="comment-form" method="POST" action="blogComments.php?id=<?php echo $_GET['id']; ?>">
+            <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment..."></textarea><br>
+            <input type="submit" name="submit-comment" value="Post comment">
+        </form>
+    </div>
+
 <?php
 $sql2 = "SELECT * FROM comments WHERE postID = :id ORDER BY date DESC";
 $stmt2 = $pdo->prepare($sql2);
@@ -95,41 +134,6 @@ if($comment_count == 0) {
 }
 ?>
 
-<!-- för att spara kommentaren i databasen -->
-<p>Leave a comment:</p>
-<?php
-if(isset($_POST['submit-comment'])){
-    $comment = $_POST['comment'];
-    $userID = $_SESSION['userID'];
-    $username = $_SESSION['username'];
-    $date = date('Y-m-d');
-    
-    if(empty($comment)) {
-        echo "<div>Please write a comment before posting!</div>";
-    } else{
-        $sql3 = "INSERT INTO comments (comment, date, userID, postID, username) VALUES (:comment, :date, :userID, :postID, :username)";
-        $stmt3 = $pdo->prepare($sql3);
-        $stmt3->execute([
-            ':comment' => $comment,
-            'date' => $date ,
-            'userID' => $userID,
-            ':postID' => $_GET['id'],
-            ':username' => $username
-        ]);
-        header("location: blogComments.php?id={$postID}");
-    }
-
-}
-
-
-?>
-    <!-- Form för att kunna kommentera -->
-    <div class="newCommentDiv">
-        <form class="comment-form" method="POST" action="blogComments.php?id=<?php echo $_GET['id']; ?>">
-            <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment..."></textarea><br>
-            <input type="submit" name="submit-comment" value="Post comment">
-        </form>
-    </div>
 
 </body>
 </html>
