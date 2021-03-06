@@ -123,6 +123,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="input-box">
                 <input type="text" name="regFname" placeholder = "First name">
             </div>
+
             <div class="input-box">
                 <input type="text" name="regLname" placeholder = "Last name">
             </div>
@@ -141,15 +142,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="password" name="regPassword" placeholder = "Password">
                 <span><?php echo $regPassword_error; ?></span>
             </div>
-            <div class="input-box">
 
+            <div class="input-box">
                 <input type="password" name="regConfirmPassword" placeholder = "Confirm Password">
                 <span><?php echo $regConfirmPassword_error; ?></span>
-                </div>
-
-                <input type="submit" name="sign-up" value="Sign-up">
+            </div>
+            <input type="submit" name="sign-up" value="Sign-up">
             </form>
-        </pre>  
     </div>
 
 </main>
