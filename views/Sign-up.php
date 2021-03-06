@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         if($stm->execute()){
             if($stm->rowCount() == 1){
-                $regEmail_error = "This password is already taken!";
+                $regEmail_error = "This email is already taken!";
             } else{
                 $regEmail = trim($_POST["regEmail"]);
             }
