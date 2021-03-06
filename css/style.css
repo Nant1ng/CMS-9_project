@@ -11,7 +11,7 @@ body {
 
 /* Style på länkar */
 
-a:link, a:visited {
+/* a:link, a:visited {
     text-decoration: none;
     color: black;
     border: black solid 1px;
@@ -27,7 +27,7 @@ a:hover, a:active {
 
 .scrolleffect {
   scroll-behavior: smooth;
-}
+} */
 
 
 
@@ -203,7 +203,6 @@ img {
 .footer{
     text-align: center;
     color: lightgray;
-    text-transform: uppercase;
     font-size: 1rem;
     padding: 1rem;
 }
