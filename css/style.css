@@ -94,14 +94,11 @@ p.welcomeLogin {
     margin-bottom: 1rem;
 }
 
-/* Style på sign-up.php*/
-
-.signup-form {
-    border: px solid grey;
-}
 
 
-/* Style på loggedin.php*/
+
+
+/* Style på loggedin.php och på sign-up.php*/
 
 header {
     position: -webkit-sticky; /* Safari */
@@ -149,7 +146,6 @@ header {
     height: auto;
     margin:1rem;
     padding:2rem 5rem;
-
 }
 
 p.date {
@@ -157,16 +153,13 @@ p.date {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     padding: 0.5rem;
-
 }
-
 
 .description {
     width: 30rem;
     margin: 2.6rem 5rem;
     letter-spacing: 0.02rem;
     line-height: 1.6;
-
 }
 
 img {
