@@ -33,7 +33,7 @@ include '../includes/database_connection.php';
 <input type="file" name="imageToUpload" > </br>
     <input type="submit" value="Upload image">
 <span>Choose a category</span>
-    <input type="text" name="category" value="<?php echo $category;?>">
+    <input type="text" name="category" placeholder="Category">
     
 <span>Choose a date</span>
     <input type="date" name="date" placeholder="Choose date" size="30">

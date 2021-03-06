@@ -16,8 +16,8 @@ include('../includes/database_connection.php');
 
 // För registrering.
 // Kollar ifall användernamnet eller email är redan taget.
-$regUsername = $regEmail = "";
-$regUsername_error = $regEmail_error = "";
+$regUsername = $regEmail = $regPassword = $regConfirmPassword = "";
+$regUsername_error = $regEmail_error = $regPassword_error = $regConfirmPassword_error = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $sql = "SELECT userID FROM users WHERE username = :username_IN";
 
@@ -47,8 +47,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
         }
     }
-    //Om email eller användernamet inte är taget så skapas det ett konto.
-    if(empty($regUsername_error) && empty($regEmail_error)){
+    //Kollar så att lösenordet är längre än 10 tecken. 
+    if(strlen(trim($_POST["regPassword"])) < 10){
+        $regPassword_error = "Password must have at least 10 characters!";
+    } else{
+        $regPassword = trim($_POST["regPassword"]);
+    }
+    $regConfirmPassword = trim($_POST["regConfirmPassword"]);
+    if(empty($regConfirmPassword_error) && ($regPassword != $regConfirmPassword)){
+        $regConfirmPassword_error = "Password is not matching!";
+    }
+    //Om man inte får ett error så skapas det ett konto.
+    if(empty($regUsername_error) && empty($regEmail_error) && empty($regPassword_error) && empty($regConfirmPassword_error)){
         try{
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         if(isset($_POST["sign-up"]))
@@ -119,21 +129,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             <div class="input-box">
                 <input type="text" name="regEmail" placeholder = "Email">
+                <span><?php echo $regEmail_error; ?></span>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name="regUsername" placeholder = "Username">
+                <span><?php echo $regUsername_error; ?></span>
             </div>
             
             <div class="input-box">
-            <input type="text" name="regUsername" placeholder = "Username">
-            </div>
-
-            <div class="input-box">
                 <input type="password" name="regPassword" placeholder = "Password">
+                <span><?php echo $regPassword_error; ?></span>
             </div>
-            <span><?php echo $regUsername_error; ?></span><br>
-            <span><?php echo $regEmail_error; ?></span>
-            <input type="submit" name="sign-up" value="Sign-up" class="login-btn">
+            <div class="input-box">
 
+                <input type="password" name="regConfirmPassword" placeholder = "Confirm Password">
+                <span><?php echo $regConfirmPassword_error; ?></span>
+                </div>
 
-        </form>
+                <input type="submit" name="sign-up" value="Sign-up">
+            </form>
+        </pre>  
     </div>
 
 </main>
