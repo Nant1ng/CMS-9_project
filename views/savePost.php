@@ -6,6 +6,7 @@ include '../includes/database_connection.php';
 $title = $_POST['title'];
 $description = $_POST['description'];
 $imageUrl = $_POST['imageUrl'];
+// $imageUrl = $_POST['imageUpload'];
 $category = $_POST['category'];
 $date = $_POST['date'];
 
@@ -14,6 +15,7 @@ $stm = $pdo->prepare($sql);
 $stm->bindParam(':title_IN', $title);
 $stm->bindParam(':description_IN', $description);
 $stm->bindParam(':imageUrl_IN', $imageUrl);
+// $stm->bindParam(':imageUpload_IN', $imageUrl);
 $stm->bindParam(':category_IN', $category);
 $stm->bindParam(':date_IN', $date);
 
@@ -22,8 +24,37 @@ if($stm->execute()) {
 }else{
     echo "Something went wrong try again";
 }
+?>
 
+<!-- Här laddar vi upp bilder från datorn :)  -->
 
+<?php
+$upload_dir = "uploads/";
+$target_file = $upload_dir . basename($_FILES['imageToUpload']['name']);
+$fileType = strtolower(pathinfo($target_file, PATHFINDER_EXTENSION));
 
+if(isset($_POST['submit'])){
+    $check = getimagesize($_FILES['imageToUpload']['top_name']);
+    if($check == false){
+        echo "The file is not an image!";
+        die;
+    }
+}
+
+if(file_exists('$target_file')){
+    echo "The file already exist!";
+    die;
+}
+
+if($_FILES['imageToUpload']['size']>1000000){
+    echo "The file is to big! max 1mb!";
+    die;
+}
+
+if($fileType != "png" && $fileType != "gif" && $fileType != "jpg" && $fileType != "jpeg"){
+    echo "You can only upload PNG, GIF, JPG or JPEG";
+    die;
+}
 
 ?>
+

@@ -191,7 +191,7 @@ p.date {
 
 /* Style på post.php, skapa inlägg */
 .postform-container {
-    background-color: lightgrey;
+    background-color: rgb(243, 243, 243);
     padding: 2rem 10rem;
     display: flex;
     justify-content: center;
