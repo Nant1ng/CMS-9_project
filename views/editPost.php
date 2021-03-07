@@ -72,14 +72,15 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
     <h5>Refresh post</h5>
 
     <form name="form1" method="post" action="editPost.php" enctype="multipart/form-data">
+    <div class ="editPost-container">
         <div class ="editPost-form">
-                <p>Update title</p>
                 <div class = "title-input">
+                    <p>Update title</p>
                     <input type="text" name="title" value="<?php echo $title;?>">
                 </div>
                 
-                <p>Update description</p>
                 <div class = "description-input">
+                    <p>Update description</p>
                     <textarea
                     cols="50" rows="20"
                     name="description" 
@@ -88,19 +89,19 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                     </textarea>
                 </div>
                 
-                <p>Update image Url</p>
                 <div class = "imageUrl">
+                    <p>Update image Url</p>
                     <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>">
                 </div>
-
-                <p>Update image from device</p>
+                
                 <div class = "image-upload">
+                    <p>Update image from device</p>
                     <input type="file" name="imageUpload" value="<?php echo $imageUrl;?>">
                     <input type="submit" value="Upload">
                 </div>
 
-                <p>Update category</p>
                 <div class = "category-input">
+                    <p>Update category</p>
                     <input type="text" name="category" value="<?php echo $category;?>">
                 </div>
 
@@ -110,6 +111,7 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                     <input type="submit" name="update" value="Update post">
                 </div>
         </div>        
+    </div>
     </form>
 </main>
 </body>

@@ -63,17 +63,17 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 
 <main>
 
-    <h5>Refresh comment</h5>
+    <h2>Refresh comment</h2>
 
     <form name="form1" method="post" action="editComment.php">
-        <div class ="editPost-form">
+        <div class = "editPost-container">
+            <div class ="editPost-form">
                 <div class = "comment-input">
-                <textarea
-                    cols="50" rows="20"
-                    name="comment" 
-                    value="<?php echo $comment;?>">
-                    <?php echo $comment;?>
-                    
+                    <textarea
+                        cols="50" rows="20"
+                        name="comment" 
+                        value="<?php echo $comment;?>">
+                        <?php echo $comment;?>    
                     </textarea>
                 </div>
                 
@@ -82,7 +82,8 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                 <div class ="submit-button">
                     <input type="submit" name="update" value="Update comment">
                 </div>
-        </div>        
+            </div> 
+        </div>       
     </form>
 </main>
 </body>

@@ -190,8 +190,20 @@ p.date {
 
 
 /* Style på post.php, skapa inlägg */
+.postform-container {
+    background-color: lightgrey;
+    padding: 2rem 10rem;
+    display: flex;
+    justify-content: center;
+}
+
 .post-form{
-    border: grey solid 3px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    text-align: left;
+    width: 25rem;
+    
 }
 
 
@@ -199,17 +211,29 @@ p.date {
 
 /* Style på editPost.php*/
 
-.editPost-form {
+.editPost-container{
     background-color: rgb(243, 243, 243);
-    width: auto;
-    height: auto;
     display: flex;
     flex-flow:column wrap;
     align-items: center;
-    padding: 3rem;
+    width: 100%;
 }
 
+.editPost-form {
+    width: 26rem;
+    padding:2rem;
+    margin:auto;
+}
 
+.title-input,
+.description-input,
+.imageUrl,
+.image-upload,
+.category-input,
+.submit-button
+{
+    margin: 1rem;
+}
 
 
 /* Style på submit/update knappen på edit comment */
