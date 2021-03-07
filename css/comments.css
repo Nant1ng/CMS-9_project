@@ -21,9 +21,14 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h4.comment-count{
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* Style på länkar */
@@ -97,5 +102,10 @@ img {
     margin-top: 1rem;
 }
 
-
-
+.latestcomments {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top:3rem
+}
