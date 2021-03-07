@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comments</title>
     <link rel = "stylesheet" type = "text/css" href = "../css/comments.css" />
-    <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -51,7 +52,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 <!-- Hämtar och skriver ut alla kommentarer -->
 <div class="comments">
     <!-- för att spara kommentaren i databasen -->
-<p>Leave a comment:</p>
+<p>Leave a comment</p>
 <?php
 if(isset($_POST['submit-comment'])){
     $comment = $_POST['comment'];
@@ -82,7 +83,9 @@ if(isset($_POST['submit-comment'])){
     <div class="newCommentDiv">
         <form class="comment-form" method="POST" action="blogComments.php?id=<?php echo $_GET['id']; ?>">
             <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment..."></textarea><br>
-            <input type="submit" name="submit-comment" value="Post comment">
+            <div class ="submit-button">
+                    <input type="submit" name="comment" value="Comment!">
+            </div>        
         </form>
     </div>
 
@@ -92,9 +95,9 @@ $stmt2 = $pdo->prepare($sql2);
 $stmt2->execute([':id'=>$_GET['id']]);
 $comment_count = $stmt2->rowCount();
 if($comment_count == 0) {
-    echo "No comments yet, be the first one!";
+    echo "<p>No comments yet, be the first one!</p>";
 }else if(isset($_SESSION['role']) && $_SESSION['role'] == "admin") {
-    echo '<h2 class="comment-count">' . $comment_count . ' Comments</h2>';            // För att skriva ut hur många kommentarer det finns
+    echo '<h5 class="comment-count">' . $comment_count . ' Comments</h5>';            // För att skriva ut hur många kommentarer det finns
     while($comment = $stmt2->fetch(PDO::FETCH_ASSOC)){
         $commentAuthor = $comment['username'];
         $commentText = $comment['comment'];

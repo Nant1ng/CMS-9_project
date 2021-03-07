@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
     <title>Edit post</title>
 </head>
 <body>
@@ -62,12 +62,14 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
     $category = $row['category'];                  
 }
 
-    include_once('../includes/header.php');
 ?>
+<div>
+<div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
 <a href="../loggedin.php">Back to the blog</a>
+</div>  
 
-
-    <h4>Edit post</h4>
+<main>
+    <h5>Refresh post</h5>
 
     <form name="form1" method="post" action="editPost.php" enctype="multipart/form-data">
         <div class ="editPost-form">
@@ -105,10 +107,10 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                 <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>               <!-- hidden och get id för att hålla koll på vilket id i posts som ska redigeras. -->
                 
                 <div class ="submit-button">
-                    <input type="submit" name="update" value="Update">
+                    <input type="submit" name="update" value="Update post">
                 </div>
         </div>        
     </form>
-
+</main>
 </body>
 </html>

@@ -90,6 +90,12 @@ img {
     margin: 1rem 0.5rem;
 }
 
+.submit-button input{
+    border:1px black solid;
+    padding:0.5rem 2rem;
+    text-decoration: none;
+    margin-top: 1rem;
+}
 
 
 

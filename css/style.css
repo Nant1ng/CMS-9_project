@@ -54,6 +54,15 @@ h4 {
     padding: 1rem 0rem ;
 }
 
+h5 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1rem 0rem ;
+    margin-top: 2rem;
+}
+
 
 span {
     width: auto;
@@ -61,6 +70,7 @@ span {
     margin:1rem;
     padding:0.5rem 2rem;
 }
+
 
 
 /* Style på index.html */

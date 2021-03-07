@@ -57,14 +57,13 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 ?>
 
 
-<header>
 <div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
 <a href="../loggedin.php">Back to the blog</a>
-</header>    
+</div>  
 
 <main>
 
-    <h4>Edit comment</h4>
+    <h5>Refresh comment</h5>
 
     <form name="form1" method="post" action="editComment.php">
         <div class ="editPost-form">

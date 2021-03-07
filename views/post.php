@@ -17,7 +17,7 @@ include '../includes/database_connection.php';
 
 <h2>Create a new blogpost</h2>
 
-<pre>
+
 <div class="post-form">
     <form method="POST" action="savePost.php" enctype="multipart/form-data">
     <span>Choose a title</span>
