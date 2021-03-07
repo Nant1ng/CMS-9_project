@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+    <link rel="stylesheet" type = "text/css" href="css/style.css?v=<?php echo time(); ?>">
+    
     <title>Logged in</title>
 </head>
 <body>
 <header>
-<a href="#top"> <img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo"></a>
+<a href="#top">
+<div id ="header-logo"> <img src = "image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
+</a>
 </header>
 
 

@@ -12,7 +12,7 @@
 
 <body>
 <header>
-<img src = "image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo">
+    <div id ="header-logo"> <img src = "image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
 </header>
 
 <main>

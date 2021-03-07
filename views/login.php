@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logga in</title>
+    <title>Log in</title>
     <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
     <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
     <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
@@ -14,7 +14,6 @@
 <?php
 session_start();
 include '../includes/database_connection.php';
-
 
 try  
 {     
@@ -64,11 +63,13 @@ catch(PDOException $error)
         echo '<label>'.$errorMessage.'</label>';  
     }  
 ?>  
+<body>
 <header>
-<img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo">
+<div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
 </header>
 <main>
 <div class="login-form">
+
     <h2>Login here</h2>
         <!-- Inputfält -->
         <form method="post">

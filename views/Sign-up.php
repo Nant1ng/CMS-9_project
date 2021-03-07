@@ -110,8 +110,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>  
 
 <body>
+
 <header>
-<a id ="header-logo" img src ="image/logos/Millhouse-logos_black.png" alt="Logo Millhouse">
+<div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
 </header>
 
 <main>
