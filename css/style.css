@@ -121,7 +121,7 @@ div#header-logo img {
 }
 
 .loggaut-knapp {
-        margin:0.5rem 2rem 7rem;
+    margin:0.5rem 2rem 7rem;
 }
 
 .latestpost
@@ -196,8 +196,20 @@ p.date {
     display: flex;
     flex-flow:column wrap;
     align-items: center;
+    padding: 3rem;
 }
 
+
+
+
+/* Style på submit/update knappen på edit comment */
+
+.submit-button input{
+    border:1px black solid;
+    padding:0.5rem 2rem;
+    text-decoration: none;
+    margin-top: 1rem;
+}
 
 
 
