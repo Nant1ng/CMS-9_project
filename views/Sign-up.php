@@ -15,7 +15,7 @@ include('../includes/database_connection.php');
 
 
 // För registrering.
-// Kollar ifall användernamnet eller email är redan taget.
+// Kollar ifall användernamnet eller email redan är taget.
 $regUsername = $regEmail = $regPassword = $regConfirmPassword = "";
 $regUsername_error = $regEmail_error = $regPassword_error = $regConfirmPassword_error = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -159,7 +159,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <input type="submit" name="sign-up" value="Sign-up" class="login-btn signup-btn">
             </form>
     </div>
-
 </main>
 </body>
 </html>
