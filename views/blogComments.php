@@ -92,7 +92,6 @@ if(isset($_POST['submit-comment'])){
             </div>        
         </form>
     </div>
-    <h4 class="latestcomments">Latest comments</h4>
 
 <?php
 $sql2 = "SELECT * FROM comments WHERE postID = :id ORDER BY date DESC";
@@ -102,7 +101,7 @@ $comment_count = $stmt2->rowCount();
 if($comment_count == 0) {
     echo "<p>No comments yet, be the first one!</p>";
 }else if(isset($_SESSION['role']) && $_SESSION['role'] == "admin") {
-    echo '<h4 class="comment-count">' . $comment_count . ' comments</h4>';            // För att skriva ut hur många kommentarer det finns
+    echo '<h4 class="comment-count">Latest ' . $comment_count . ' comments</h4>';            // För att skriva ut hur många kommentarer det finns
     while($comment = $stmt2->fetch(PDO::FETCH_ASSOC)){
         $commentAuthor = $comment['username'];
         $commentText = $comment['comment'];
@@ -123,7 +122,7 @@ if($comment_count == 0) {
     
     }
 }else{
-    echo '<h2 class="comment-count">' . $comment_count . ' Comments</h2>';            // För att skriva ut hur många kommentarer det finns
+    echo '<h4 class="comment-count"> Latest ' . $comment_count . ' Comments</h4>';            // För att skriva ut hur många kommentarer det finns
     while($comment = $stmt2->fetch(PDO::FETCH_ASSOC)){
         $commentAuthor = $comment['username'];
         $commentText = $comment['comment'];

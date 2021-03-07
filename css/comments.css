@@ -30,6 +30,7 @@ h4 {
 h4.comment-count{
     font-size: 1rem;
     text-align: center;
+    padding-top:3rem;
 }
 
 /* Style på länkar */
@@ -103,12 +104,4 @@ img {
     text-decoration: none;
     margin-top: 1rem;
     background-color: white;
-}
-
-.latestcomments {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding-top:3rem
 }
