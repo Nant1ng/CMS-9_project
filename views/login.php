@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logga in</title>
-    <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
-    <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
-    <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
-    <script src="../includes/Showpassword.js" defer></script>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Logga in</title>
+	<link href="../css/style.css" rel="stylesheet" type="text/css">
+	<link href="../css/login.css" rel="stylesheet" type="text/css">
+	<script src="https://kit.fontawesome.com/510675b914.js">
+	</script>
+	<script defer src="../includes/Showpassword.js">
+	</script>
 </head>
-
 <?php
-session_start();
-include '../includes/database_connection.php';
+    session_start();
+    include '../includes/database_connection.php';
 
-
-try  
-{     
-    // För login      
+try
+{
+    // För login.
     if(isset($_POST["login"]))  
     {  
-        if(empty($_POST["username"]) || empty($_POST["password"]))  
-        {  
-            $errorMessage = '<label>Alla fält måste vara ifyllda</label>';  
-        }  
-        else{ 
+        if(empty($_POST["username"]) || empty($_POST["password"]))
+        {
+            $errorMessage = '<label>Alla fält måste vara ifyllda</label>';
+        }
+        else{
             $username = $_POST['username'];
             $userPassword = $_POST['password'];
             $salt = "siahbndjiasnidja12893183s9300";
@@ -56,35 +56,29 @@ catch(PDOException $error)
     $errorMessage = $error->getMessage();  
 }  
 ?>
-
-
 <!-- För error meddelandet -->
 <?php  
     if(isset($errorMessage)){  
         echo '<label>'.$errorMessage.'</label>';  
     }  
-?>  
-<header>
-<img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse" class ="header-logo">
-</header>
-<main>
-<div class="login-form">
-    <h2>Login here</h2>
-        <!-- Inputfält -->
-        <form method="post">
-        <div class="input-box">
-            <input type="text" name="username" placeholder = "Username">
-        </div>
-        <div class="input-box">
-        <input type="password" name="password" placeholder ="Password" id="Input">
-        <span class="eye" onclick="showpassword()">
-        <i id="hide1" class="fa fa-eye"></i>
-        <i id="hide2" class="fa fa-eye-slash"></i>
-        </span>
-        </div>
-        <input type="submit" name="login" value="Logga in" class="login-btn">
-        </form>
-</div>
-</main>
+?>
+<body>
+	<header>
+		<img alt="Logo Millhouse" class="header-logo" src="../image/logos/Millhouse-logos_black.png">
+	</header>
+	<main>
+		<div class="login-form">
+			<h2>Login here</h2>
+            <!-- Inputfält -->
+			<form method="post">
+				<div class="input-box">
+					<input name="username" placeholder="Username" type="text">
+				</div>
+				<div class="input-box">
+					<input id="Input" name="password" placeholder="Password" type="password"> <span class="eye" onclick="showpassword()"><i class="fa fa-eye" id="hide1"></i> <i class="fa fa-eye-slash" id="hide2"></i></span>
+				</div><input class="login-btn" name="login" type="submit" value="Logga in">
+			</form>
+		</div>
+	</main>
 </body>
 </html>
