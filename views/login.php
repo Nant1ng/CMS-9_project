@@ -7,10 +7,8 @@
     <title>Log in</title>
 	<link href="../css/style.css" rel="stylesheet" type="text/css">
 	<link href="../css/login.css" rel="stylesheet" type="text/css">
-	<script src="https://kit.fontawesome.com/510675b914.js">
-	</script>
-	<script defer src="../includes/Showpassword.js">
-	</script>
+	<script src="https://kit.fontawesome.com/510675b914.js"></script>
+	<script defer src="../includes/Showpassword.js"></script>
 </head>
 <?php
     session_start();

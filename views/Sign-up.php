@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
     <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
+    <script src="https://kit.fontawesome.com/510675b914.js"></script>
+	<script defer src="../includes/Showpassword.js"></script>
     <title>Sign up</title>
 </head>
 
@@ -102,7 +104,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
-<!-- För error meddelandet -->
+<!-- För error meddelandet. -->
 <?php  
     if(isset($errorMessage)){  
         echo '<input>'.$errorMessage.'</input>';  
@@ -118,7 +120,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <main>
     <div class="login-form signup-form">
         <h2>Sign up here</h2>
-        <!-- Inputfält -->
+        <!-- Inputfält. -->
         <form method="post">
             
             <div class="input-box">
@@ -140,21 +142,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             
             <div class="input-box">
-                <input type="password" name="regPassword" placeholder = "Password">
-                <span><?php echo $regPassword_error; ?></span>
-                <!-- <span class="eye" onclick="showpassword()">
+                <input id="Input" type="password" name="regPassword" placeholder = "Password">
+                <span class="eye" onclick="showpassword()">
                 <i id="hide1" class="fa fa-eye"></i>
                 <i id="hide2" class="fa fa-eye-slash"></i>
-                </span> -->
+                </span> <span><?php echo $regPassword_error; ?></span>
+
             </div>
 
             <div class="input-box">
-                <input type="password" name="regConfirmPassword" placeholder = "Confirm Password">
-                <span><?php echo $regConfirmPassword_error; ?></span>
-                <!-- <span class="eye" onclick="showpassword()">
+                <input id="Input2" type="password" name="regConfirmPassword" placeholder = "Confirm Password">
+                <span class="eye" onclick="showpassword2()">
                 <i id="hide1" class="fa fa-eye"></i>
                 <i id="hide2" class="fa fa-eye-slash"></i>
-                </span> -->
+                </span>
+                <span><?php echo $regConfirmPassword_error; ?></span>
             </div>
             <input type="submit" name="sign-up" value="Sign-up" class="login-btn signup-btn">
             </form>
