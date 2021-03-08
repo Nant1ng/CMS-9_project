@@ -42,11 +42,7 @@ if(move_uploaded_file($_FILES['imageToUpload']['tmp_name'], $target_file)){
 session_start();
 include '../includes/database_connection.php';
 
-if(empty($_POST["title"]) || empty($_POST["description"]) || empty($_POST["imageUrl"]) || empty($_POST["category"]) || empty($_POST["date"]))
-{
-    $errorMessage = '<label>Alla fält måste vara ifyllda</label>';
-}
-else{
+
 $title = $_POST['title'];
 $description = $_POST['description'];
 $imageUrl = $_POST['imageUrl'];
@@ -67,5 +63,5 @@ if($stm->execute()) {
 }else{
     echo "Something went wrong try again";
 }
-}
+
 ?>
