@@ -89,14 +89,10 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                     </textarea>
                 </div>
                 
-                <div class = "imageUrl">
-                    <p>Update image Url</p>
-                    <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>">
-                </div>
                 
                 <div class = "image-upload">
                     <p>Update image from device</p>
-                    <input type="file" name="imageUpload" value="<?php echo $imageUrl;?>">
+                    <input type="file" name="imageToUpload" value="<?php echo $imageUrl;?>">
                     <input type="submit" value="Upload">
                 </div>
 
