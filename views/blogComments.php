@@ -17,12 +17,12 @@ include '../includes/database_connection.php';
 
 $postID = $_GET['id'];
 
-//Välj data från rätt id
+//Välj data från rätt id.
 $sql = "SELECT * FROM posts WHERE postID=:postID";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(array(':postID' => $postID));
 
-while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en array med all data från posts med rätt id
+while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en array med all data från posts med rätt id.
 {
     $blogTitle = $row['title'];
     $blogText = $row['description'];
@@ -31,14 +31,10 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
     $blogDate = $row['date'];               
 }
 
-
 ?>
 <a href="../loggedin.php">Back to the blog</a>
 
-
-
-
-<!-- Visar det bloginlägget som kommentarerna tillhör -->
+<!-- Visar det bloginlägget som kommentarerna tillhör. -->
 <div class ="post">
     <figure><h4><?php echo $blogTitle?></h4>
     <p class ="date"><?php echo $blogDate;?></p>
@@ -47,10 +43,9 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
     <img src="<?php echo $blogImg;?>" alt="blog-bild">
     <figure>
 </div>
-
-<!-- Hämtar och skriver ut alla kommentarer -->
+<!-- Hämtar och skriver ut alla kommentarer. -->
 <div class="comments">
-    <!-- för att spara kommentaren i databasen -->
+    <!-- för att spara kommentaren i databasen. -->
 <p>Leave a comment:</p>
 <?php
 if(isset($_POST['submit-comment'])){
@@ -75,8 +70,6 @@ if(isset($_POST['submit-comment'])){
     }
 
 }
-
-
 ?>
     <!-- Form för att kunna kommentera -->
     <div class="newCommentDiv">
@@ -133,7 +126,6 @@ if($comment_count == 0) {
     }
 }
 ?>
-
 
 </body>
 </html>
