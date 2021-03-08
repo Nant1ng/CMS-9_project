@@ -35,7 +35,7 @@ include '../includes/database_connection.php';
             <textarea name="description" cols="30" rows="10" placeholder="Description"></textarea>
             
             <div>
-            <span>Choose image from device(max 1mb, png, gif or jpeg)</span>
+            <span>Choose image from device(max 1mb and png, gif or jpeg)</span>
             <input type="file" name="imageToUpload" > </br>
             </div>
             
