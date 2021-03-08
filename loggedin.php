@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type = "text/css" href="css/style.css?v=<?php echo time(); ?>">
+    <script src="https://kit.fontawesome.com/510675b914.js"></script>
     
     <title>Logged in</title>
 </head>
@@ -75,9 +76,9 @@
             <!-- För att få rätt id på edit o delete knapparna -->
             
                 <div class="postbuttons">
-                    <a href="views/editPost.php?id=<?php echo $row['postID']; ?>">Edit</a>
-                    <a href="views/deletePost.php?id=<?php echo $row['postID']; ?>">Delete</a>
-                    <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">Comments</a>
+                    <a href="views/editPost.php?id=<?php echo $row['postID']; ?>"><i class="fas fa-edit"></i>Edit</a>
+                    <a href="views/deletePost.php?id=<?php echo $row['postID']; ?>"><i class="fas fa-trash"></i>Delete</a>
+                    <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>"><i class="fas fa-comment"></i>Comments</a>
                 </div><!-- stänger postbuttons-->
 
         </div> <!-- stänger post -->

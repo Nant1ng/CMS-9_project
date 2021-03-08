@@ -54,12 +54,6 @@ catch(PDOException $error)
     $errorMessage = $error->getMessage();  
 }  
 ?>
-<!-- För error meddelandet -->
-<?php  
-    if(isset($errorMessage)){  
-        echo '<label>'.$errorMessage.'</label>';  
-    }  
-?>
 <body>
 	<header>
     <div id ="header-logo"> <img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
@@ -75,6 +69,12 @@ catch(PDOException $error)
 				<div class="input-box">
 					<input id="Input" name="password" placeholder="Password" type="password"> <span class="eye" onclick="showpassword()"><i class="fa fa-eye" id="hide1"></i> <i class="fa fa-eye-slash" id="hide2"></i></span>
 				</div><input class="login-btn" name="login" type="submit" value="Logga in">
+                <!-- För error meddelandet -->
+                <?php  
+                    if(isset($errorMessage)){  
+                    echo '<label id="errorMessage">'.$errorMessage.'</label>';  
+                    }  
+                ?>  
 			</form>
 		</div>
 	</main>
