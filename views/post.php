@@ -35,14 +35,8 @@ include '../includes/database_connection.php';
             <textarea name="description" cols="30" rows="10" placeholder="Description"></textarea>
             
             <div>
-            <span>Choose an image URL</span>
-            <input type="text" name="imageUrl" placeholder="Image adress ex: https://images.pexels.com/photos/2811088/pexels-photo-2811088.jpeg" size="37">
-            </div>
-
-            <div>
-            <span>Choose image from device</span>
+            <span>Choose image from device(max 1mb, png, gif or jpeg)</span>
             <input type="file" name="imageToUpload" > </br>
-            <input type="submit" value="Upload image">
             </div>
             
             <div>
