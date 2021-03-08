@@ -3,6 +3,7 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: rgb(243, 243, 243);
 }
 
 
@@ -21,9 +22,15 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h4.comment-count{
+    font-size: 1rem;
+    text-align: center;
+    padding-top:3rem;
 }
 
 /* Style på länkar */
@@ -83,6 +90,7 @@ img {
     width: 30%;
     padding: 1rem;
     margin: 1rem 0.5rem;
+    background-color: white;
 }
 .comment-box {
     border-top: lightgray 1px solid;
@@ -95,7 +103,5 @@ img {
     padding:0.5rem 2rem;
     text-decoration: none;
     margin-top: 1rem;
+    background-color: white;
 }
-
-
-

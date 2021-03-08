@@ -25,25 +25,32 @@ include '../includes/database_connection.php';
     <div class = "postform-container">
         <div class="post-form">
             <form method="POST" action="savePost.php" enctype="multipart/form-data">
-            <span>Choose a title</span>
-            <input type="text" name="title" placeholder="Choose a title" size="30">
             
+            <div>
+                <span>Choose a title</span>
+                <input type="text" name="title" placeholder="Choose a title" size="30">
+            </div>
+            <div>
             <span>Write a description</span>
             <textarea name="description" cols="30" rows="10" placeholder="Description"></textarea>
             
-        <span>Choose an image URL</span>
-            <input type="text" name="imageUrl" placeholder="Image adress ex: https://images.pexels.com/photos/2811088/pexels-photo-2811088.jpeg" size="37">
+            <div>
+            <span>Choose image from device(max 1mb and png, gif or jpeg)</span>
+            <input type="file" name="imageToUpload" > </br>
+            </div>
             
-        <span>Choose image from device</span>
-        <input type="file" name="imageToUpload" > </br>
-            <input type="submit" value="Upload image">
-        <span>Choose a category</span>
+            <div>
+            <span>Choose a category</span>
             <input type="text" name="category" placeholder="Category">
-            
-        <span>Choose a date</span>
-            <input type="date" name="date" placeholder="Choose date" size="30">
-            
+            </div>
+
+            <div>
+            <span>Choose a date</span>
+                <input type="date" name="date" placeholder="Choose date" size="30">
+            </div>
+
             <input type="submit" value="Post to blog">
+            
             </form>
         </div>
     </div>
