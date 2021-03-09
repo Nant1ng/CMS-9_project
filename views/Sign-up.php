@@ -134,24 +134,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             <div class="input-box">
                 <input type="text" name="regEmail" placeholder = "Email">
-                <span><?php echo $regEmail_error; ?></span>
             </div>
+            <span><?php echo $regEmail_error; ?></span>
 
             <div class="input-box">
                 <input type="text" name="regUsername" placeholder = "Username">
-                <span><?php echo $regUsername_error; ?></span>
             </div>
+            <span><?php echo $regUsername_error; ?></span>
             
             <div class="input-box">
                 <input id="Input" type="password" name="regPassword" placeholder = "Password">
-                </span> <span><?php echo $regPassword_error; ?></span>
-
             </div>
+            <div class="requirement">
+                Enter at least 10 characters.
+            </div>
+             <span><?php echo $regPassword_error; ?></span>
 
             <div class="input-box">
                 <input id="Input" type="password" name="regConfirmPassword" placeholder = "Confirm Password">
-                <span><?php echo $regConfirmPassword_error; ?></span>
             </div>
+            <span><?php echo $regConfirmPassword_error; ?></span>
             <input type="submit" name="sign-up" value="Sign-up" class="login-btn signup-btn">
             </form>
     </div>
