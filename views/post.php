@@ -17,6 +17,11 @@ include '../includes/database_connection.php';
 
 <div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
 <a href="../loggedin.php">Back to the blog</a>
+<!-- Kolla med Sandra -->
+<br></br>
+<div class = "loggaut-knapp">
+    <a href="logout.php">Log out</a>
+</div> 
 </div>  
 
 <main>
