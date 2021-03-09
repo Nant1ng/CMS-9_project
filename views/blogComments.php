@@ -7,6 +7,8 @@
     <title>Comments</title>
     <link rel = "stylesheet" type = "text/css" href = "../css/comments.css" />
     <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../image/logos/Millhouse-favicon.jpeg">
+
 </head>
 <body>
 

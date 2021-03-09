@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type = "text/css" href="css/style.css?v=<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/510675b914.js"></script>
-    
+    <link rel="icon" href="image/logos/Millhouse-favicon.jpeg">
+
     <title>Logged in</title>
 </head>
 <body>

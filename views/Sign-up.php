@@ -8,7 +8,8 @@
     <link rel = "stylesheet" type = "text/css" href = "../css/login.css" />
     <script src="https://kit.fontawesome.com/510675b914.js"></script>
 	<script defer src="../includes/Showpassword.js"></script>
-    <title>Sign up</title>
+    <link rel="icon" href="../image/logos/Millhouse-favicon.jpeg">
+<title>Sign up</title>
 </head>
 
 <?php

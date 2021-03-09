@@ -9,6 +9,8 @@
 	<link href="../css/login.css" rel="stylesheet" type="text/css">
 	<script src="https://kit.fontawesome.com/510675b914.js"></script>
 	<script defer src="../includes/Showpassword.js"></script>
+    <link rel="icon" href="../image/logos/Millhouse-favicon.jpeg">
+
 </head>
 <?php
     session_start();
