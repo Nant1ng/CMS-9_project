@@ -20,42 +20,44 @@ include '../includes/database_connection.php';
 
 <main>
 <h2>Create a new blogpost</h2>
-<pre>
-
     <div class = "postform-container">
         <div class="post-form">
             <form method="POST" action="savePost.php" enctype="multipart/form-data">
             
-            <div>
-                <span>Choose a title</span>
+            <div class = "title-input">
+                <p>Choose a title</p>
                 <input type="text" name="title" placeholder="Choose a title" size="30">
             </div>
-            <div>
-            <span>Write a description</span>
-            <textarea name="description" cols="30" rows="10" placeholder="Description"></textarea>
             
-            <div>
-            <span>Choose image from device(max 1mb and png, gif or jpeg)</span>
-            <input type="file" name="imageToUpload" > </br>
+            <div class ="description-input">
+            <p>Write a description</p>
+            <textarea name="description" cols="50" rows="20" placeholder="Description"></textarea>
+            </div>
+
+            <div class = "image-upload">
+            <p>Choose image from device</p>
+            <p>(max 1mb and png, gif or jpeg)</p>
+            <input type="file" name="imageToUpload">
             </div>
             
-            <div>
-            <span>Choose a category</span>
+            <div class = "category-input">
+            <p>Choose a category</p>
             <input type="text" name="category" placeholder="Category">
             </div>
 
-            <div>
-            <span>Choose a date</span>
+            <div class = "date-input">
+            <p>Choose a date</p>
                 <input type="date" name="date" placeholder="Choose date" size="30">
             </div>
 
+            <div class ="submit-button">
             <input type="submit" value="Post to blog">
-            
+            </div>
+
             </form>
         </div>
     </div>
 
-</pre>
 <main>
 </body>
 </html>
