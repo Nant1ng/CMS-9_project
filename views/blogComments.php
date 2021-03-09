@@ -36,6 +36,12 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 ?>
 <div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse">
 <a href="../loggedin.php">Back to the blog</a>
+<!-- Lätt lösning -->
+<br></br>
+<div class = "loggaut-knapp">
+    <a href="logout.php">Log out</a>
+</div> 
+
 </div>  
 
 <!-- Visar det bloginlägget som kommentarerna tillhör. -->

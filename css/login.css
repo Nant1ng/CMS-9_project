@@ -14,7 +14,7 @@ h1{
     margin-bottom: 40px;
 }
 .input-box{
-    margin: 31px auto;
+    margin: auto;
     width: 80%;
     border-bottom: 1px solid black;
     padding-top: 10px;
@@ -51,5 +51,8 @@ input{
     font-size: 16px;    
 }
 .requirement{
-    border: 1px solid black;
+    font-size: 10px;
+    position: relative;
+    left: 10%;
+    bottom: 10%;
 }
