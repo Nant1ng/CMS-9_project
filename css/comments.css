@@ -51,6 +51,21 @@ a:hover, a:active {
 }
 
 
+
+/* Header logo */
+
+#header-logo {
+    min-width: 11.5rem;
+    max-width: 11.5rem;
+    padding: 1rem;
+    border:none;
+}
+
+#header-logo a:link {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 /* Blogposten  */
 
 .post{
@@ -105,3 +120,4 @@ img {
     margin-top: 1rem;
     background-color: white;
 }
+
