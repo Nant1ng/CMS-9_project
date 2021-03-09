@@ -36,6 +36,7 @@ input{
 }
 .eye{
     position: absolute;
+    right: 0%;
 }
 #hide2{
     display: none;
