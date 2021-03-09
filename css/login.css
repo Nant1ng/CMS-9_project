@@ -16,8 +16,6 @@ h1{
 .input-box{
     margin: 31px auto;
     width: 80%;
-    /*border: 1px solid black 
-    eller */
     border-bottom: 1px solid black;
     padding-top: 10px;
     padding-bottom: 5px;
@@ -26,7 +24,7 @@ input{
     border: none;
     outline: none;
     background: transparent;
-    width: 100%;
+    width: 90%;
 }
 ::placeholder{
     color: gray;
@@ -36,7 +34,6 @@ input{
 }
 .eye{
     position: absolute;
-    right: 0%;
 }
 #hide2{
     display: none;
