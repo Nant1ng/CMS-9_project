@@ -1,9 +1,12 @@
-/* Style på blogComments.php */
+
+    /* Style på blogComments.php */
 
 body {
     display: flex;
     justify-content: center;
     background-color: rgb(243, 243, 243);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 
@@ -31,6 +34,11 @@ h4.comment-count{
     font-size: 1rem;
     text-align: center;
     padding-top:3rem;
+}
+
+textarea {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 /* Style på länkar */
@@ -102,7 +110,7 @@ img {
 
 .comments{
     border: lightgray 1px solid;
-    width: 30%;
+    min-width: 25%;
     padding: 1rem;
     margin: 1rem 0.5rem;
     background-color: white;
@@ -113,6 +121,13 @@ img {
     margin: 1rem 0.5rem;
 }
 
+
+textarea{
+    border: 1px solid black;
+    width: 100%;
+}
+
+
 .submit-button input{
     border:1px black solid;
     padding:0.5rem 2rem;
@@ -120,4 +135,5 @@ img {
     margin-top: 1rem;
     background-color: white;
 }
+
 

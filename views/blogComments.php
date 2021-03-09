@@ -50,7 +50,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 <!-- Hämtar och skriver ut alla kommentarer. -->
 <div class="comments">
     <!-- för att spara kommentaren i databasen. -->
-<p>Leave a comment:</p>
+<p>Leave a comment</p>
 <?php
 if(isset($_POST['submit-comment'])){
     $comment = $_POST['comment'];
@@ -79,7 +79,9 @@ if(isset($_POST['submit-comment'])){
     <div class="newCommentDiv">
         <form class="comment-form" method="POST" action="blogComments.php?id=<?php echo $_GET['id']; ?>">
             <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment..."></textarea><br>
-            <input type="submit" name="submit-comment" value="Post comment">
+            <div class ="submit-button">
+                <input type="submit" name="submit-comment" value="Post comment">
+            </div>
         </form>
     </div>
 
