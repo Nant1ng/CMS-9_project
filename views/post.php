@@ -27,12 +27,12 @@ include '../includes/database_connection.php';
             
             <div class = "title-input">
                 <p>Choose a title</p>
-                <input type="text" name="title" placeholder="Choose a title" size="30">
+                <input type="text" name="title" placeholder="Choose a title" size="30" required>
             </div>
             
             <div class ="description-input">
             <p>Write a description</p>
-            <textarea name="description" cols="50" rows="20" placeholder="Description"></textarea>
+            <textarea name="description" cols="50" rows="20" placeholder="Description" required></textarea>
             </div>
 
             <div class = "image-upload">
@@ -43,12 +43,12 @@ include '../includes/database_connection.php';
             
             <div class = "category-input">
             <p>Choose a category</p>
-            <input type="text" name="category" placeholder="Category">
+            <input type="text" name="category" placeholder="Category" required>
             </div>
 
             <div class = "date-input">
             <p>Choose a date</p>
-                <input type="date" name="date" placeholder="Choose date" size="30">
+                <input type="date" name="date" placeholder="Choose date" size="30" required>
             </div>
 
             <div class ="submit-button">
