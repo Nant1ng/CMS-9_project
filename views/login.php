@@ -68,7 +68,7 @@ catch(PDOException $error)
 				<div class="input-box">
 					<input name="username" placeholder="Username" type="text">
 				</div>
-				<div class="input-box">
+				<div class="input-box-password">
 					<input id="Input" name="password" placeholder="Password" type="password"> 
                     <span class="eye" onclick="showpassword()">
                         <i class="fa fa-eye" id="hide1"></i> 
