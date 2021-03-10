@@ -64,13 +64,15 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 }
 
 ?>
-<div>
-<div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
+<div id ="header-logo"><img class = "header-logo-img-editcreate" src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse">
 <a href="../loggedin.php">Back to the blog</a>
-</div>  
+<div class = "loggaut-knapp-create">
+    <a href="logout.php">Log out</a>
+</div> 
+</div>
 
 <main>
-    <h5>Refresh post</h5>
+    <h5>Edit post</h5>
 
     <form name="form1" method="post" action="editPost.php" enctype="multipart/form-data">
     <div class ="editPost-container">
