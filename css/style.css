@@ -5,7 +5,8 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    scroll-behavior: smooth;}
+    scroll-behavior: smooth;
+    }
 
 
 /* Style på länkar */
@@ -77,12 +78,12 @@ p {
 
 /* Style på index.html */
 .startpage-container {
-    border-left: 3px solid black;
-    min-width: 50%;
+    border-top: 3px solid black;
+    width: 50%;
+    text-align: center;
     display: flex;
     align-items: center;
     flex-flow: column wrap; 
-    margin: 10% 25%;
     padding:2rem 2rem 4rem;
 }
 
