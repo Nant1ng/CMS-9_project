@@ -7,6 +7,8 @@
     <title>Comments</title>
     <link rel = "stylesheet" type = "text/css" href = "../css/comments.css" />
     <script src="https://kit.fontawesome.com/510675b914.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../image/logos/Millhouse-favicon.jpeg">
+
 </head>
 <body>
 
@@ -32,7 +34,15 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 }
 
 ?>
+<div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse">
 <a href="../loggedin.php">Back to the blog</a>
+<!-- Lätt lösning -->
+<br></br>
+<div class = "loggaut-knapp">
+    <a href="logout.php">Log out</a>
+</div> 
+
+</div>  
 
 <!-- Visar det bloginlägget som kommentarerna tillhör. -->
 <div class ="post">
@@ -46,7 +56,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 <!-- Hämtar och skriver ut alla kommentarer. -->
 <div class="comments">
     <!-- för att spara kommentaren i databasen. -->
-<p>Leave a comment:</p>
+<p>Leave a comment</p>
 <?php
 if(isset($_POST['submit-comment'])){
     $comment = $_POST['comment'];
@@ -75,7 +85,9 @@ if(isset($_POST['submit-comment'])){
     <div class="newCommentDiv">
         <form class="comment-form" method="POST" action="blogComments.php?id=<?php echo $_GET['id']; ?>">
             <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment..."></textarea><br>
-            <input type="submit" name="submit-comment" value="Post comment">
+            <div class ="submit-button">
+                <input type="submit" name="submit-comment" value="Post comment">
+            </div>
         </form>
     </div>
 

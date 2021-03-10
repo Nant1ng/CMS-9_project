@@ -27,6 +27,7 @@ if($fileType != "png" && $fileType != "gif" && $fileType != "jpg" && $fileType !
     echo "You can only upload PNG, GIF, JPG or JPEG";
     die;
 }
+
 if(move_uploaded_file($_FILES['imageToUpload']['tmp_name'], $target_file)){
     echo "File uploaded succesfully";
 }else {
@@ -64,6 +65,5 @@ if($stm->execute()) {
 }else{
     echo "Something went wrong try again";
 }
+
 ?>
-
-

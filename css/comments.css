@@ -1,9 +1,12 @@
-/* Style på blogComments.php */
+
+    /* Style på blogComments.php */
 
 body {
     display: flex;
     justify-content: center;
     background-color: rgb(243, 243, 243);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 
@@ -33,6 +36,11 @@ h4.comment-count{
     padding-top:3rem;
 }
 
+textarea {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
 /* Style på länkar */
 
 a:link, a:visited {
@@ -48,6 +56,21 @@ a:link, a:visited {
 a:hover, a:active {
     text-decoration:none;
     background-color: rgba(211, 211, 211, 0.192);
+}
+
+
+
+/* Header logo */
+
+#header-logo {
+    min-width: 11.5rem;
+    max-width: 11.5rem;
+    padding: 1rem;
+    border:none;
+}
+
+#header-logo a:link {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -87,7 +110,7 @@ img {
 
 .comments{
     border: lightgray 1px solid;
-    width: 30%;
+    min-width: 25%;
     padding: 1rem;
     margin: 1rem 0.5rem;
     background-color: white;
@@ -98,10 +121,18 @@ img {
     margin: 1rem 0.5rem;
 }
 
+
+textarea{
+    border: 1px solid black;
+    width: 100%;
+}
+
+
 .submit-button input{
     border:1px black solid;
     padding:0.5rem 2rem;
     text-decoration: none;
     margin-top: 1rem;
     background-color: white;
+    margin-bottom: 2.5rem;
 }

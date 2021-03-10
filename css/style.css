@@ -1,12 +1,11 @@
 *{
     margin: 0%;
     padding: 0%;
-    
 }
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+    scroll-behavior: smooth;}
 
 
 /* Style på länkar */
@@ -71,6 +70,9 @@ span {
     padding:0.5rem 2rem;
 }
 
+p {
+    padding-bottom: 0.3rem;
+}
 
 
 /* Style på index.html */
@@ -111,15 +113,13 @@ header a:link{
 }
 
 header a:hover{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
 }
 
 
 div#header-logo img {
     width: 15rem;
     padding: 0rem 1rem ;
-    text-decoration: none;
-    background-color: transparent;
 }
 
 
@@ -173,43 +173,65 @@ p.date {
     margin: 2.6rem 5rem;
     letter-spacing: 0.02rem;
     line-height: 1.6;
+    
 }
+
 
 .post img {
     width: 40rem;
 }
 
+.post a:link{
+    border:none;
+    padding:0rem;
+}
+
+.post a:hover{
+    background-color: transparent;
+}
+
+
 .postbuttons{
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin: 1.5rem;
+
+    /* 
+    flex-flow: column wrap;
+    width: 30%;
+    text-align: center; */
+}
+
+.postbuttons a:link{
+    border:black 1px solid;
+    padding:1rem 2rem;
+}
+
+.postbutton a:hover{
+    background-color: rgba(134, 134, 134, 0.192);
 }
 
 
 
-
-
-/* Style på post.php, skapa inlägg */
+/* Style på post.php, skapa inlägg*/
 .postform-container {
     background-color: rgb(243, 243, 243);
-    padding: 2rem 10rem;
     display: flex;
-    justify-content: center;
+    flex-flow:column wrap;
+    align-items: center;
+    width: 100%;
 }
 
-.post-form{
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.7rem;
-    text-align: left;
-    width: 25rem;
-    
+.post-form {
+    width: 26rem;
+    padding:2rem;
+    margin:auto;
 }
 
 
 
 
-/* Style på editPost.php*/
+/* Style på editPost.php flyttat till skapa inlägg*/
 
 .editPost-container{
     background-color: rgb(243, 243, 243);
@@ -230,19 +252,30 @@ p.date {
 .imageUrl,
 .image-upload,
 .category-input,
+.date-input,
 .submit-button
 {
+    font-size: 1rem;
     margin: 1rem;
 }
 
+input, textarea{
+    border: 1px solid black;
+    padding: 0.3rem;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 /* Style på submit/update knappen på edit comment */
 
 .submit-button input{
     border:1px black solid;
-    padding:0.5rem 2rem;
+    padding:1rem 2.5rem;
     text-decoration: none;
     margin-top: 1rem;
+    font-size: 0.9rem;
 }
 
 

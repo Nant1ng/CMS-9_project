@@ -9,6 +9,8 @@
 	<link href="../css/login.css" rel="stylesheet" type="text/css">
 	<script src="https://kit.fontawesome.com/510675b914.js"></script>
 	<script defer src="../includes/Showpassword.js"></script>
+    <link rel="icon" href="../image/logos/Millhouse-favicon.jpeg">
+
 </head>
 <?php
     session_start();
@@ -67,8 +69,13 @@ catch(PDOException $error)
 					<input name="username" placeholder="Username" type="text">
 				</div>
 				<div class="input-box">
-					<input id="Input" name="password" placeholder="Password" type="password"> <span class="eye" onclick="showpassword()"><i class="fa fa-eye" id="hide1"></i> <i class="fa fa-eye-slash" id="hide2"></i></span>
-				</div><input class="login-btn" name="login" type="submit" value="Logga in">
+					<input id="Input" name="password" placeholder="Password" type="password"> 
+                    <span class="eye" onclick="showpassword()">
+                        <i class="fa fa-eye" id="hide1"></i> 
+                        <i class="fa fa-eye-slash" id="hide2"></i>
+                    </span>
+				</div>
+                <input class="login-btn" name="login" type="submit" value="Logga in">
                 <!-- För error meddelandet -->
                 <?php  
                     if(isset($errorMessage)){  

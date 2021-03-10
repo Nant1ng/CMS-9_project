@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
-    <title>Edit post</title>
+    <link rel="icon" href="../image/logos/Millhouse-favicon.jpeg">
+<title>Edit post</title>
 </head>
 <body>
 
@@ -89,16 +90,15 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                     </textarea>
                 </div>
                 
-                <div class = "imageUrl">
-                    <p>Update image Url</p>
-                    <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>">
-                </div>
-                
                 <div class = "image-upload">
                     <p>Update image from device</p>
-                    <input type="file" name="imageUpload" value="<?php echo $imageUrl;?>">
-                    <input type="submit" value="Upload">
+                    <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>" size = 57>
                 </div>
+                
+                <!-- <div class = "image-upload">
+                    <p>Update image from device</p>
+                    <input type="file" name="imageToUpload" value="<?php echo $imageUrl;?>">
+                </div> -->
 
                 <div class = "category-input">
                     <p>Update category</p>
