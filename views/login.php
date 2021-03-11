@@ -44,7 +44,7 @@ try
                 $_SESSION['role'] = $return['role'];
                 $_SESSION['fname'] = $return['fname'];
                 $_SESSION['userID'] = $return['userID'];
-                header("location:../loggedin.php");
+                header("location:loggedin.php");
             }else{  
                 $errorMessage = '<label>Something went wrong, try again!</label>';  
             }   

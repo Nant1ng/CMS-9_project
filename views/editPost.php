@@ -18,12 +18,44 @@ include '../includes/database_connection.php';
 
 
 if(isset($_POST['update'])){    
-    
+    $upload_dir = "../image/uploads/";
+$target_file = $upload_dir . basename($_FILES['imageToUpload']['name']);
+$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+if(isset($_POST['submit'])){
+    $check = getimagesize($_FILES['imageToUpload']['top_name']);
+    if($check == false){
+        echo "The file is not an image!";
+        die;
+    }
+}
+
+if(file_exists('$target_file')){
+    echo "The file already exist!";
+    die;
+}
+
+if($_FILES['imageToUpload']['size']>1000000){
+    echo "The file is to big! max 1mb!";
+    die;
+}
+
+if($fileType != "png" && $fileType != "gif" && $fileType != "jpg" && $fileType != "jpeg"){
+    echo "You can only upload PNG, GIF, JPG or JPEG";
+    die;
+}
+
+if(move_uploaded_file($_FILES['imageToUpload']['tmp_name'], $target_file)){
+    echo "File uploaded succesfully";
+}else {
+    die;
+};
+
+
     // Ta in alla värden från den raden som editknappen fanns på
     $postID = $_POST['id'];
     $title = $_POST['title'];
     $description = $_POST['description'];
-    $imageUrl = $_POST['imageUrl'];
     $category = $_POST['category'];    
         
     // sql query och förbered för att köra
@@ -34,13 +66,13 @@ if(isset($_POST['update'])){
     $query->bindparam(':postID_IN', $postID);               
     $query->bindparam(':description_IN', $description);
     $query->bindparam(':title_IN', $title);
-    $query->bindparam(':imageUrl_IN', $imageUrl);
+    $query->bindparam(':imageUrl_IN', $target_file);
     $query->bindparam(':category_IN', $category);
 
     //Kör query
     $query->execute();
 
-    header("location:../loggedin.php");
+    header("location:loggedin.php");
     }
 
 ?>
@@ -65,7 +97,7 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 
 ?>
 <div id ="header-logo"><img class = "header-logo-img-editcreate" src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse">
-<a href="../loggedin.php">Back to the blog</a>
+<a href="loggedin.php">Back to the blog</a>
 <div class = "loggaut-knapp-create">
     <a href="logout.php">Log out</a>
 </div> 
@@ -92,15 +124,15 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                     </textarea>
                 </div>
                 
-                <div class = "image-upload">
+               <!--  <div class = "image-upload">
                     <p>Update image from device</p>
                     <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>" size = 57>
-                </div>
+                </div> -->
                 
-                <!-- <div class = "image-upload">
+                <div class = "image-upload">
                     <p>Update image from device</p>
                     <input type="file" name="imageToUpload" value="<?php echo $imageUrl;?>">
-                </div> -->
+                </div> 
 
                 <div class = "category-input">
                     <p>Update category</p>
