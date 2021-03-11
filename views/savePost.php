@@ -50,11 +50,12 @@ $imageUrl = $_POST['imageUrl'];
 $category = $_POST['category'];
 $date = $_POST['date'];
 
+
 $sql = "INSERT INTO posts (title,description,imageUrl,category,date) VALUES(:title_IN, :description_IN, :imageUrl_IN, :category_IN, :date_IN)";
 $stm = $pdo->prepare($sql);
 $stm->bindParam(':title_IN', $title);
 $stm->bindParam(':description_IN', $description);
-$target_file = "/PhpOvn/CMS-9_project/image/" . $target_file;
+$target_file = "/PhpOvn/CMS-9_project/image/" . $target_file; 
 $stm->bindParam(':imageUrl_IN', $target_file);
 $stm->bindParam(':category_IN', $category);
 $stm->bindParam(':date_IN', $date);

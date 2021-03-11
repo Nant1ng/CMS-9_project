@@ -12,6 +12,8 @@
 <?php
 session_start();
 include '../includes/database_connection.php';
+
+
 ?>
 
 
@@ -23,6 +25,10 @@ include '../includes/database_connection.php';
 </div>  
 
 <main>
+
+
+
+
 <h2>Create a new blogpost</h2>
     <div class = "postform-container">
         <div class="post-form">
@@ -57,7 +63,6 @@ include '../includes/database_connection.php';
             <div class ="submit-button">
             <input type="submit" value="Post to blog">
             </div>
-
             </form>
         </div>
     </div>
