@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type = "text/css" href="css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" type = "text/css" href="../css/style.css?v=<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/510675b914.js"></script>
-    <link rel="icon" href="image/logos/Millhouse-favicon.jpeg">
+    <link rel="icon" href="../image/logos/Millhouse-favicon.jpeg">
 
     <title>Logged in</title>
 </head>
 <body>
 <header>
 <a href="#top">
-<div id ="header-logo"> <img src = "image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
+<div id ="header-logo"> <img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
 </a>
 </header>
 
@@ -23,10 +23,13 @@
 <div id = "post-container">
     <?php
     session_start();
-    include 'includes/database_connection.php';
+    include '../includes/database_connection.php';
 
 
-    $stm = $pdo->query("SELECT postID, title, description, imageURL, category, date FROM posts ORDER BY date DESC");
+    $sql = "SELECT postID, title, description, imageUrl, category, date FROM posts ORDER BY date DESC";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array());
+
 
     //För välkomstmeddelande och kollar om man är admin
     //ucfrist() är en inbygged funktion som gör så att den första bokstaven är uppercase
@@ -44,14 +47,14 @@
 
 
         if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
-            echo "<span><a href='views/post.php'> Create a new blogpost</a></span>";
+            echo "<span><a href='post.php'> Create a new blogpost</a></span>";
         }
     }
    
     ?>
 
     <div class = "loggaut-knapp">
-    <a href="views/logout.php">Log out</a>
+    <a href="logout.php">Log out</a>
     </div> 
 
     <p class ="latestpost">Latest posts</p>
@@ -60,7 +63,8 @@
     // Man måste kunna lägga till nytt blogginlägg som admin
 
     //while loop för att skriva ut alla blogposts på sidan
-    while ($row = $stm->fetch()){
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        $blogImg = $row['imageUrl'];
         if($_SESSION['role'] == "admin"){           // Om role är admin loopa ut edit och deleteknapparna
     ?>
 
@@ -71,15 +75,15 @@
             <figure><h4><?php echo $row['title'];?></h4>
             <hr>
             <figcaption class ="description"><p><?php echo $row['description'];?></p></figcaption>
-            <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">
-                <img src="<?php echo $row['imageURL'];?>" alt="blog-bild"></a>
+            <a href="blogComments.php?id=<?php echo $row['postID']; ?>">
+                <img src="<?php echo $blogImg;?>" alt="blog-bild"></a>
             <figure>
             <!-- För att få rätt id på edit o delete knapparna -->
             
                 <div class="postbuttons">
-                    <a href="views/editPost.php?id=<?php echo $row['postID']; ?>"><i class="fas fa-edit"></i> Edit</a>
-                    <a href="views/deletePost.php?id=<?php echo $row['postID']; ?>"><i class="fas fa-trash"></i> Delete</a>
-                    <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>"><i class="fas fa-comment"></i> Comments</a>
+                    <a href="editPost.php?id=<?php echo $row['postID']; ?>"><i class="fas fa-edit"></i> Edit</a>
+                    <a href="deletePost.php?id=<?php echo $row['postID']; ?>"><i class="fas fa-trash"></i> Delete</a>
+                    <a href="blogComments.php?id=<?php echo $row['postID']; ?>"><i class="fas fa-comment"></i> Comments</a>
                 </div><!-- stänger postbuttons-->
 
         </div> <!-- stänger post -->
@@ -94,13 +98,13 @@
             <figure><h4><?php echo $row['title'];?></h4>
             <hr>
             <figcaption class ="description"><p><?php echo $row['description'];?></p></figcaption>
-            <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>">
-                <img src="<?php echo $row['imageURL'];?>" alt="blog-bild"></a>
+            <a href="blogComments.php?id=<?php echo $row['postID']; ?>">
+                <img src="<?php echo $row['imageUrl']; ?>" alt="blog-bild"></a>
             <figure>
             <!-- För att få rätt id på edit o delete knapparna -->
             
                 <div class="postbuttons">
-                    <a href="views/blogComments.php?id=<?php echo $row['postID']; ?>"> Comments</a>
+                    <a href="blogComments.php?id=<?php echo $row['postID']; ?>"> Comments</a>
                 </div><!-- stänger postbuttons-->
 
 </div> <!-- stänger post-container -->
