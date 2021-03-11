@@ -68,14 +68,14 @@ catch(PDOException $error)
 				<div class="input-box">
 					<input name="username" placeholder="Username" type="text">
 				</div>
-				<div class="input-box input-box-password">
+				<div class="input-box">
 					<input id="Input" name="password" placeholder="Password" type="password"> 
-                    <span class="eye" onclick="showpassword()">
+                    <div class="eye" onclick="showpassword()">
                         <i class="fa fa-eye" id="hide1"></i> 
                         <i class="fa fa-eye-slash" id="hide2"></i>
-                    </span>
+                </div>
 				</div>
-                <input class="login-btn" name="login" type="submit" value="Logga in">
+                <input class="login-btn" name="login" type="submit" value="Login">
                 <!-- För error meddelandet -->
                 <?php  
                     if(isset($errorMessage)){  

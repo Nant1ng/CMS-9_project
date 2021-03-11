@@ -37,6 +37,7 @@ input{
     width: 90%;
 }
 
+
 ::placeholder{
     color: gray;
 }
@@ -45,12 +46,14 @@ input{
 /* Det där j**** ögat */
 .fa{
     border:3px solid red;
-    padding: 10px;
+    padding: 1px;
 }
+
 .eye{
     position: absolute;
     border:3px solid blue;
     padding: 1px;
+
 }
 
 #hide2{
@@ -61,7 +64,7 @@ input{
 /* Login och signup submit knappen */
 
 .login-btn, .signup-btn{
-    margin: 40px auto 20px;
+    margin: 40px auto 40px;
     width: 80%;
     display: block;
     outline: none;
