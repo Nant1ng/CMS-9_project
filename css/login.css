@@ -1,34 +1,32 @@
+/* Style för login.php och sign-up.php */
+
+
 *{
     margin: 0%;
     padding: 0%;    
 }
+
 .login-form, .signup-form{
-    width: 500px;
-    margin: 12% auto;
+    margin: 80px 20%;
     padding: 50px;
-    border: 3px solid black;
-    color: black;
+    border: 3px solid;
 }
-h1{
-    text-align: center;
-    margin-bottom: 40px;
-}
+
 .input-box{
-    margin-left: 3.2rem;
+    margin: 0% auto;
     width: 80%;
-    border-bottom: 1px solid black;
-    padding-top: 25px;
-    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    padding: 25px 0px 5px;
 }
 
 
-.input-box-password{
+/* .input-box-password{
 margin-left: 3.2rem;
 width: 80%;
 border-bottom: 1px solid black;
 padding-top: 25px;
 padding-bottom: 5px;
-}
+} */
 
 
 input{
@@ -37,21 +35,31 @@ input{
     outline: none;
     background: transparent;
     width: 90%;
-
 }
+
 ::placeholder{
     color: gray;
 }
+
+
+/* Det där j**** ögat */
 .fa{
-    margin-bottom: 30px;
+    border:3px solid red;
+    padding: 10px;
 }
 .eye{
     position: absolute;
+    border:3px solid blue;
+    padding: 1px;
 }
 
 #hide2{
     display: none;
 }
+
+
+/* Login och signup submit knappen */
+
 .login-btn, .signup-btn{
     margin: 40px auto 20px;
     width: 80%;
@@ -64,9 +72,67 @@ input{
     color: black;
     font-size: 16px;    
 }
+
 .requirement{
     font-size: 10px;
-    position: relative;
-    left: 10%;
-    bottom: 10%;
+    margin: 10px 10% 0px;
 }
+
+
+
+
+/* BREAKPOINTS */
+
+/* Extra small devices (phones, 768px (egentligen 600px) and down) */
+@media only screen and (max-width: 768px) {
+    .login-form, .signup-form{
+        margin: 40px 3.5%;
+        padding: 20px;
+    }
+}
+
+/* Medium devices (landscape tablets, 600px and up) */
+@media only screen and (min-width: 768px) {
+
+    body{
+        justify-content: center;
+    }
+
+
+    div#header-logo img {
+        width: 32vw;
+    }
+
+    .login-form, .signup-form{
+        margin: 10% 20%;
+    }
+    
+    h2 {
+        font-size:2.7vw;
+        padding:2%;
+    }
+
+    input {
+        font-size: 1.7vw;
+        margin-top: 5%;
+    }
+
+    .input-box{
+    margin: 0% auto;
+    width: 80%;
+    border-bottom: 1px solid;
+    padding: 25px 0px 5px;
+    }
+
+
+    .login-btn, .signup-btn{
+        margin: 4vw auto 2vw;
+        font-size: 2vw;
+        padding: 2%;
+    }
+
+    .requirement {
+        font-size:1.2vw;
+    }
+}
+
