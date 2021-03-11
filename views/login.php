@@ -75,7 +75,7 @@ catch(PDOException $error)
                         <i class="fa fa-eye-slash" id="hide2"></i>
                     </span>
 				</div>
-                <input class="login-btn" name="login" type="submit" value="Logga in">
+                <input class="login-btn" name="login" type="submit" value="Login">
                 <!-- För error meddelandet -->
                 <?php  
                     if(isset($errorMessage)){  
