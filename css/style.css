@@ -101,7 +101,7 @@ p {
 }
 
 @media only screen and (min-width: 1200px){
-    ::placeholder { font-size:1vw; }
+    ::placeholder { font-size:1.1vw; }
 }
 
 
@@ -185,18 +185,15 @@ div#header-logo img {
     margin-bottom: 2rem;
 }
 
-@media only screen and (min-width: 1200px){
-    .welcome-text {
-        font-size:1.5vw;
-        margin:1% 0%;
-    }
-}
-
 .loggaut-knapp {
     margin:0.5rem 2rem 7rem;
 }
 
 @media only screen and (min-width: 1200px){
+    .welcome-text {
+        font-size:1.5vw;
+        margin:1% 0%;
+    }
    .loggaut-knapp { font-size:1.3vw; }
 }
 
@@ -302,21 +299,27 @@ p.date {
     margin-top:1.4rem;
 }
 
+
+
+
+
 /* Style på post.php, skapa inlägg*/
 .postform-container {
     background-color: rgb(243, 243, 243);
     display: flex;
     flex-flow:column wrap;
     align-items: center;
-    width: 100%;
+    width: auto;
 }
 
 .post-form {
-    width: 26rem;
-    padding:2rem;
+    width: auto;
+    padding:2%;
     margin:auto;
 }
 
+
+git 
 
 /* Style på editPost.php */
 
@@ -351,7 +354,13 @@ p.date {
 
 input, textarea{
     border: 1px solid black;
-    padding: 0.3rem;
+    padding: 0.5vw;
+    width: 20rem;
+}
+
+@media only screen and (min-width: 1200px)
+{
+    input, textarea { width: 35vw; }
 }
 
 textarea {
