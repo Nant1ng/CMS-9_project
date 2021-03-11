@@ -84,7 +84,7 @@ p {
     display: flex;
     align-items: center;
     flex-flow: column wrap; 
-    padding:2rem 2rem 4rem;
+    padding:1rem 2rem 4rem;
 }
 
 p.welcomeLogin {
@@ -93,15 +93,36 @@ p.welcomeLogin {
     margin: 2rem;
 }
 
-#login{
-    margin-bottom: 1rem;
+#login, #signup{
+    margin-bottom: 0px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+    p.welcomeLogin {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 3vw;
+        margin: 3vw;
+    }
+    
+    #login{
+        margin-bottom: 10%;
+        font-size: 2vw;
+
+    }
+
+    #signup {
+        margin-bottom: 10%;
+        font-size: 2vw;
+    }
 }
 
 
 
 
 
-/* Style på loggedin.php och på sign-up.php*/
+
+/* Style på loggedin.php*/
 
 header {
     position: -webkit-sticky; /* Safari */
