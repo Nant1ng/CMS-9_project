@@ -117,12 +117,16 @@ header a:hover{
     background-color: transparent;
 }
 
+#header-logo {
+    min-width: 11.5rem;
+    max-width: 11.5rem;
+    padding-left: 1rem;
+    border:none;
+}
 
 div#header-logo img {
     width: 15rem;
-    padding: 0rem 1rem ;
 }
-
 
 
 .welcome-text {
@@ -212,7 +216,9 @@ p.date {
     background-color: rgba(134, 134, 134, 0.192);
 }
 
-
+.loggaut-knapp-create {
+    margin-top:1.4rem;
+}
 
 /* Style på post.php, skapa inlägg*/
 .postform-container {
@@ -232,8 +238,11 @@ p.date {
 
 
 
-/* Style på editPost.php flyttat till skapa inlägg*/
+/* Style på editPost.php */
 
+/* img .header-logo-img {
+    width: 11rem;
+} */
 .editPost-container{
     background-color: rgb(243, 243, 243);
     display: flex;

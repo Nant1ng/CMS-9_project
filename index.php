@@ -17,12 +17,12 @@
 
 <main>
    <div class ="startpage-container">
-      <p class = "welcomeLogin">Welcome! Login here</p>
+      <p class = "welcomeLogin">Welcome! Login here!</p>
       <a id="login" href="views/login.php">Login</a>
    </div>
 
    <div class ="startpage-container">
-      <p class = "welcomeLogin">Or if your new here, sign up!</p>
+      <p class = "welcomeLogin">Or if you're new here, sign up here!</p>
       <p><a id="signup" href="views/sign-up.php">Sign up</a></p>
    </div>
 
