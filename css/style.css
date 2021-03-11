@@ -181,10 +181,10 @@ div#header-logo img {
 .post{
     border: lightgray solid 1px;
     background-color: white;
-    width: 40rem;
+    width: 50%;
     height: auto;
-    margin:1rem;
-    padding:2rem 5rem;
+    margin:2%;
+    padding:2% 15%;
 }
 
 p.date {
@@ -195,8 +195,8 @@ p.date {
 }
 
 .description {
-    width: 30rem;
-    margin: 2.6rem 5rem;
+    width: auto;
+    margin: 7% 5%;
     letter-spacing: 0.02rem;
     line-height: 1.6;
     
@@ -204,7 +204,7 @@ p.date {
 
 
 .post img {
-    width: 40rem;
+    width: 100%;
 }
 
 .post a:link{
@@ -220,12 +220,17 @@ p.date {
 .postbuttons{
     display: flex;
     justify-content: center;
-    margin: 1.5rem;
+    margin: 1.5rem 0rem 7%;
+}
 
-    /* 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+
+    .postbuttons {
     flex-flow: column wrap;
-    width: 30%;
-    text-align: center; */
+    width: 100%;
+    text-align: center;
+    }
 }
 
 .postbuttons a:link{
