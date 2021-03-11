@@ -10,6 +10,6 @@ $pdo_stm->execute();
 // För att radera posten
 $pdo_stm2 = $pdo->prepare("DELETE from posts where postID=" . $_GET['id']);
 $pdo_stm2->execute();
-header("location:../loggedin.php");
+header("location:loggedin.php");
 
 ?>
