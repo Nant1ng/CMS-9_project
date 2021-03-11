@@ -114,9 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <body>
 
-<header>
 <div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
-</header>
 
 <main>
     <div class="login-form signup-form">

@@ -240,9 +240,9 @@ p.date {
 
 /* Style på editPost.php */
 
-img .header-logo-img {
+/* img .header-logo-img {
     width: 11rem;
-}
+} */
 .editPost-container{
     background-color: rgb(243, 243, 243);
     display: flex;
