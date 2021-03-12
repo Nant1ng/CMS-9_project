@@ -6,9 +6,18 @@ body {
     justify-content: center;
     background-color: rgb(243, 243, 243);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 
+@media only screen and (max-width: 996px){
+    body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-flow: column wrap;
+    padding: 0rem 10%;
+    }
+}
 
 
 /* RUBRIKER  */
@@ -19,27 +28,25 @@ h2 {
     text-align: center;
 }
 
-h3 {
-    font-size: 2rem 1rem;
-}
 
 h4 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-h4.comment-count{
-    font-size: 1rem;
-    text-align: center;
-    padding-top:3rem;
-}
-
 textarea {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
+
+@media only screen and (min-width: 1200px){
+    span, p, ::placeholder { font-size: 1.3vw }
+}
+
+
+
+
 
 /* Style på länkar */
 
@@ -60,6 +67,7 @@ a:hover, a:active {
 
 
 
+
 /* Header logo */
 
 #header-logo {
@@ -74,6 +82,8 @@ a:hover, a:active {
 }
 
 
+
+
 /* Blogposten  */
 
 .post{
@@ -82,9 +92,9 @@ a:hover, a:active {
     width: 40%;
     height: 70%;
     margin:1rem;
-    padding:1rem;
 
 }
+
 
 p.date {
     font-size: 1rem;
@@ -106,11 +116,55 @@ img {
 
 }
 
+@media only screen and (min-width: 1200px) {
+
+    h4 { font-size: 3.5vw; }
+
+    .post {
+        border: lightgray solid 1px;
+        background-color: white;
+        width: 90%;
+        height: 70%;
+    }
+
+    p.date {
+        font-size: 2vw;    
+    }
+    
+    .description {
+        font-size: 1.2vw;
+
+        margin: 2rem 0rem;
+        letter-spacing: 0.02rem;
+        line-height: 1.6;
+    
+    }
+}
+
+
+@media only screen and (max-width: 1200px){
+
+    .post {
+        border: lightgray solid 1px;
+        background-color: white;
+        width: 90%;
+        height: 70%;
+
+    }
+
+    p.date {
+        font-size: 1.2rem;    
+    }
+
+}
+
+
+
 /* Style på kommentar sektionen */
 
 .comments{
     border: lightgray 1px solid;
-    min-width: 25%;
+    width: 40%;
     padding: 1rem;
     margin: 1rem 0.5rem;
     background-color: white;
@@ -135,4 +189,13 @@ textarea{
     margin-top: 1rem;
     background-color: white;
     margin-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .comments{
+        border: lightgray 1px solid;
+        width: 90%;
+        padding: 1rem;
+        background-color: white;
+    }
 }

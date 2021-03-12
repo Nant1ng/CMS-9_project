@@ -46,8 +46,8 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
 
 <!-- Visar det bloginlägget som kommentarerna tillhör. -->
 <div class ="post">
+<p class ="date"><?php echo $blogDate;?></p>
     <figure><h4><?php echo $blogTitle?></h4>
-    <p class ="date"><?php echo $blogDate;?></p>
     <hr>
     <figcaption class ="description"><p><?php echo $blogText;?></p></figcaption>
     <img src="<?php echo $blogImg;?>" alt="blog-bild">
