@@ -72,6 +72,3 @@ include '../includes/database_connection.php';
 <main>
 </body>
 </html>
-
-
-
