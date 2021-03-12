@@ -20,7 +20,7 @@ include '../includes/database_connection.php';
 
 
 <div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse">
-<a href="../loggedin.php">Back to the blog</a>
+<a href="loggedin.php">Back to the blog</a>
 <div class = "loggaut-knapp-create">
     <a href="logout.php">Log out</a>
 </div> 
