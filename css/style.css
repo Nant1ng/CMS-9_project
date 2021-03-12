@@ -36,15 +36,22 @@ h1 {
     margin: 5rem 0rem 2rem;
 }
 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    h1 { font-size: 7vw; }
+}
+
 h2 {
     font-size: 3rem 1rem;
     text-align: center;
     padding: 1rem 0rem;
 }
 
-h3 {
-    font-size: 2rem 1rem;
+@media only screen and (min-width: 1200px){
+    h2 { font-size:1.9vw;}
 }
+
+h3 { font-size: 2rem 1rem; }
 
 h4 {
     font-size: 1.5rem;
@@ -52,6 +59,12 @@ h4 {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 1rem 0rem ;
+}
+
+@media only screen and (min-width: 1200px){
+    h4 {
+        font-size:2vw;
+    }
 }
 
 h5 {
@@ -71,8 +84,24 @@ span {
     padding:0.5rem 2rem;
 }
 
+@media only screen and (min-width: 1200px){
+    span {
+        font-size:1.3vw;
+    }
+}
+
 p {
     padding-bottom: 0.3rem;
+}
+
+@media only screen and (min-width: 1200px){
+    p {
+        font-size: 1.3vw;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    ::placeholder { font-size:1.1vw; }
 }
 
 
@@ -152,13 +181,22 @@ div#header-logo img {
 
 .welcome-text {
     text-align: center;
-    width: 35rem;
+    width: 65%;
     margin-bottom: 2rem;
 }
 
 .loggaut-knapp {
     margin:0.5rem 2rem 7rem;
 }
+
+@media only screen and (min-width: 1200px){
+    .welcome-text {
+        font-size:1.5vw;
+        margin:1% 0%;
+    }
+   .loggaut-knapp { font-size:1.3vw; }
+}
+
 
 .latestpost
 {
@@ -168,6 +206,12 @@ div#header-logo img {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 1rem 0rem ;
 }
+
+@media only screen and (min-width: 1200px){
+    .latestpost { font-size: 1.7vw; }
+}
+
+
 
 #post-container{
     background-color: rgb(243, 243, 243);
@@ -181,10 +225,10 @@ div#header-logo img {
 .post{
     border: lightgray solid 1px;
     background-color: white;
-    width: 40rem;
+    width: 50%;
     height: auto;
-    margin:1rem;
-    padding:2rem 5rem;
+    margin:2%;
+    padding:2% 15%;
 }
 
 p.date {
@@ -194,17 +238,26 @@ p.date {
     padding: 0.5rem;
 }
 
+@media only screen and (min-width: 1200px){
+    p.date { font-size:1.5vw; }
+}
+
 .description {
-    width: 30rem;
-    margin: 2.6rem 5rem;
+    width: auto;
+    margin: 7% 5%;
     letter-spacing: 0.02rem;
     line-height: 1.6;
     
 }
 
+@media only screen and (min-width: 1200px)
+{
+    .description {font-size: 1.2vw;}
+}
+
 
 .post img {
-    width: 40rem;
+    width: 100%;
 }
 
 .post a:link{
@@ -220,12 +273,17 @@ p.date {
 .postbuttons{
     display: flex;
     justify-content: center;
-    margin: 1.5rem;
+    margin: 1.5rem 0rem 7%;
+}
 
-    /* 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+
+    .postbuttons {
     flex-flow: column wrap;
-    width: 30%;
-    text-align: center; */
+    width: 100%;
+    text-align: center;
+    }
 }
 
 .postbuttons a:link{
@@ -241,23 +299,27 @@ p.date {
     margin-top:1.4rem;
 }
 
+
+
+
+
 /* Style på post.php, skapa inlägg*/
 .postform-container {
     background-color: rgb(243, 243, 243);
     display: flex;
     flex-flow:column wrap;
     align-items: center;
-    width: 100%;
+    width: auto;
 }
 
 .post-form {
-    width: 26rem;
-    padding:2rem;
+    width: auto;
+    padding:2%;
     margin:auto;
 }
 
 
-
+git 
 
 /* Style på editPost.php */
 
@@ -292,7 +354,13 @@ p.date {
 
 input, textarea{
     border: 1px solid black;
-    padding: 0.3rem;
+    padding: 0.5vw;
+    width: 20rem;
+}
+
+@media only screen and (min-width: 1200px)
+{
+    input, textarea { width: 35vw; }
 }
 
 textarea {
