@@ -8,8 +8,9 @@
 .login-form,
 .signup-form {
   margin: 80px 20%;
-  padding: 50px;
+  padding: 20px 0px;
   border: 3px solid;
+  text-align: center;
 }
 
 .input-box {
@@ -19,6 +20,23 @@
   padding: 25px 0px 5px;
 }
 
+.input-box-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 79%;
+    height: auto;
+    margin-left: 10%;
+}
+
+
+.input-box-password {
+    margin: 0%;
+    width: 100%;
+    border-bottom: 1px solid;
+    padding: 25px 0px 5px;
+  }
 
 input {
   margin: 5px;
@@ -33,16 +51,19 @@ input {
 }
 
 /* Det där j**** ögat */
-.fa {
-  border: 3px solid red;
-  padding: 1px;
-}
 
 .eye {
-  position: absolute;
-  border: 3px solid blue;
-  padding: 1px;
+    border-bottom: 1px solid;
+    width: auto;
+    width: 22px;
+    height: 22px;
+
+  }
+  
+.fa {
+  border: none;
 }
+
 
 #hide2 {
   display: none;
@@ -69,6 +90,13 @@ input {
   margin: 10px 10% 0px;
 }
 
+
+
+
+
+
+
+
 /* BREAKPOINTS */
 
 /* Extra small devices (phones, 768px (egentligen 600px) and down) */
@@ -79,6 +107,10 @@ input {
     padding: 20px;
   }
 }
+
+
+
+
 
 /* Medium devices (landscape tablets, 600px and up) */
 @media only screen and (min-width: 768px) {
@@ -100,7 +132,7 @@ input {
     padding: 2%;
   }
 
-  input {
+  input, ::placeholder {
     font-size: 1.7vw;
     margin-top: 5%;
   }
@@ -108,6 +140,24 @@ input {
   .input-box {
     margin: 0% auto;
     width: 80%;
+    border-bottom: 1px solid;
+    padding: 25px 0px 5px;
+  }
+
+  .input-box-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 79%;
+    height: auto;
+    margin-left: 10%;
+    }
+
+
+    .input-box-password {
+    margin: 0%;
+    width: 100%;
     border-bottom: 1px solid;
     padding: 25px 0px 5px;
   }

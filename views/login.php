@@ -24,7 +24,7 @@ try
     {  
         if(empty($_POST["username"]) || empty($_POST["password"]))
         {
-            $errorMessage = '<label>Alla fält måste vara ifyllda</label>';
+            $errorMessage = '<label>All fields must be filled out</label>';
         }
         else{
             $username = $_POST['username'];
@@ -69,20 +69,25 @@ catch(PDOException $error)
 				<div class="input-box">
 					<input name="username" placeholder="Username" type="text">
 				</div>
-				<div class="input-box">
-					<input id="Input" name="password" placeholder="Password" type="password"> 
+
+                <div class = "input-box-password-container">
+
+                    <div class="input-box-password">
+                        <input id="Input" name="password" placeholder="Password" type="password"> 
+                    </div>
                     <div class="eye" onclick="showpassword()">
-                        <i class="fa fa-eye" id="hide1"></i> 
-                        <i class="fa fa-eye-slash" id="hide2"></i>
-                </div>
-				</div>
+                            <i class="fa fa-eye" id="hide1"></i> 
+                            <i class="fa fa-eye-slash" id="hide2"></i>
+                        </div>
+                    </div>    
+
                 <input class="login-btn" name="login" type="submit" value="Login">
                 <!-- För error meddelandet -->
                 <?php  
                     if(isset($errorMessage)){  
                     echo '<label id="errorMessage">'.$errorMessage.'</label>';  
                     }  
-                ?>  
+                ?>
 			</form>
 		</div>
 	</main>
