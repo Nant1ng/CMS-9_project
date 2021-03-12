@@ -104,7 +104,7 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 </div>
 
 <main>
-    <h5>Edit post</h5>
+    <h4>Edit post</h4>
 
     <form name="form1" method="post" action="editPost.php" enctype="multipart/form-data">
     <div class ="editPost-container">
@@ -123,11 +123,6 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                     <?php echo $description;?>    
                     </textarea>
                 </div>
-                
-               <!--  <div class = "image-upload">
-                    <p>Update image from device</p>
-                    <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>" size = 57>
-                </div> -->
                 
                 <div class = "image-upload">
                     <p>Update image from device</p>
