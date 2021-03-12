@@ -12,13 +12,8 @@
 <?php
 session_start();
 include '../includes/database_connection.php';
-
-
 ?>
-
-
-
-
+<!-- header -->
 <div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse">
 <a href="loggedin.php">Back to the blog</a>
 <div class = "loggaut-knapp-create">
@@ -27,10 +22,6 @@ include '../includes/database_connection.php';
 </div>  
 
 <main>
-
-
-
-
 <h2>Create a new blogpost</h2>
     <div class = "postform-container">
         <div class="post-form">

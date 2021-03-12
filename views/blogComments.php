@@ -11,8 +11,6 @@
 
 </head>
 <body>
-
-
 <?php
 session_start();
 include '../includes/database_connection.php';
@@ -32,18 +30,14 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en ar
     $blogCategory = $row['category'];
     $blogDate = $row['date'];               
 }
-
 ?>
+<!-- header -->
 <div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse">
-<a href="loggedin.php">Back to the blog</a>
-<!-- Lätt lösning -->
-<br></br>
-<div class = "loggaut-knapp">
-    <a href="logout.php">Log out</a>
-</div> 
-
+    <a href="loggedin.php">Back to the blog</a> </br></br>
+    <div class = "loggaut-knapp">
+        <a href="logout.php">Log out</a>
+    </div> 
 </div>  
-
 <!-- Visar det bloginlägget som kommentarerna tillhör. -->
 <div class ="post">
 <p class ="date"><?php echo $blogDate;?></p>
@@ -81,16 +75,16 @@ if(isset($_POST['submit-comment'])){
 
 }
 ?>
-    <!-- Form för att kunna kommentera -->
-    <div class="newCommentDiv">
-        <form class="comment-form" method="POST" action="blogComments.php?id=<?php echo $_GET['id']; ?>">
-            <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment..."></textarea><br>
-            <div class ="submit-button">
-                <input type="submit" name="submit-comment" value="Post comment">
-            </div>
-        </form>
-    </div>
-
+<!-- Form för att kunna kommentera -->
+<div class="newCommentDiv">
+    <form class="comment-form" method="POST" action="blogComments.php?id=<?php echo $_GET['id']; ?>">
+        <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment..."></textarea><br>
+        <div class ="submit-button">
+            <input type="submit" name="submit-comment" value="Post comment">
+        </div>
+    </form>
+</div>
+<!-- loop för att visa edit och delete knappar endast för admin -->
 <?php
 $sql2 = "SELECT * FROM comments WHERE postID = :id ORDER BY date DESC";
 $stmt2 = $pdo->prepare($sql2);
@@ -106,7 +100,7 @@ if($comment_count == 0) {
         $commentID = $comment['commentID'];
         $commentDate = $comment['date'];
         $_SESSION['postID'] = $comment['postID'];
-        ?>              <!-- stänger php taggen -->
+?>      <!-- stänger php taggen -->
         <!-- Skriver ut comments -->
         <div class="comment-box">
            <span class="comment-author"><b><?php echo $commentAuthor; ?></b> </span>
@@ -115,24 +109,21 @@ if($comment_count == 0) {
            <a href="editComment.php?id=<?php echo $commentID; ?>">Edit</a>
            <a href="deleteComment.php?id=<?php echo $commentID?>">Delete</i></a>
         </div>
-    
 <?php  
-    
-    }
-}else{
-    echo '<h2 class="comment-count">' . $comment_count . ' Comments</h2>';            // För att skriva ut hur många kommentarer det finns
+    } /* loop för user */
+}else{ 
+    echo '<h2 class="comment-count">' . $comment_count . ' Comments</h2>';            
     while($comment = $stmt2->fetch(PDO::FETCH_ASSOC)){
         $commentAuthor = $comment['username'];
         $commentText = $comment['comment'];
-        $commentDate = $comment['date'];?>              <!-- stänger php taggen -->
+        $commentDate = $comment['date'];
+?>      <!-- stänger php taggen -->
         <!-- Skriver ut comments -->
         <div class="comment-box">
            <span class="comment-author"><b><?php echo $commentAuthor; ?></b> </span>
            <span class="comment-date"><?php echo $commentDate; ?></span>
            <p class="comment-text"><?php echo $commentText; ?></p>
         </div>
-
-
 <?php
     // bara för att stänga whileloopen till kommentarerna 
     }

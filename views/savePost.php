@@ -1,5 +1,4 @@
-<!-- Här laddar vi upp bilder från datorn  -->
-
+<!-- För att ladda upp bilder från datorn  -->
 <?php
 $upload_dir = "../image/uploads/";
 $target_file = $upload_dir . basename($_FILES['imageToUpload']['name']);
@@ -35,20 +34,15 @@ if(move_uploaded_file($_FILES['imageToUpload']['tmp_name'], $target_file)){
 };
 
 ?>
-
-
-
-
+<!-- spara till databas -->
 <?php
 session_start();
 include '../includes/database_connection.php';
-
 
 $title = $_POST['title'];
 $description = $_POST['description'];
 $category = $_POST['category'];
 $date = $_POST['date'];
-
 
 $sql = "INSERT INTO posts (title,description,imageUrl,category,date) VALUES(:title_IN, :description_IN, :imageUrl_IN, :category_IN, :date_IN)";
 $stm = $pdo->prepare($sql);
