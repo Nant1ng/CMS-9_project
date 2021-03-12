@@ -118,7 +118,7 @@ while($row = $query3->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en 
 </div>
 
 <main>
-<h4 class = "create-post-title">Create a new blogpost</h4>
+<h4 class = "edit-post-title">Create a new blogpost</h4>
 
     <form name="form1" method="post" action="editPost.php" enctype="multipart/form-data">
     <div class ="editPost-container">

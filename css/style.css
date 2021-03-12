@@ -315,6 +315,7 @@ p.date {
 }
 
 .post-form, .editPost-form{
+    margin-top: 2rem;
     width: auto;
 }
 
@@ -341,7 +342,10 @@ p.date {
 
 }
 
-
+@media only screen and (min-width: 1200px){
+    .create-post-title, .edit-post-title
+    { font-size: 2.3vw; }
+}
 
 .title-input,
 .description-input,
