@@ -134,7 +134,7 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
 </div>
 
 <main>
-    <h4>Edit post</h4>
+    <h4 class = ".edit-post-title">Edit post</h4>
 
     <form name="form1" method="post" action="editPost.php" enctype="multipart/form-data">
     <div class ="editPost-container">
@@ -155,7 +155,8 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                 </div>
                 
                 <div class = "image-upload">
-                    <p>Update image from device or use existing image: <?php echo $imageUrl;?></p>
+                    <p>Update image from device or use existing image:</p>
+                    <p><?php echo $imageUrl;?></p>
                     <input type="file" name="imageToUpload">
                 </div> 
 
