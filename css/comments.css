@@ -1,182 +1,174 @@
-
-    /* Style på blogComments.php */
+/* Style på blogComments.php */
 
 body {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(243, 243, 243);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(243, 243, 243);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-@media only screen and (max-width: 996px){
-    body {
+@media only screen and (max-width: 996px) {
+  body {
     display: flex;
     justify-content: center;
     background-color: rgb(243, 243, 243);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
     flex-flow: column wrap;
     padding: 0rem 10%;
-    }
+  }
 }
-
 
 /* RUBRIKER  */
 
-
 h2 {
-    font-size: 3rem 1rem;
-    text-align: center;
+  font-size: 3rem 1rem;
+  text-align: center;
 }
 
-
 h4 {
-    font-size: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 textarea {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-@media only screen and (min-width: 1200px){
-    span, p, ::placeholder { font-size: 1.3vw }
+@media only screen and (min-width: 1200px) {
+  span,
+  p,
+  ::placeholder {
+    font-size: 1.3vw;
+  }
 }
-
-
-
-
 
 /* Style på länkar */
 
-a:link, a:visited {
-    text-decoration: none;
-    color: black;
-    border: black solid 1px;
-    width: auto;
-    height: 10%;
-    padding:0.5rem 2rem;
-    margin-top:1rem;
-}
-  
-a:hover, a:active {
-    text-decoration:none;
-    background-color: rgba(211, 211, 211, 0.192);
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+  border: black solid 1px;
+  width: auto;
+  height: 10%;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
 }
 
-
-
+a:hover,
+a:active {
+  text-decoration: none;
+  background-color: rgba(211, 211, 211, 0.192);
+}
 
 /* Header logo */
 
 #header-logo {
-    min-width: 11.5rem;
-    max-width: 11.5rem;
-    padding: 1rem;
-    border:none;
+  min-width: 11.5rem;
+  max-width: 11.5rem;
+  padding: 1rem;
+  border: none;
 }
 
 #header-logo a:link {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-
-
 
 /* Blogposten  */
 
-.post{
-    border: lightgray solid 1px;
-    background-color: white;
-    width: 40%;
-    height: 70%;
-    margin:1rem;
-
+.post {
+  border: lightgray solid 1px;
+  background-color: white;
+  width: 40%;
+  height: 70%;
+  margin: 1rem;
 }
 
-
 p.date {
-    font-size: 1rem;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 0.5rem;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 .description {
-    width: auto;
-    margin: 2rem 0rem;
-    letter-spacing: 0.02rem;
-    line-height: 1.6;
-
+  width: auto;
+  margin: 2rem 0rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.6;
 }
 
 @media only screen and (min-width: 1200px) {
+  h4 {
+    font-size: 3.5vw;
+  }
 
-    h4 { font-size: 3.5vw; }
+  p.date {
+    font-size: 2vw;
+  }
 
-    p.date { font-size: 2vw; }
-    
-    .description {
-        font-size: 1.2vw;
-        margin: 2rem 0rem;
-        letter-spacing: 0.02rem;
-        line-height: 1.6;
-    }
-}
-
-
-@media only screen and (max-width: 1200px){
-
-    .post { width: 100%; }
-
-    p.date { font-size: 1.2rem;}
-
-}
-
-
-
-/* Style på kommentar sektionen */
-
-.comments{
-    border: lightgray 1px solid;
-    width: 40%;
-    padding: 1rem;
-    margin: 1rem 0.5rem;
-    background-color: white;
-}
-.comment-box {
-    border-top: lightgray 1px solid;
-    padding: 1rem;
-    margin: 1rem 0.5rem;
-}
-
-
-textarea{
-    border: 1px solid black;
-    width: 100%;
-}
-
-
-.submit-button input{
-    border:1px black solid;
-    padding:0.5rem 2rem;
-    text-decoration: none;
-    margin-top: 1rem;
-    background-color: white;
-    margin-bottom: 2.5rem;
+  .description {
+    font-size: 1.2vw;
+    margin: 2rem 0rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.6;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
-    .comments{
-        border: lightgray 1px solid;
-        width: 90%;
-        padding: 2rem;
-        background-color: white;
-        margin: 1rem;
-    }
+  .post {
+    width: 100%;
+  }
+
+  p.date {
+    font-size: 1.2rem;
+  }
+}
+
+/* Style på kommentar sektionen */
+
+.comments {
+  border: lightgray 1px solid;
+  width: 40%;
+  padding: 1rem;
+  margin: 1rem 0.5rem;
+  background-color: white;
+}
+.comment-box {
+  border-top: lightgray 1px solid;
+  padding: 1rem;
+  margin: 1rem 0.5rem;
+}
+
+textarea {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.submit-button input {
+  border: 1px black solid;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  background-color: white;
+  margin-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .comments {
+    border: lightgray 1px solid;
+    width: 90%;
+    padding: 2rem;
+    background-color: white;
+    margin: 1rem;
+  }
 }

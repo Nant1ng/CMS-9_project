@@ -1,350 +1,360 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
 
 /* Style på länkar */
 
-a:link, a:visited {
-    text-decoration: none;
-    color: black;
-    border: black solid 1px;
-    width: auto;
-    height: auto;
-    padding:0.5rem 2rem;
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+  border: black solid 1px;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 2rem;
 }
-  
-a:hover{
-    background-color: rgba(134, 134, 134, 0.192);
+
+a:hover {
+  background-color: rgba(134, 134, 134, 0.192);
 }
 
 /* RUBRIKER  */
 
 /* Welcome..  */
-h1 { 
-    font-size: 5rem;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    height: auto;
-    width: auto;
-    margin: 5rem 0rem 2rem;
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  height: auto;
+  width: auto;
+  margin: 5rem 0rem 2rem;
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px){
-    h1 { font-size: 7vw; }
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 7vw;
+  }
 }
 
 h2 {
-    font-size: 3rem 1rem;
-    text-align: center;
-    padding: 1rem 0rem;
+  font-size: 3rem 1rem;
+  text-align: center;
+  padding: 1rem 0rem;
 }
 
-@media only screen and (min-width: 1200px){
-    h2 { font-size:1.9vw; }
+@media only screen and (min-width: 1200px) {
+  h2 {
+    font-size: 1.9vw;
+  }
 }
 
-h3 { font-size: 2rem 1rem; }
+h3 {
+  font-size: 2rem 1rem;
+}
 
 h4 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 1rem 0rem ;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 1rem 0rem;
 }
 
-@media only screen and (min-width: 1200px){
-    h4 { font-size:2vw;}
+@media only screen and (min-width: 1200px) {
+  h4 {
+    font-size: 2vw;
+  }
 }
 
 h5 {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 1rem 0rem ;
-    margin-top: 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 1rem 0rem;
+  margin-top: 2rem;
 }
-
 
 span {
-    width: auto;
-    height: auto;
-    margin:1rem;
-    padding:0.5rem 2rem;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+  padding: 0.5rem 2rem;
 }
 
-@media only screen and (min-width: 1200px){
-    span {
-        font-size:1.3vw;
-    }
+@media only screen and (min-width: 1200px) {
+  span {
+    font-size: 1.3vw;
+  }
 }
 
-p { padding-bottom: 0.3rem;}
+p {
+  padding-bottom: 0.3rem;
+}
 
-@media only screen and (min-width: 1200px){
-    p { font-size: 1.3vw; }
+@media only screen and (min-width: 1200px) {
+  p {
+    font-size: 1.3vw;
+  }
 }
 
 ::placeholder {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-@media only screen and (min-width: 1200px){
-    ::placeholder { font-size:1.1vw; }
+@media only screen and (min-width: 1200px) {
+  ::placeholder {
+    font-size: 1.1vw;
+  }
 }
-
 
 /* Style på index.html */
 .startpage-container {
-    border-top: 3px solid black;
-    width: 50%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-flow: column wrap; 
-    padding:1rem 2rem 4rem;
+  border-top: 3px solid black;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: 1rem 2rem 4rem;
 }
 
 p.welcomeLogin {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.2rem;
-    margin: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2rem;
+  margin: 2rem;
 }
 
-#login, #signup{
-    margin-bottom: 0px;
+#login,
+#signup {
+  margin-bottom: 0px;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px){
-    p.welcomeLogin {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 3vw;
-        margin: 3vw;
-    }
-    
-    #login{
-        margin-bottom: 10%;
-        font-size: 2vw;
+@media only screen and (min-width: 992px) {
+  p.welcomeLogin {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 3vw;
+    margin: 3vw;
+  }
 
-    }
+  #login {
+    margin-bottom: 10%;
+    font-size: 2vw;
+  }
 
-    #signup {
-        margin-bottom: 10%;
-        font-size: 2vw;
-    }
+  #signup {
+    margin-bottom: 10%;
+    font-size: 2vw;
+  }
 }
-
-
-
-
-
 
 /* Style på loggedin.php*/
 
 header {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
-header a:link{
-    border:none;
+header a:link {
+  border: none;
 }
 
-header a:hover{
-    background-color: transparent;
+header a:hover {
+  background-color: transparent;
 }
 
 #header-logo {
-    min-width: 11.5rem;
-    max-width: 11.5rem;
-    padding-left: 1rem;
-    border:none;
+  min-width: 11.5rem;
+  max-width: 11.5rem;
+  padding-left: 1rem;
+  border: none;
 }
 
 div#header-logo img {
-    width: 15rem;
+  width: 15rem;
 }
 
-
 .welcome-text {
-    text-align: center;
-    width: 65%;
-    margin-bottom: 2rem;
+  text-align: center;
+  width: 65%;
+  margin-bottom: 2rem;
 }
 
 .loggaut-knapp {
-    margin:0.5rem 2rem 0rem;
+  margin: 0.5rem 2rem 0rem;
 }
 
-@media only screen and (min-width: 1200px){
-    .welcome-text {
-        font-size:1.5vw;
-        margin:1% 0%;
-    }
-   .loggaut-knapp { font-size:1.3vw; }
+@media only screen and (min-width: 1200px) {
+  .welcome-text {
+    font-size: 1.5vw;
+    margin: 1% 0%;
+  }
+  .loggaut-knapp {
+    font-size: 1.3vw;
+  }
 }
 
-
-.latestpost
-{
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 1rem 0rem ;
-    margin-top: 7rem;
+.latestpost {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 1rem 0rem;
+  margin-top: 7rem;
 }
 
-@media only screen and (min-width: 1200px){
-    .latestpost { font-size: 1.7vw; }
+@media only screen and (min-width: 1200px) {
+  .latestpost {
+    font-size: 1.7vw;
+  }
 }
 
-
-
-#post-container{
-    background-color: rgb(243, 243, 243);
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-flow:column wrap;
-    align-items: center;
+#post-container {
+  background-color: rgb(243, 243, 243);
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
 }
 
-.post{
-    border: lightgray solid 1px;
-    background-color: white;
-    width: 50%;
-    height: auto;
-    margin:2%;
-    padding:2% 15%;
+.post {
+  border: lightgray solid 1px;
+  background-color: white;
+  width: 50%;
+  height: auto;
+  margin: 2%;
+  padding: 2% 15%;
 }
 
 p.date {
-    font-size: 1rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-    padding: 0.5rem;
+  font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  padding: 0.5rem;
 }
 
-@media only screen and (min-width: 1200px){
-    p.date { font-size:1.5vw; }
+@media only screen and (min-width: 1200px) {
+  p.date {
+    font-size: 1.5vw;
+  }
 }
 
 .description {
-    width: auto;
-    margin: 7% 5%;
-    letter-spacing: 0.02rem;
-    line-height: 1.6;
-    
+  width: auto;
+  margin: 7% 5%;
+  letter-spacing: 0.02rem;
+  line-height: 1.6;
 }
 
-@media only screen and (min-width: 1200px)
-{
-    .description { font-size: 1.2vw; }
+@media only screen and (min-width: 1200px) {
+  .description {
+    font-size: 1.2vw;
+  }
 }
-
 
 .post img {
-    width: 100%;
+  width: 100%;
 }
 
-.post a:link{
-    border:none;
-    padding:0rem;
+.post a:link {
+  border: none;
+  padding: 0rem;
 }
 
-.post a:hover{
-    background-color: transparent;
+.post a:hover {
+  background-color: transparent;
 }
 
-
-.postbuttons{
-    display: flex;
-    justify-content: center;
-    margin: 1.5rem 0rem 7%;
+.postbuttons {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0rem 7%;
 }
 
-@media only screen and (max-width: 600px){
-
-    .postbuttons {
+@media only screen and (max-width: 600px) {
+  .postbuttons {
     flex-flow: column wrap;
     width: 100%;
     text-align: center;
-    }
+  }
 }
 
-.postbuttons a:link{
-    border:black 1px solid;
-    padding:1rem 2rem;
+.postbuttons a:link {
+  border: black 1px solid;
+  padding: 1rem 2rem;
 }
 
-.postbutton a:hover{
-    background-color: rgba(134, 134, 134, 0.192);
+.postbutton a:hover {
+  background-color: rgba(134, 134, 134, 0.192);
 }
 
 .loggaut-knapp-create {
-    margin-top:1.4rem;
+  margin-top: 1.4rem;
 }
-
-
-
 
 /* Style på create och edit post i post.php samt editPost.php, skapa och redigera inlägg*/
-.create-post-title, .edit-post-title {
-    font-size: 2rem;
-    width: 100%;
-    margin-top: 1rem;
+.create-post-title,
+.edit-post-title {
+  font-size: 2rem;
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.postform-container, .editPost-container {
-    background-color: rgb(243, 243, 243);
-    display: flex;
-    align-items: center;
-    flex-flow:column wrap;
-    width: 100%;
+.postform-container,
+.editPost-container {
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  width: 100%;
 }
 
-.post-form, .editPost-form{
-    margin-top: 2rem;
-    width: auto;
+.post-form,
+.editPost-form {
+  margin-top: 2rem;
+  width: auto;
 }
 
-@media only screen and (max-width: 600px){
-
-    .create-post-title, .edit-post-title {
+@media only screen and (max-width: 600px) {
+  .create-post-title,
+  .edit-post-title {
     font-size: 2rem;
     width: 100%;
     margin: 2rem 1rem 0.5rem;
     text-align: left;
-    }
+  }
 
-    .postform-container, .editPost-container {
+  .postform-container,
+  .editPost-container {
     background-color: white;
     display: flex;
     align-items: center;
-    flex-flow:column wrap;
+    flex-flow: column wrap;
     width: 100%;
-    }
+  }
 
-    .post-form, .editPost-form{
+  .post-form,
+  .editPost-form {
     width: auto;
-    }
-
+  }
 }
 
-@media only screen and (min-width: 1200px){
-    .create-post-title, .edit-post-title
-    { font-size: 2.3vw; }
+@media only screen and (min-width: 1200px) {
+  .create-post-title,
+  .edit-post-title {
+    font-size: 2.3vw;
+  }
 }
 
 .title-input,
@@ -353,53 +363,50 @@ p.date {
 .image-upload,
 .category-input,
 .date-input,
-.submit-button
-{
-    font-size: 1rem;
-    margin: 1rem;
+.submit-button {
+  font-size: 1rem;
+  margin: 1rem;
 }
 
-input, textarea {
-    border: 1px solid black;
-    padding: 0.5vw;
-    width: 30rem;
+input,
+textarea {
+  border: 1px solid black;
+  padding: 0.5vw;
+  width: 30rem;
 }
 
-@media only screen and (min-width: 1200px)
-{
-    input, textarea { 
-        width: 40vw;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.3vw;}
+@media only screen and (min-width: 1200px) {
+  input,
+  textarea {
+    width: 40vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vw;
+  }
 }
 
 /* Style på submit/update knappen på edit comment */
 
-.submit-button input{
-    border:1px black solid;
-    padding:1rem 2.5rem;
-    text-decoration: none;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    width:auto;
+.submit-button input {
+  border: 1px black solid;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  width: auto;
 }
 
-
-@media only screen and (min-width: 1200px){
-    .submit-button input { 
-        font-size: 1.5vw; 
-        width: auto;
-    }
+@media only screen and (min-width: 1200px) {
+  .submit-button input {
+    font-size: 1.5vw;
+    width: auto;
+  }
 }
-
 
 /* Style på footer */
 
-.footer{
-    text-align: center;
-    color: lightgray;
-    font-size: 1rem;
-    padding: 1rem;
+.footer {
+  text-align: center;
+  color: lightgray;
+  font-size: 1rem;
+  padding: 1rem;
 }
-
-
