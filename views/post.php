@@ -22,15 +22,8 @@ include '../includes/database_connection.php';
 </div>  
 
 <main>
-<<<<<<< HEAD
-
-
-
 
 <h4 class = "create-post-title">Create a new blogpost</h4>
-=======
-<h2>Create a new blogpost</h2>
->>>>>>> d4ca3a3036803effede61ecc81c920b44e3cede9
     <div class = "postform-container">
         <div class="post-form">
             <form method="POST" action="savePost.php" enctype="multipart/form-data">
