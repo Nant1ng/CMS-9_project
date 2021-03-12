@@ -22,7 +22,8 @@ include '../includes/database_connection.php';
 </div>  
 
 <main>
-<h2>Create a new blogpost</h2>
+
+<h4 class = "create-post-title">Create a new blogpost</h4>
     <div class = "postform-container">
         <div class="post-form">
             <form method="POST" action="savePost.php" enctype="multipart/form-data">

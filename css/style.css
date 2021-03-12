@@ -5,7 +5,6 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    scroll-behavior: smooth;
     }
 
 
@@ -48,7 +47,7 @@ h2 {
 }
 
 @media only screen and (min-width: 1200px){
-    h2 { font-size:1.9vw;}
+    h2 { font-size:1.9vw; }
 }
 
 h3 { font-size: 2rem 1rem; }
@@ -62,9 +61,7 @@ h4 {
 }
 
 @media only screen and (min-width: 1200px){
-    h4 {
-        font-size:2vw;
-    }
+    h4 { font-size:2vw;}
 }
 
 h5 {
@@ -90,14 +87,14 @@ span {
     }
 }
 
-p {
-    padding-bottom: 0.3rem;
-}
+p { padding-bottom: 0.3rem;}
 
 @media only screen and (min-width: 1200px){
-    p {
-        font-size: 1.3vw;
-    }
+    p { font-size: 1.3vw; }
+}
+
+::placeholder {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 @media only screen and (min-width: 1200px){
@@ -186,7 +183,7 @@ div#header-logo img {
 }
 
 .loggaut-knapp {
-    margin:0.5rem 2rem 7rem;
+    margin:0.5rem 2rem 0rem;
 }
 
 @media only screen and (min-width: 1200px){
@@ -205,6 +202,7 @@ div#header-logo img {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 1rem 0rem ;
+    margin-top: 7rem;
 }
 
 @media only screen and (min-width: 1200px){
@@ -301,38 +299,49 @@ p.date {
 
 
 
-/* Style på post.php, skapa inlägg*/
-.postform-container {
-    background-color: rgb(243, 243, 243);
-    display: flex;
-    flex-flow:column wrap;
-    align-items: center;
-    width: auto;
+/* Style på create och edit post i post.php samt editPost.php, skapa och redigera inlägg*/
+.create-post-title, .edit-post-title {
+    font-size: 2rem;
+    width: 100%;
+    margin-top: 1rem;
 }
 
-.post-form {
-    width: auto;
-    padding:2%;
-    margin:auto;
-}
-
-
-/* Style på editPost.php */
-
-
-.editPost-container{
+.postform-container, .editPost-container {
     background-color: rgb(243, 243, 243);
     display: flex;
-    flex-flow:column wrap;
     align-items: center;
+    flex-flow:column wrap;
     width: 100%;
 }
 
-.editPost-form {
-    width: 26rem;
-    padding:2rem;
-    margin:auto;
+.post-form, .editPost-form{
+    width: auto;
 }
+
+@media only screen and (max-width: 600px){
+
+    .create-post-title, .edit-post-title {
+    font-size: 2rem;
+    width: 100%;
+    margin: 2rem 1rem 0.5rem;
+    text-align: left;
+    }
+
+    .postform-container, .editPost-container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-flow:column wrap;
+    width: 100%;
+    }
+
+    .post-form, .editPost-form{
+    width: auto;
+    }
+
+}
+
+
 
 .title-input,
 .description-input,
@@ -346,10 +355,10 @@ p.date {
     margin: 1rem;
 }
 
-input, textarea{
+input, textarea {
     border: 1px solid black;
     padding: 0.5vw;
-    width: 20rem;
+    width: 30rem;
 }
 
 @media only screen and (min-width: 1200px)
@@ -368,6 +377,7 @@ input, textarea{
     text-decoration: none;
     margin-top: 2rem;
     font-size: 0.9rem;
+    width:auto;
 }
 
 
