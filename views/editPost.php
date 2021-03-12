@@ -17,8 +17,36 @@ include '../includes/database_connection.php';
 
 
 
-if(isset($_POST['update'])){    
-    $upload_dir = "../image/uploads/";
+if(isset($_POST['update'])){
+    
+
+// Om man inte väljer en ny bild, behåll befintlig   
+if(empty($_FILES['imageToUpload']['name'])){
+    $sql1 = "UPDATE posts set description=:description_IN, title=:title_IN, category=:category_IN WHERE postID=:postID_IN";
+    $query1 = $pdo->prepare($sql1);
+
+   // Ta in alla värden från den raden som editknappen fanns på
+   $postID = $_POST['id'];
+   $title = $_POST['title'];
+   $description = $_POST['description'];
+   $category = $_POST['category'];
+
+
+    $query1->bindparam(':postID_IN', $postID);               
+    $query1->bindparam(':description_IN', $description);
+    $query1->bindparam(':title_IN', $title);
+    $query1->bindparam(':category_IN', $category);
+
+    //Kör query
+    $query1->execute();
+
+    header("location:loggedin.php");
+
+} else{
+
+// För att kunna lägga till en ny bild
+   
+$upload_dir = "../image/uploads/";
 $target_file = $upload_dir . basename($_FILES['imageToUpload']['name']);
 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -56,24 +84,26 @@ if(move_uploaded_file($_FILES['imageToUpload']['tmp_name'], $target_file)){
     $postID = $_POST['id'];
     $title = $_POST['title'];
     $description = $_POST['description'];
-    $category = $_POST['category'];    
-        
+    $category = $_POST['category'];
+       
+    
     // sql query och förbered för att köra
-    $sql = "UPDATE posts set description=:description_IN, title=:title_IN, imageUrl=:imageUrl_IN, category=:category_IN WHERE postID=:postID_IN";
-    $query = $pdo->prepare($sql);
+    $sql2 = "UPDATE posts set description=:description_IN, title=:title_IN, imageUrl=:imageUrl_IN, category=:category_IN WHERE postID=:postID_IN";
+    $query2 = $pdo->prepare($sql2);
 
 
-    $query->bindparam(':postID_IN', $postID);               
-    $query->bindparam(':description_IN', $description);
-    $query->bindparam(':title_IN', $title);
-    $query->bindparam(':imageUrl_IN', $target_file);
-    $query->bindparam(':category_IN', $category);
+    $query2->bindparam(':postID_IN', $postID);               
+    $query2->bindparam(':description_IN', $description);
+    $query2->bindparam(':title_IN', $title);
+    $query2->bindparam(':imageUrl_IN', $target_file);
+    $query2->bindparam(':category_IN', $category);
 
     //Kör query
-    $query->execute();
+    $query2->execute();
 
     header("location:loggedin.php");
     }
+}
 
 ?>
 
@@ -125,8 +155,8 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                 </div>
                 
                 <div class = "image-upload">
-                    <p>Update image from device</p>
-                    <input type="file" name="imageToUpload" value="<?php echo $imageUrl;?>">
+                    <p>Update image from device or use existing image: <?php echo $imageUrl;?></p>
+                    <input type="file" name="imageToUpload">
                 </div> 
 
                 <div class = "category-input">
