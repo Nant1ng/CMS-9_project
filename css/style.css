@@ -252,7 +252,7 @@ p.date {
 
 @media only screen and (min-width: 1200px)
 {
-    .description {font-size: 1.2vw;}
+    .description { font-size: 1.2vw; }
 }
 
 
@@ -276,7 +276,6 @@ p.date {
     margin: 1.5rem 0rem 7%;
 }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px){
 
     .postbuttons {
@@ -302,7 +301,6 @@ p.date {
 
 
 
-
 /* Style på post.php, skapa inlägg*/
 .postform-container {
     background-color: rgb(243, 243, 243);
@@ -319,13 +317,9 @@ p.date {
 }
 
 
-git 
-
 /* Style på editPost.php */
 
-/* img .header-logo-img {
-    width: 11rem;
-} */
+
 .editPost-container{
     background-color: rgb(243, 243, 243);
     display: flex;
@@ -360,11 +354,10 @@ input, textarea{
 
 @media only screen and (min-width: 1200px)
 {
-    input, textarea { width: 35vw; }
-}
-
-textarea {
-    font-family: Arial, Helvetica, sans-serif;
+    input, textarea { 
+        width: 40vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3vw;}
 }
 
 /* Style på submit/update knappen på edit comment */
@@ -373,10 +366,17 @@ textarea {
     border:1px black solid;
     padding:1rem 2.5rem;
     text-decoration: none;
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 0.9rem;
 }
 
+
+@media only screen and (min-width: 1200px){
+    .submit-button input { 
+        font-size: 1.5vw; 
+        width: auto;
+    }
+}
 
 
 /* Style på footer */
