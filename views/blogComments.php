@@ -105,7 +105,7 @@ if($comment_count == 0) {
         $commentText = $comment['comment'];
         $commentID = $comment['commentID'];
         $commentDate = $comment['date'];
-        $_SESSION['postID'] = $comment['postID']
+        $_SESSION['postID'] = $comment['postID'];
         ?>              <!-- stänger php taggen -->
         <!-- Skriver ut comments -->
         <div class="comment-box">
