@@ -56,7 +56,8 @@ if(move_uploaded_file($_FILES['imageToUpload']['tmp_name'], $target_file)){
     $postID = $_POST['id'];
     $title = $_POST['title'];
     $description = $_POST['description'];
-    $category = $_POST['category'];    
+    $category = $_POST['category'];
+       
         
     // sql query och förbered för att köra
     $sql = "UPDATE posts set description=:description_IN, title=:title_IN, imageUrl=:imageUrl_IN, category=:category_IN WHERE postID=:postID_IN";
@@ -123,11 +124,6 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))     // Fetch_assoc returnerar en a
                     <?php echo $description;?>    
                     </textarea>
                 </div>
-                
-               <!--  <div class = "image-upload">
-                    <p>Update image from device</p>
-                    <input type="text" name="imageUrl" value="<?php echo $imageUrl;?>" size = 57>
-                </div> -->
                 
                 <div class = "image-upload">
                     <p>Update image from device</p>

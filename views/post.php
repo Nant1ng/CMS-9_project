@@ -49,7 +49,7 @@ include '../includes/database_connection.php';
             <div class = "image-upload">
             <p>Choose image from device</p>
             <p>(max 1mb and png, gif or jpeg)</p>
-            <input type="file" name="imageToUpload">
+            <input type="file" name="imageToUpload">    
             </div>
             
             <div class = "category-input">
