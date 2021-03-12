@@ -15,6 +15,7 @@
 <?php
     session_start();
     include '../includes/database_connection.php';
+    error_reporting(E_ALL ^ E_WARNING);                 // för att inte visa varningar
 
 try
 {
@@ -46,7 +47,7 @@ try
                 $_SESSION['userID'] = $return['userID'];
                 header("location:loggedin.php");
             }else{  
-                $errorMessage = '<label>Something went wrong, try again!</label>';  
+                $errorMessage = '<label>Something went wrong, try again!</label>'; 
             }   
         }    
     }  

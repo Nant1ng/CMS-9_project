@@ -58,8 +58,8 @@ if(isset($_POST['submit-comment'])){
     $username = $_SESSION['username'];
     $date = date('Y-m-d');
     
-    if(empty($comment)) {
-        echo "<div>Please write a comment before posting!</div>";
+if(empty($comment)) {
+    echo "<div>Please write a comment before posting!</div>";
     } else{
         $sql3 = "INSERT INTO comments (comment, date, userID, postID, username) VALUES (:comment, :date, :userID, :postID, :username)";
         $stmt3 = $pdo->prepare($sql3);
