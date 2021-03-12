@@ -11,11 +11,9 @@
     <link rel="icon" href="../image/logos/Millhouse-favicon.jpeg">
 <title>Sign up</title>
 </head>
-
 <?php
 session_start();
 include('../includes/database_connection.php');
-
 
 // För registrering.
 // Kollar ifall användernamnet eller email redan är taget.
@@ -111,11 +109,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo '<input>'.$errorMessage.'</input>';  
     }  
 ?>  
-
 <body>
-
 <div id ="header-logo"><img src = "../image/logos/Millhouse-logos_black.png" alt="Logo Millhouse"></div>
-
 <main>
     <div class="login-form signup-form">
         <h2>Sign up here</h2>
