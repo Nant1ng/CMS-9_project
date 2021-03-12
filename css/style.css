@@ -324,7 +324,7 @@ p.date {
     .create-post-title, .edit-post-title {
     font-size: 2rem;
     width: 100%;
-    margin: 2rem 1rem;
+    margin: 2rem 1rem 0.5rem;
     text-align: left;
     }
 
