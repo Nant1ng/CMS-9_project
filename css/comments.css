@@ -101,7 +101,6 @@ p.date {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 0.5rem;
-
 }
 
 img {
@@ -120,41 +119,22 @@ img {
 
     h4 { font-size: 3.5vw; }
 
-    .post {
-        border: lightgray solid 1px;
-        background-color: white;
-        width: 90%;
-        height: 70%;
-    }
-
-    p.date {
-        font-size: 2vw;    
-    }
+    p.date { font-size: 2vw; }
     
     .description {
         font-size: 1.2vw;
-
         margin: 2rem 0rem;
         letter-spacing: 0.02rem;
         line-height: 1.6;
-    
     }
 }
 
 
 @media only screen and (max-width: 1200px){
 
-    .post {
-        border: lightgray solid 1px;
-        background-color: white;
-        width: 90%;
-        height: 70%;
+    .post { width: 100%; }
 
-    }
-
-    p.date {
-        font-size: 1.2rem;    
-    }
+    p.date { font-size: 1.2rem;}
 
 }
 
@@ -195,7 +175,8 @@ textarea{
     .comments{
         border: lightgray 1px solid;
         width: 90%;
-        padding: 1rem;
+        padding: 2rem;
         background-color: white;
+        margin: 1rem;
     }
 }
