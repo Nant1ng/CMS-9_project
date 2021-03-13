@@ -136,10 +136,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <span><?php echo $regUsername_error; ?></span>
             
             <div class="input-box">
-                <input id="Input" type="password" name="regPassword" placeholder = "Password">
-            </div>
-            <div class="requirement">
-                Enter at least 10 characters.
+                <input id="Input" type="password" name="regPassword" placeholder = "Password (Enter at least 10 characters)">
             </div>
              <span><?php echo $regPassword_error; ?></span>
 

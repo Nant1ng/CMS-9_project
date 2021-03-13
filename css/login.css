@@ -85,10 +85,6 @@ input {
   font-size: 16px;
 }
 
-.requirement {
-  font-size: 10px;
-  margin: 10px 10% 0px;
-}
 
 
 
@@ -169,7 +165,4 @@ input {
     padding: 2%;
   }
 
-  .requirement {
-    font-size: 1.2vw;
-  }
 }

@@ -290,6 +290,13 @@ p.date {
   }
 }
 
+@media only screen and (min-width: 992px) {
+    .postbuttons { 
+        font-size: 1.5vw;
+    }
+}
+
+
 .postbuttons a:link {
   border: black 1px solid;
   padding: 1rem 2rem;
